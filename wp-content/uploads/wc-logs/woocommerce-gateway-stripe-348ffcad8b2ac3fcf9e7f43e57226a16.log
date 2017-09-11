@@ -1,0 +1,19 @@
+09-11-2017 @ 12:35:51 - Error: Unable to verify domain - Stripe no longer supports API requests made with TLS 1.0. Please initiate HTTPS connections with TLS 1.2 or later. You can learn more about this at https://stripe.com/blog/upgrading-tls.
+09-11-2017 @ 12:37:27 - Info: Begin processing payment for order 28 for the amount of 100.00
+09-11-2017 @ 12:37:27 - charges request: Array
+(
+    [currency] => sek
+    [amount] => 10000
+    [description] => Värdskapet - Order 28
+    [capture] => true
+    [expand[]] => balance_transaction
+    [metadata] => Array
+        (
+            [Customer Name] => Emil Jönsson
+            [Customer Email] => emil.jonsson@reformact.se
+        )
+
+    [source] => tok_1B0pIBERQagdrTk4Ky9LxStK
+)
+
+09-11-2017 @ 12:37:29 - Error: Stripe no longer supports API requests made with TLS 1.0. Please initiate HTTPS connections with TLS 1.2 or later. You can learn more about this at https://stripe.com/blog/upgrading-tls.
