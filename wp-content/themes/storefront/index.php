@@ -1,10 +1,8 @@
 <?php
-get_header(); 
+include 'head-block.php';
 ?>
 
 <h1>Language Select</h1>
-
-
-<?php
-
-get_footer();
+<a href="/sv"><button>Svenska</button></a>
+<a href="/"><button>English</button></a>
+<br><br>
