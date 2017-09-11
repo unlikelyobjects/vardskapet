@@ -17,3 +17,4 @@
 )
 
 09-11-2017 @ 12:37:29 - Error: Stripe no longer supports API requests made with TLS 1.0. Please initiate HTTPS connections with TLS 1.2 or later. You can learn more about this at https://stripe.com/blog/upgrading-tls.
+09-11-2017 @ 12:51:10 - Error: Unable to verify domain - Stripe no longer supports API requests made with TLS 1.0. Please initiate HTTPS connections with TLS 1.2 or later. You can learn more about this at https://stripe.com/blog/upgrading-tls.
