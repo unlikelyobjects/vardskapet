@@ -87,11 +87,24 @@ if ( ! function_exists( 'storefront_product_search' ) ) {
 	 * @return void
 	 */
 	function storefront_product_search() {
-		if ( storefront_is_woocommerce_activated() ) { ?>
-			<div class="site-search">
-				<?php the_widget( 'WC_Widget_Product_Search', 'title=' ); ?>
-			</div>
-		<?php
+		$pagename = get_query_var('pagename');
+		if($pagename == ''){
+			$pagename = 'index';
+		}
+		$hideMenuSearch = true;
+		$pagesWithCart = ['checkout','cart','products'];
+		foreach($pagesWithCart as $key => $val){
+			if($val == $pagename){
+				$hideMenuSearch = false;
+			}
+		}
+		if($hideMenuSearch == false  ){
+			if ( storefront_is_woocommerce_activated() ) { ?>
+				<div class="site-search">
+					<?php the_widget( 'WC_Widget_Product_Search', 'title=' ); ?>
+				</div>
+			<?php
+			}
 		}
 	}
 }
@@ -105,22 +118,35 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 	 * @return void
 	 */
 	function storefront_header_cart() {
-		if ( storefront_is_woocommerce_activated() ) {
-			if ( is_cart() ) {
-				$class = 'current-menu-item';
-			} else {
-				$class = '';
+		$pagename = get_query_var('pagename');
+		if($pagename == ''){
+			$pagename = 'index';
+		}
+		$hideMenuCart = true;
+		$pagesWithCart = ['checkout','cart','products'];
+		foreach($pagesWithCart as $key => $val){
+			if($val == $pagename){
+				$hideMenuCart = false;
 			}
-		?>
-		<ul id="site-header-cart" class="site-header-cart menu">
-			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php storefront_cart_link(); ?>
-			</li>
-			<li>
-				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-			</li>
-		</ul>
-		<?php
+		}
+		if($hideMenuCart == false  ){
+			if ( storefront_is_woocommerce_activated() ) {
+				if ( is_cart() ) {
+					$class = 'current-menu-item';
+				} else {
+					$class = '';
+				}
+				?>
+				<ul id="site-header-cart" class="site-header-cart menu">
+					<li class="<?php echo esc_attr( $class ); ?>">
+						<?php storefront_cart_link(); ?>
+					</li>
+					<li>
+						<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+					</li>
+				</ul>
+				<?php
+			}
 		}
 	}
 }

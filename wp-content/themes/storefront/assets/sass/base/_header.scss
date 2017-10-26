@@ -1,0 +1,55 @@
+.video-header {
+    text-align:center;
+    padding-top: 240px;
+    padding-bottom: 65px;
+    background: url('assets/images/main_page_bg.png');
+    background-size: cover;
+    background-position: center center;
+    min-height:100vh;
+    cursor: pointer;
+    .play-button::after {
+        @include fa-icon();
+        display:block;
+        text-align: center;
+        content: "\f144";
+        font-size: 4em;
+        color: white;
+    }
+    .arrow-down::after {
+        @include fa-icon();
+        display:block;
+        text-align: center;
+        content: "\f103";
+        font-size: 4em;
+        color: white;
+        margin-top:100px;
+        margin-bottom:250px;
+        animation: 1.5s ease-in-out 0 arrow-move;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        left:0;
+        right:0;
+        position: absolute;
+    }
+    .video-title {
+        font-size: 70px;
+        color: white;
+    }
+    p {
+        color: white;
+        font-size: 20px;
+    }
+}
+
+
+@keyframes arrow-move {
+  from {
+    margin-top: 100px;
+    margin-bottom:250px;
+  }
+
+  to {
+    margin-top: 125px;
+    margin-bottom:225px;
+  }
+}

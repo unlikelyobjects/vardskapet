@@ -1,0 +1,61 @@
+$imgpath: "assets/images/";
+
+@mixin block(){
+    display: inline-block;
+}
+
+.menu {
+    width: 100%;
+    max-width: $grid-large;
+    margin: auto;
+    padding: 1em auto;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top:30px;
+}
+
+.logged-in .menu {
+    top: 32px;
+    @media screen and (max-width:782px){
+        top: 46px;
+    }
+}
+
+.menu-logo {
+    background-image: url($imgpath + 'logo.png');
+    width: 176px;
+    height: 56px;
+    float: left;
+}
+
+.menu-links {
+    float: right;
+    margin-top: 1em;
+    font-size:20px;
+    div {
+        @include block();
+        background-image: url($imgpath + 'english.png');
+        opacity: 0.5;
+        width: 31px;
+        height: 18px;
+        cursor:pointer;
+        margin-right: 5px;
+    }
+    div[data-href="sv"]{
+        background-image: url($imgpath + 'sweden.png');
+    }
+    div.active {
+        opacity: 1;
+    }
+    a {
+        color: white;
+        margin-right: 1em;
+        font-size:20px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
