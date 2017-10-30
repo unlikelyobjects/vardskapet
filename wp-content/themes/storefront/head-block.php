@@ -8,4 +8,6 @@
 <?php wp_head(); ?>
 <link rel="stylesheet" href="/wp-content/themes/storefront/assets/sass/vendors/slick.css">
 <link rel="stylesheet" href="/wp-content/themes/storefront/assets/sass/vendors/slick-theme.css">
+<script src="//www.youtube.com/iframe_api"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>

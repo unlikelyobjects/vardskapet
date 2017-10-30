@@ -3,8 +3,40 @@
 // yourself. This means that changes that should be small, such as tweaking the
 // coloring or the sizing, can be done in one place, not all over the stylesheet.
 
-$base-font: 		"Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$header-font: 		$base-font;
+@font-face {
+  font-family: 'Playfair';
+  src: url('../../fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),  url('../../fonts/PlayfairDisplay-Regular.woff') format('woff'), url('../../fonts/PlayfairDisplay-Regular.ttf')  format('truetype'), url('../../fonts/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),  url('../../fonts/Roboto-Regular.woff') format('woff'), url('../../fonts/Roboto-Regular.ttf')  format('truetype'), url('../../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),  url('../../fonts/Roboto-Medium.woff') format('woff'), url('../../fonts/Roboto-Medium.ttf')  format('truetype'), url('../../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),  url('../../fonts/Roboto-Light.woff') format('woff'), url('../../fonts/Roboto-Light.ttf')  format('truetype'), url('../../fonts/Roboto-Light.svg#Roboto-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+$base-font: 		"Roboto-Regular","Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$header-font: 		"Playfair","Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $ms-base:           1em, .875em;
 $ms-ratio:          1.618;
 
