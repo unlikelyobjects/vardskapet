@@ -27,6 +27,14 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+	<div class="filter-search">
+			<?php
+			$buttonName = translate("[:en]Filter[:sv]Filtrera");
+			$categoryName = translate("[:en]Category[:sv]Kategori");
+			echo do_shortcode( '[searchandfilter fields="category,post_date" types="checkbox,daterange" submit_label="'.$buttonName.'" headings="'.$categoryName.',Datum"]' );
+			?>
+			</div>
+
 <?php
 do_action( 'storefront_sidebar' );
 get_footer();

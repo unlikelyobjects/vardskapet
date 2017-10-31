@@ -1,3 +1,12 @@
+body.page section.main-content {
+    margin: 0 auto;
+
+    .content-inner {
+        margin-top: 0;
+        padding-top: 30px;
+    }
+}
+
 section.main-content {
     width: 100%;
     max-width: $grid-large;
@@ -11,6 +20,13 @@ section.main-content {
         margin: auto;
         padding: 80px 0;
         margin-bottom: 90px;
+    }
+
+    @media screen and (max-width:1020px){
+        box-shadow: none;
+        .content-inner {
+            margin-bottom: 0;
+        }
     }
 
     h1,h2 {
@@ -169,6 +185,10 @@ section.main-content {
     margin-top: 14px;
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.23);
 
+    &.latest-blogs h2 {
+        text-align: center;
+    }
+
     h1 {
         margin-bottom: 10px;
     }
@@ -179,6 +199,11 @@ section.main-content {
     }
     .divider-short {
         width: 90px;
+    }
+    .divider.black {
+        border-bottom: 1px solid black;
+        width: 250px;
+        max-width: 100%;
     }
 
     .date {
@@ -336,4 +361,136 @@ section.main-content {
 
 .red-bg {
     background-image: url(assets/images/red-bg.png);
+}
+
+
+.searchandfilter {
+    background: #2a22ff;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    h4 {
+        color: white;
+        margin: 0 0 15px;
+    }
+    label {
+        font-size: 16px;
+        font-family: 'Roboto-regular';
+    }
+
+    ul li ul li {
+        display: block;
+    }
+
+    ul > li {
+        vertical-align: top;
+    }
+
+    div > ul {
+        margin: 0;
+    }
+
+    div > ul > li:nth-of-type(2n){
+        width: 250px;
+    }
+
+    div > ul > li:nth-of-type(4n){
+        display: block;
+        margin-top: 20px;
+        input[type="submit"] {
+            border: 1px solid white;
+            background: none;
+            color: white;
+            padding: 4px 20px;
+            font-family: 'Roboto-light';
+            &:hover {
+                background: rgba(255,255,255,0.1);
+            }
+        }
+    }
+
+    input[type="date"]{
+        border: none;
+        border-bottom: 1px solid white;
+        background: none;
+        padding: 5px;
+        color: white;
+        display: inline-block;
+        margin-bottom: 12px;
+        &::-webkit-calendar-picker-indicator {
+            background: none;
+            &:hover {
+                background: none;
+                opacity: .8;
+            }
+        }
+        &::-webkit-clear-button {
+            color: white;
+        }
+    }
+
+    button {
+        //background: none;
+        color: white;
+        &:hover,:active {
+            background: none !important;
+            opacity: .8;
+        }
+    }
+}
+
+.filter-search {
+    position: relative;
+    text-align: right;
+    .date-from,.date-to {
+        display: inline-block;
+        width: 50px;
+    }
+    .filter-toggle {
+        text-align: center;
+        background: #2a22ff;
+        font-size: 16px;
+        font-family: 'Roboto-light';
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.23);
+        width: 180px;
+        padding: 10px 10px 3px;
+        display: inline-block;
+        cursor:pointer;
+        p {
+            display: inline-block;
+            vertical-align: top;
+            color: white;
+            margin: 0;
+            margin-right: 10px;
+        }
+    }
+    .search-icon {
+        width: 25px;
+        &:hover {
+            opacity: 0.8;
+        }
+        &.contracted {
+            display: inline-block;
+        }
+        &.expanded {
+            display: none;
+        }
+    }
+    .searchandfilter {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        right: 0;
+    }
+    &.active {
+        .searchandfilter {
+            display: block;
+        }
+        .search-icon.contracted {
+            display: none;
+        }
+        .search-icon.expanded {
+            display: inline-block;
+        }
+    }
 }

@@ -66,6 +66,8 @@
 		</div>
 	</div>
 </div>
+<script src="/wp-content/themes/storefront/assets/js/vendor/slick.min.js"></script>
+<script src="/wp-content/themes/storefront/assets/js/general.min.js"></script>
 <script>
     (function () {
       var el = document.createElement('script');

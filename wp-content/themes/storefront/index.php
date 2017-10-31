@@ -10,31 +10,16 @@
  * @package storefront
  */
 include 'head-block.php';
-if($_COOKIE["qtrans_front_language"] == 'sv'){
-  $lang = 'sv';
-  $menu = ['Hem','Blogg','Värdskapet','Våra Tjänster','Kontakta oss'];
-  setlocale(LC_ALL, "sv_SE");
-} else {
-  $lang = 'en';
-  $menu = ['Home','Blog','Värdskapet','Our Services','Contact us'];
-}
+
 ?>
 <body <?php body_class(); ?>>
-<div class="menu cf">
-	<div class="menu-logo"></div>
-	<div class="menu-links">
-		<a class="menu-link" href="/home"><?php echo $menu[0]?></a>
-		<a class="menu-link" href="/blog"><?php echo $menu[1]?></a>
-		<a class="menu-link" href="/vardskapet"><?php echo $menu[2]?></a>
-		<a class="menu-link" href="/services"><?php echo $menu[3]?></a>
-		<a class="menu-link" href="/contact"><?php echo $menu[4]?></a>
-		<div data-href="en" <?php if($lang == 'en'){echo 'class="active"';} ?>></div>
-		<div data-href="sv" <?php if($lang == 'sv'){echo 'class="active"';} ?>></div>
-	</div>
-</div>
+<?php
+include 'menu.php';
+createMenu('frontpage');
+?>
 <div class='video-header' data-url="https://www.youtube.com/watch?v=Zk9J5xnTVMA">
-	<h1 class="video-title">Art of Welcoming</h1>
-	<p>Tryck här för att se trailern</p>
+	<h1 class="video-title"><?php _e("[:en]Art of welcoming[:sv]Konsten att välkomna"); ?></h1>
+	<p><?php _e("[:en]Click here to see the trailer[:sv]Tryck här för att se trailern"); ?></p>
 	<div class="play-button"></div>
 	<div class="arrow-down"></div>
 </div>
@@ -43,13 +28,13 @@ if($_COOKIE["qtrans_front_language"] == 'sv'){
 	<div class="content-inner">
 		<div class="grid-holder">
 			<div class="grid-col-50 green-bg-square colored-box">
-				<h1>Vad är värdskap?</h1>
+				<h1><?php _e("[:en]What is welcoming?[:sv]Vad är värdskap?"); ?></h1>
 				<p class="colored-body">Lorem ipsum dolor sit amet, Shasd consectetur sa adipiscing elit. Sdfs Integer porttitor ligula asfaq       nsequat consectetur. Mauris sedha ligulased nibh luctus rutru sgfasfs.</p>
 				<div class="divider"></div>
-				<p class="colored-link"><a href="#">Läs mer här</a></p>
+				<p class="colored-link"><a href="#"><?php _e("[:en]Read more[:sv]Läs mer här"); ?></a></p>
 			</div>
-			<div class="grid-col-50 blue-bg-square colored-box">
-				<h2>Senaste blogginlägget</h2>
+			<div class="grid-col-50 blue-bg-square colored-box latest-blogs">
+				<h2><?php _e("[:en]Latest blog post[:sv]Senaste blogginlägget"); ?></h2>
 				<div class="divider-short"></div>
 				
 				<div class="slick-slider-text">
@@ -67,21 +52,21 @@ if($_COOKIE["qtrans_front_language"] == 'sv'){
 					</div>
 				</div>
 				<div class="divider"></div>
-				<div class="colored-link"><a href="#">Läs mer här</a></div>
+				<div class="colored-link"><a href="#"><?php _e("[:en]Read more[:sv]Läs mer här"); ?></a></div>
 			</div>
 		</div>
 		<div class="grid-holder">
 			<div class="grid-col-100 teal-bg-square colored-box">
-				<h1 class="center">Om värdskapet</h1>
+				<h1 class="center"><?php _e("[:en]About värdskapet[:sv]Om värdskapet"); ?></h1>
 				<p class="text-two-rows">Lorem ipsum dolor sit amet, consectetur sa adipiscing elit. Integer porttitor ligula ut sdgs consequat consectetur. Mauris sed ligulased nibh luctus rutrum. Suspendisse non magna in dolor convallis bibendum. Integer pretium pharetra facilisis. Sed tempus maximushem ssapien, id rutrum dolor biben eget semsgjd. iaculis posuere. Curabitur dictum odio eu enim pulvinar, et porttitor mi varius. Ut sagittis faucibus dolor. Ut pellentesque dui ac arcu molestie congue. Donec mattis, ex ut cursus dignissim, sem tortor finibus sem, quis aliquam lectus ligula et massa. Donec condimentum nec libero eu interdum.</p>
 				<div class="center">
-					<div class="button">Läs mer här</div>
+					<div class="button"><?php _e("[:en]Read more[:sv]Läs mer här"); ?></div>
 				</div>
 			</div>
 		</div>
 		<div class="grid-holder">
 			<div class="grid-col-100 white-bg">
-				<h1 class="center">Värdskap applicerat<br>i verkligheten</h1>
+				<h1 class="center"><?php _e("[:en]Welcoming applied<br>in reality[:sv]Värdskap applicerat<br>i verkligheten"); ?></h1>
 				<p class="text-two-rows">
 					Lorem ipsum dolor sit amet, consectetur sa adipiscing elit. Integer porttitor ligula ut sdgs consequat consectetur. Mauris sed ligulased nibh luctus rutrum. Suspendisse non magna in dolor convallis bibendum. Integer pretium pharetra facilisis. Sed tempus maximushem ssapien, id rutrum dolor biben eget semsgjd. iaculis posuere. Curabitur dictum odio eu enim pulvinar, et porttitor mi varius. Ut sagittis faucibus dolor. Ut pellentesque dui ac arcu molestie congue. Donec mattis, ex ut cursus dignissim, sem tortor finibus sem, quis aliquam lectus ligula et massa. Donec condimentum nec libero eu interdum.
 				</p>
@@ -90,7 +75,7 @@ if($_COOKIE["qtrans_front_language"] == 'sv'){
 				<img class="client" src="/wp-content/themes/storefront/assets/images/client.png">
 			</div>
 			<div class="grid-col-100 white-bg">
-				<h1>Våra tjänster</h1>
+				<h1><?php _e("[:en]Our services[:sv]Våra tjänster"); ?></h1>
 				<p class="text-two-rows">
 					Lorem ipsum dolor sit amet, consectetur sa adipiscing elit. Integer porttitor ligula ut sdgs consequat consectetur. Mauris sed ligulased nibh luctus rutrum. Suspendisse non magna in dolor convallis bibendum. Integer pretium pharetra facilisis. Sed tempus maximushem ssapien, id rutrum dolor biben eget semsgjd. iaculis posuere. Curabitur dictum odio eu enim pulvinar, et porttitor mi varius. Ut sagittis faucibus dolor.
 				</p>
@@ -120,29 +105,18 @@ if($_COOKIE["qtrans_front_language"] == 'sv'){
 			</div>
 		</div>
 		<div class="newsletter">
-			<h1>Världskapsbrevet</h1>
+			<h1><?php _e("[:en]The welcoming letter[:sv]Världskapsbrevet"); ?></h1>
 			<p>Aliquam neque quisque quis adipiscingsfelis aliquam vitaeag
 mollis diam gasa sgfusce quia nulls sa sgfus.</p>
 			<div class="form">
-				<input id="newsletter-input" type="email" placeholder="Skriv er emailadress här">
-				<p class="form-error">Fel</p>
-				<p class="form-sent">Tack!</p>
+				<input id="newsletter-input" type="email" placeholder="<?php _e("[:en]Write your e-mail here[:sv]Skriv er emailadress här"); ?>">
+				<p class="form-error"><?php _e("[:en]Malformed e-mail[:sv]Felaktig emailadress")?></p>
+				<p class="form-sent"><?php _e("[:en]Thank you![:sv]Tack!")?></p>
 			</div>
-			<div class="button" id="newsletter-send">Prenumerera</div>
+			<div class="button" id="newsletter-send"><?php _e("[:en]Subscribe[:sv]Prenumerera")?></div>
 		</div>
 	</div>
 </section>
-
-<script src="/wp-content/themes/storefront/assets/js/vendor/slick.min.js"></script>
-<script src="/wp-content/themes/storefront/assets/js/general.min.js"></script>
-<script>
-	$ = jQuery;
-	$('.menu-links div[data-href]').click(function(){
-		var href = window.location.href + '?lang=' + $(this).attr('data-href');
-		console.log(href);
-		window.location.href = href;
-	})
-</script>
 
 <?php
 //do_action( 'storefront_sidebar' );

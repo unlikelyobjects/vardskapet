@@ -6,15 +6,31 @@ $imgpath: "assets/images/";
 
 .menu {
     width: 100%;
-    max-width: $grid-large;
     margin: auto;
-    padding: 1em auto;
-    overflow: auto;
+    padding: 16px;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     padding-top:30px;
+    &.blue {
+        position: initial;
+        background: #2a22ff;
+    }
+}
+
+.menu-wrapper {
+    width: 100%;
+    max-width: $grid-large;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
 }
 
 .logged-in .menu {
@@ -23,12 +39,18 @@ $imgpath: "assets/images/";
         top: 46px;
     }
 }
-
+.menu ul li {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
 .menu-logo {
     background-image: url($imgpath + 'logo.png');
+    background-size: 176px 56px;
     width: 176px;
     height: 56px;
     float: left;
+    cursor: pointer;
 }
 
 .menu-links {
@@ -38,10 +60,11 @@ $imgpath: "assets/images/";
     div {
         @include block();
         background-image: url($imgpath + 'english.png');
+        background-size: 31px 18px;
         opacity: 0.5;
         width: 31px;
         height: 18px;
-        cursor:pointer;
+        cursor: pointer;
         margin-right: 5px;
     }
     div[data-href="sv"]{
