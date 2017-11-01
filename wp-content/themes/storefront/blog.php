@@ -37,6 +37,13 @@ createMenu('blue');
 		</div>
 		<div class="divider black"></div>
 		<?php
+		$args = array(
+			'post_type' => 'post', 
+			'paged' => $paged,
+			'cat' => 5
+		);
+		$wp_query = new WP_Query($args);
+		$postcount = $wp_query->found_posts;
 		while ( have_posts() ) : the_post();
 		?>
 		<div class="grid-holder">
