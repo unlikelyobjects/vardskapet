@@ -1,0 +1,129 @@
+.blog-post-holder{
+    .grid-holder .grid-col-50 {
+        height: 320px;
+    }
+    .grid-holder:nth-child(2n+1){
+        .text {
+            padding: 40px 60px 0 0;
+        }
+    }
+    .grid-holder:nth-child(2n+2){
+        .image {
+            float: right;
+        }
+        .text {
+            padding: 40px 0 0 50px;
+        }
+    }
+    p {
+        color: black;
+    }
+    .blog-excerpt {
+        $font-size: 16px;
+        $line-height: 1.4;
+        $lines-to-show: 6;
+        p {
+            display: block; /* Fallback for non-webkit */
+            display: -webkit-box;
+            /* height: $font-size*$line-height*$lines-to-show;  Fallback for non-webkit */
+            font-size: $font-size;
+            line-height: $line-height;
+            -webkit-line-clamp: $lines-to-show;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.blog-intro {
+    padding-bottom: 30px;
+}
+
+.arrow-blue {
+    background: url('assets/images/arrow-blue.png');
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    margin: 100px auto;
+    cursor: pointer;
+}
+
+.divider-black {
+    border-bottom: 1px solid black;
+    width: 250px;
+    max-width: 100%;
+    margin: 0 auto 50px;
+}
+
+
+.blog-post-small.grid-col-50 {
+    .read-more a {
+        color: #2a22ff;
+        font-family: 'Roboto-regular';
+    }
+    h3 {
+        color: #2a22ff;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    .date {
+        font-family: 'Roboto-regular';
+        color: #2a22ff;
+        margin-bottom: 10px;
+    }
+    .blog-post-image {
+        background-size: cover;
+        background-position: center center;
+        background-image: url('assets/images/main_page_bg.png');
+        padding-bottom: 100%;
+    }
+}
+
+.divider-small {
+    width: 100px;
+    border-bottom: 1px solid black;
+    margin: 10px auto 10px;
+}
+
+
+.single {
+    section.main-content {
+        margin: 0 auto 0;
+    }
+}
+
+section.main-content {
+    .blog-post-single {
+        h1 {
+            color: $blue;
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+        }
+        p.date {
+            color: blue;
+            font-family: 'Roboto-regular';
+            text-align: center;
+        }
+        .blog-post-content {
+            column-count: 2;
+            margin-top: 50px;
+            margin-bottom: 65px;
+            padding: 0 60px;
+            img {
+                width: 90%;
+                display: inline-block;
+                border-radius: 0;
+            }
+            strong {
+                font-weight: normal;
+                font-family: 'Roboto-regular';
+            }
+            p {
+                color: black;
+            }
+        }
+    }
+}

@@ -72,6 +72,14 @@ $(document).ready(function(){
     window.location.href= 'https://www.linkedin.com/company/1805255/';
   });
 
+  $('.arrow-blue').click(function(){
+    $('#additional-post').show();
+  });
+
+  $('.blog-back').click(function(){
+    window.history.back();
+  });
+
 
 
 });

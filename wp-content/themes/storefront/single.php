@@ -5,24 +5,30 @@
  * @package storefront
  */
 
-get_header(); ?>
+get_header();
+include 'menu.php';
+createMenu('blue');
+?>
+<section class="main-content">
+	<div class="content-inner">
+		<div class="blog-post-single">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<h1><?php the_title(); ?></h1>
+				<div class="divider-small"></div>
+				<p class="date"><?php echo get_the_date('F j, Y'); ?></p>
+				<div class="blog-post-content">
+					<?php the_content(); ?>
+				</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php while ( have_posts() ) : the_post();
-
-			do_action( 'storefront_single_post_before' );
-
-			get_template_part( 'content', 'single' );
-
-			do_action( 'storefront_single_post_after' );
-
-		endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			<?php endwhile; ?>
+			<div class="center">
+				<div class="button blue blog-back">
+					<?php _e('[:en]Go back[:sv]Tillbaka') ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <?php
-do_action( 'storefront_sidebar' );
 get_footer();
