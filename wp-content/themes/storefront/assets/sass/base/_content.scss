@@ -40,9 +40,6 @@ section.main-content {
     h2{
         font-size:22px;
     }
-    a {
-        color: $blue;
-    }
 
     .slick-dots li.slick-active button:before {
         color: white;
@@ -71,7 +68,7 @@ section.main-content {
     $font-size: 16px;
     $line-height: 1.6;
     $lines-to-show: 6;
-    .slider-excerpt {
+    .slider-excerpt p {
         display: block; /* Fallback for non-webkit */
         display: -webkit-box;
         height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
@@ -242,6 +239,10 @@ section.main-content {
         /* display: block; */
         font-family: $base-font;
         margin: 0;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
         a:hover {
             text-decoration: underline;
         }

@@ -62,6 +62,9 @@
     .read-more a {
         color: #2a22ff;
         font-family: 'Roboto-regular';
+        &:hover {
+            text-decoration: underline;
+        }
     }
     h3 {
         color: #2a22ff;
@@ -92,6 +95,16 @@
     section.main-content {
         margin: 0 auto 0;
     }
+}
+
+.nav-previous, .nav-next {
+    a {
+        color: $blue;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    margin-top: 32px;
 }
 
 section.main-content {

@@ -3,8 +3,14 @@ var $ = jQuery;
 var console;
 console.log('waddup');
 $(document).ready(function(){
+  $('.slick-slider-text').on('afterChange init', function(event, slick, currentSlide, nextSlide){
+    var theURL = $(slick.$slides.get(currentSlide)).attr('data-url');
+    console.log(theURL);
+    console.log(this,event,slick,currentSlide,nextSlide);
+    slideURL = theURL;
+  });
   $('.slick-slider-text').slick({
-    autoplay: true,
+    autoplay: false,
     arrows: false,
     dots: true
   });
@@ -80,9 +86,16 @@ $(document).ready(function(){
     window.history.back();
   });
 
+  $('.colored-link').click(function(e){
+    console.log(e);
+    window.location.href = slideURL;
+  });
+
 
 
 });
+
+var slideURL = '';
 
 function postSignup(data,callback){
   $.ajax({

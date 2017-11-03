@@ -38,21 +38,28 @@ createMenu('frontpage');
 				<div class="divider-short"></div>
 				
 				<div class="slick-slider-text">
-					<div class="slidething">
-						<div class="date">21 Sep 2017</div>
-						<p class="slider-excerpt">Aliquam neque quisque quis adipiacing, felis aliquam vitae mollis dias mporta fu.quia nulla turpismagnsa. Aliquam neque quisque quis adipia nafafam. velit, ut commodo etiam. Turpis urna magni. 2</p>
-					</div>
-					<div class="slidething">
-						<div class="date">21 Sep 2017</div>
-						<p class="slider-excerpt">Aliquam neque quisque quis adipiacing, felis aliquam vitae mollis dias mporta fu.quia nulla turpismagnsa. Aliquam neque quisque quis adipia nafafam. velit, ut commodo etiam. Turpis urna magni. 2</p>
-					</div>
-					<div class="slidething">
-						<div class="date">21 Sep 2017</div>
-						<p class="slider-excerpt">Aliquam neque quisque quis adipiacing, felis aliquam vitae mollis dias mporta fu.quia nulla turpismagnsa. Aliquam neque quisque quis adipia nafafam. velit, ut commodo etiam. Turpis urna magni. 2</p>
-					</div>
+					<?php
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					$args = array(
+						'post_type' => 'post',
+						'posts_per_page' => 3
+					);
+					$wp_query = new WP_Query($args);
+					$postcount = $wp_query->found_posts;
+					if ( have_posts() ) :
+						while ( have_posts() ) : the_post();
+						?>
+						<div class="slidething" data-url="<?php the_permalink(); ?>">
+							<div class="date"><?php echo get_the_date('F j, Y'); ?></div>
+							<div class="slider-excerpt"><?php the_excerpt(); ?></div>
+						</div>
+					<?php
+						endwhile;
+					endif;
+					?>
 				</div>
 				<div class="divider"></div>
-				<div class="colored-link"><a href="#"><?php _e("[:en]Read more[:sv]Läs mer här"); ?></a></div>
+				<div class="colored-link"><?php _e("[:en]Read more[:sv]Läs mer här"); ?></div>
 			</div>
 		</div>
 		<div class="grid-holder">
