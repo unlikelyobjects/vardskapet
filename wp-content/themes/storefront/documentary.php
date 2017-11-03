@@ -27,10 +27,10 @@ createMenu('frontpage');
 	<div class="arrow-down"></div>
 </div>
 
-<section class="main-content">
+<section class="main-content documentary">
 	<div class="content-inner">
 		<div class="grid-holder">
-			<div class="grid-col-100 white-bg blog-intro">
+			<div class="grid-col-100 white-bg documentary-intro">
                 <?php
                 if ( have_posts() ) :
 				    while ( have_posts() ) : the_post();
@@ -44,7 +44,8 @@ createMenu('frontpage');
                 endif;
                 ?>
 			</div>
-		</div>
+        </div>
+        <?php get_template_part( 'content-block' ); ?>
 	</div>
 </section>
 

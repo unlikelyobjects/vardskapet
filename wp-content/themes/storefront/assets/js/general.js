@@ -91,6 +91,17 @@ $(document).ready(function(){
     window.location.href = slideURL;
   });
 
+  $('.expandable .entry-title').click(function(){
+    var isActive = $(this).parent().hasClass('active');
+    if(isActive){
+      $(this).parent().find('.entry-expanded').slideUp();
+    }
+    else {
+      $(this).parent().find('.entry-expanded').slideDown();
+    }
+    $(this).parent().toggleClass('active');
+
+  });
 
 
 });

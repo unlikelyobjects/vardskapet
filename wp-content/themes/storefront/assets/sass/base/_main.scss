@@ -1,7 +1,13 @@
 .medium {
     font-family: 'Roboto-medium' !important;
 }
-
+.purple {
+    color: $purple;
+}
+strong {
+    font-family: 'Roboto-medium';
+    font-weight: normal;
+}
 
 //modal crap
 .modal {

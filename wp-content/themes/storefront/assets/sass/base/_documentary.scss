@@ -1,0 +1,102 @@
+section.documentary {
+
+    .grid-holder .grid-col-100.white-bg {
+        h1 {
+            color: $purple;
+            text-align: center;
+            font-size: 41px;
+        }
+    }
+
+    .grid-holder .grid-col-100 {
+        padding: 80px 0 0;
+        max-width: 612px;
+        margin: auto;
+    }
+
+    .grid-col-100.documentary-intro {
+        padding: 40px 12px 0;
+        h1 {
+            margin-bottom: 40px;
+        }
+    }
+
+    .expandable {
+        .label {
+            color: $purple;
+        }
+    }
+
+    .button {
+        background: $purple;
+        a {
+            color: white;
+        }
+        color: white;
+        font-family: 'Roboto-regular';
+        &:hover {
+            background: #a38cec;
+        }
+    }
+}
+
+.expandable {
+    margin-top: 80px;
+    .entry {
+        border-bottom: 1px solid $purple;
+        &.active {
+            padding-bottom: 80px;
+            .entry-title:after {
+                content: '\f463';
+            }
+        }
+    }
+    .entry-title {
+        padding: 20px 12px;
+        font-size: 24px;
+        color: $purple;
+        font-family: 'Playfair';
+        cursor: pointer;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '\f48a';
+            font-family: 'ion';
+            top: 55%;
+            transform: translateY(-50%);
+            right: 12px;
+            font-size: 35px;
+        }
+    }
+    .entry-expanded {
+        display: none;
+        margin-top:40px;
+    }
+    .row-title {
+        width: 20%;
+        display: inline-block;
+        vertical-align: top;
+        color: $purple;
+        font-family: 'Roboto-regular';
+        padding-left: 12px;
+    }
+    .row-text {
+        width: 79%;
+        display: inline-block;
+        vertical-align: top;
+        border-left: 1px solid $purple;
+        padding-left: 30px;
+        padding-bottom: 10px;
+        font-family: 'Roboto-light';
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    .button {
+        margin-right: 12px;
+    }
+    .button-row {
+        margin-top: 40px;
+        text-align: center;
+    }
+}

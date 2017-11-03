@@ -28,6 +28,12 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'ion';
+  src: url("../../fonts/ionicons.eot?#iefix") format("embedded-opentype"), url("../../fonts/ionicons.woff") format("woff"), url("../../fonts/ionicons.ttf") format("truetype"), url("../../fonts/ionicons.svg#ionicons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 .composite_summary .summary_element .summary_element_wrapper {
   box-shadow: 0px 0px 0px 4px transparent; }
   .composite_summary .summary_element .summary_element_wrapper.selected, .composite_summary .summary_element .summary_element_wrapper.selected:hover {
