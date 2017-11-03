@@ -70,12 +70,8 @@
 <script src="/wp-content/themes/storefront/assets/js/general.min.js"></script>
 <script>
     (function () {
-      var el = document.createElement('script');
-      el.src = "//www.youtube.com/iframe_api";
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(el, s);
-    
       
+
       window.onYouTubeIframeAPIReady = function () {
 		  console.log('ready yt');
         window.videoDialogPlayer = new YT.Player('videoDialogPlayer', {
@@ -88,7 +84,12 @@
                 }
             }
         });
-      }
+	  }
+	  
+	  var el = document.createElement('script');
+      el.src = "//www.youtube.com/iframe_api";
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(el, s);
     }());
   </script>
 </body>
