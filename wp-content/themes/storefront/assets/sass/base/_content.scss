@@ -1,9 +1,14 @@
-body.page section.main-content {
-    margin: 0 auto;
+body.page{
+    section.main-content {
+        margin: 0 auto;
 
-    .content-inner {
-        margin-top: 0;
-        padding-top: 30px;
+        .content-inner {
+            margin-top: 0;
+            padding-top: 30px;
+        }
+    }
+    &.page-template-documentary section.main-content  {
+        margin: -200px auto 0;
     }
 }
 
