@@ -52,11 +52,13 @@ $(document).ready(function(){
 
   $('li.cat-item-1').remove();
 
+  /*
   if(window.location.href.indexOf('/sv/') !== -1){
     $('li.cat-item-17 label').html($('li.cat-item-17 label').html().replace('Consideration','Omtanke'));
     $('li.cat-item-16 label').html($('li.cat-item-16 label').html().replace('Dignity','Värdighet'));
     $('li.cat-item-15 label').html($('li.cat-item-15 label').html().replace('Respect','Respekt'));
   }
+  */
 
   $('input[type="date"]').last().appendTo($('input[type="date"]').first().parent());
   $('.filter-toggle').click(function(){
@@ -101,6 +103,18 @@ $(document).ready(function(){
     }
     $(this).parent().toggleClass('active');
 
+  });
+
+  $(window).scroll(function(){
+    var scrollTop = $(window).scrollTop();
+    if(scrollTop > 0){
+      $('.menu').addClass('fixed');
+      $('section.main-content').addClass('active');
+    }
+    else {
+      $('.menu').removeClass('fixed');
+      $('section.main-content').removeClass('active');
+    }    
   });
 
 

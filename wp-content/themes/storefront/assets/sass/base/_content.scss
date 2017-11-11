@@ -16,12 +16,13 @@ section.main-content {
     width: 100%;
     max-width: $grid-large;
     background: #f7f7f7;
-    margin: -200px auto 0;
+    margin: 0 auto 0;
+    transition: margin .3s ease-in-out;
     color:white;
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.23);
     .content-inner{
         width: 100%;
-        max-width: 734px;
+        max-width: 834px;
         margin: auto;
         padding: 80px 0;
         margin-bottom: 90px;
@@ -32,6 +33,10 @@ section.main-content {
         .content-inner {
             margin-bottom: 0;
         }
+    }
+
+    &.active {
+        margin-top: -200px;
     }
 
     h1,h2,h3 {
