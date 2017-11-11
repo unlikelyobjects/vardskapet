@@ -138,6 +138,41 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		sassdev : {
+			dist: {
+				options: {
+					require: 'susy',
+					sourcemap: 'none',
+					includePaths: require( 'node-bourbon' ).includePaths
+				},
+				files: [{
+					'style.css': 'style.scss', 
+					'assets/sass/admin/admin.css': 'assets/sass/admin/admin.scss',
+					'assets/sass/admin/plugin-install.css': 'assets/sass/admin/plugin-install.scss',
+					'assets/sass/admin/welcome-screen/welcome.css': 'assets/sass/admin/welcome-screen/welcome.scss',
+					'assets/sass/admin/customizer/customizer.css': 'assets/sass/admin/customizer/customizer.scss',
+					'assets/sass/woocommerce/extensions/bookings.css': 'assets/sass/woocommerce/extensions/bookings.scss',
+					'assets/sass/woocommerce/extensions/brands.css': 'assets/sass/woocommerce/extensions/brands.scss',
+					'assets/sass/woocommerce/extensions/wishlists.css': 'assets/sass/woocommerce/extensions/wishlists.scss',
+					'assets/sass/woocommerce/extensions/ajax-layered-nav.css': 'assets/sass/woocommerce/extensions/ajax-layered-nav.scss',
+					'assets/sass/woocommerce/extensions/variation-swatches.css': 'assets/sass/woocommerce/extensions/variation-swatches.scss',
+					'assets/sass/woocommerce/extensions/composite-products.css': 'assets/sass/woocommerce/extensions/composite-products.scss',
+					'assets/sass/woocommerce/extensions/photography.css': 'assets/sass/woocommerce/extensions/photography.scss',
+					'assets/sass/woocommerce/extensions/product-reviews-pro.css': 'assets/sass/woocommerce/extensions/product-reviews-pro.scss',
+					'assets/sass/woocommerce/extensions/smart-coupons.css': 'assets/sass/woocommerce/extensions/smart-coupons.scss',
+					'assets/sass/woocommerce/extensions/deposits.css': 'assets/sass/woocommerce/extensions/deposits.scss',
+					'assets/sass/woocommerce/extensions/bundles.css': 'assets/sass/woocommerce/extensions/bundles.scss',
+					'assets/sass/woocommerce/extensions/ship-multiple-addresses.css': 'assets/sass/woocommerce/extensions/ship-multiple-addresses.scss',
+					'assets/sass/woocommerce/extensions/advanced-product-labels.css': 'assets/sass/woocommerce/extensions/advanced-product-labels.scss',
+					'assets/sass/woocommerce/extensions/mix-and-match.css': 'assets/sass/woocommerce/extensions/mix-and-match.scss',
+					'assets/sass/woocommerce/extensions/quick-view.css': 'assets/sass/woocommerce/extensions/quick-view.scss',
+					'assets/sass/woocommerce/woocommerce.css': 'assets/sass/woocommerce/woocommerce.scss',
+					'assets/sass/jetpack/jetpack.css': 'assets/sass/jetpack/jetpack.scss',
+					'assets/sass/base/icons.css': 'assets/sass/base/icons.scss'
+				}]
+			}
+		},
+
 		// Minify all .css files.
 		cssmin: {
 			main: {

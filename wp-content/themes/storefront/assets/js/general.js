@@ -105,7 +105,9 @@ $(document).ready(function(){
 
   });
 
-  $(window).scroll(function(){
+  $(window).scroll(checkMenu);
+
+  function checkMenu(){
     var scrollTop = $(window).scrollTop();
     if(scrollTop > 0){
       $('.menu').addClass('fixed');
@@ -115,9 +117,9 @@ $(document).ready(function(){
       $('.menu').removeClass('fixed');
       $('section.main-content').removeClass('active');
     }    
-  });
+  }
 
-
+  checkMenu();
 });
 
 var slideURL = '';

@@ -3,7 +3,7 @@ body.page{
         margin: 0 auto;
 
         .content-inner {
-            margin-top: 0;
+            margin-top: 84px;
             padding-top: 30px;
         }
     }
@@ -74,6 +74,9 @@ section.main-content {
     }
     .slick-slider {
         height: 160px;
+    }
+    .slick-slide {
+        outline: 0;
     }
     $font-size: 16px;
     $line-height: 1.6;

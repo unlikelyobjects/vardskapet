@@ -15,15 +15,10 @@ $imgpath: "assets/images/";
     padding-top:30px;
     transition: all .3s ease-in-out;
     z-index: 100;
-    &.blue {
-        background: $blue;
-    }
-    &.green {
-        background: $green;
-    }
     &.fixed {
         padding: 10px;
-        background: blue;
+        background: $blue;
+        box-shadow: 2px 2px 30px rgba(0,0,0,0.3);
         .menu-links {
             margin-top: 0;
         }
@@ -33,7 +28,22 @@ $imgpath: "assets/images/";
             height: 28px;
             margin-top:2px;
         }
+        .menu-link-expanded {
+            background: $blue;
+            padding: 0 15px;
+            margin-left: -15px;
+        }
 
+    }
+}
+
+.menu.blue {
+    background: $blue;
+}
+.menu.green {
+    background: $green;
+    &.fixed.menu-link-expanded {
+        background: $green;
     }
 }
 
@@ -69,11 +79,40 @@ $imgpath: "assets/images/";
     height: 36px;
     float: left;
     cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 
+
 .menu-link-expanded {
-    display: none;
-    position: relative;
+    display: block;
+    position: absolute;
+    transition: all .1s ease-in-out;
+    height: 0;
+    overflow: hidden;
+}
+
+.menu-link-holder {
+    display: block;
+    margin-right: 16px;
+    float: left;
+    i {
+        color: white;
+        margin-left: 5px;
+    }
+    &.link-expandable:hover {
+        .menu-link-expanded {
+            display: block;
+            height: 56px;
+        }
+        .menu-link-expanded.menu-services {
+            height: 160px;
+        }
+    }
+    .menu-link-expanded {
+        .menu-link {
+            display: block;
+        }
+    }
 }
 
 .menu-links {
@@ -81,7 +120,7 @@ $imgpath: "assets/images/";
     margin-top: 3px;
     font-size:20px;
     transition: all .3s ease-in-out;
-    div {
+    .flag {
         @include block();
         background-image: url($imgpath + 'english.png');
         background-size: 31px 18px;
@@ -91,15 +130,15 @@ $imgpath: "assets/images/";
         cursor: pointer;
         margin-right: 5px;
     }
-    div[data-href="sv"]{
+    .flag[data-href="sv"]{
         background-image: url($imgpath + 'sweden.png');
     }
-    div.active {
+    .flag[data-active="active"] {
         opacity: 1;
     }
     a {
         color: white;
-        margin-right: 1em;
+        margin-right: 5px;
         font-size:16px;
         &:hover {
             text-decoration: underline;
