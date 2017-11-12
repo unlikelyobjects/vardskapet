@@ -34,6 +34,18 @@
   font-weight: normal;
   font-style: normal; }
 
+.ion {
+  font-family: 'ion'; }
+
+.center {
+  text-align: center; }
+
+.regular {
+  font-family: 'Roboto-Regular'; }
+
+.light {
+  font-family: 'Roboto-Light'; }
+
 .bundle_form div.bundled_product_summary {
   padding-bottom: 1.618em !important;
   margin-bottom: 1.618em;

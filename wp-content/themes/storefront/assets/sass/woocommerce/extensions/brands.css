@@ -34,6 +34,18 @@
   font-weight: normal;
   font-style: normal; }
 
+.ion {
+  font-family: 'ion'; }
+
+.center {
+  text-align: center; }
+
+.regular {
+  font-family: 'Roboto-Regular'; }
+
+.light {
+  font-family: 'Roboto-Light'; }
+
 .header-widget-region .widget_brand_thumbnails ul.brand-thumbnails {
   text-align: center; }
   .header-widget-region .widget_brand_thumbnails ul.brand-thumbnails:before, .header-widget-region .widget_brand_thumbnails ul.brand-thumbnails:after {
