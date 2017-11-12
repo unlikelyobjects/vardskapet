@@ -10,28 +10,31 @@
  * @package storefront
  */
 
-/* Template Name: Documentary */ 
+/* Template Name: Dynamic Page */ 
 
 include 'head-block.php';
 $pagecolor = get_field('page_color');
-$menucolor = get_field('menu_color')
+$menucolor = get_field('menu_color');
+$showvideo = get_field('show_video_header');
+$videoclass = '';
+if($showvideo == 'yes'){
+    $videoclass = 'show-video-header';
+}
 ?>
-<body <?php body_class($pagecolor); ?>>
+<body <?php body_class([$pagecolor,$videoclass]); ?>>
 <?php
 include 'menu.php';
+include 'video-header.php';
 createMenu($menucolor);
+if($showvideo == 'yes'):
+    createVideoHeader('');
+endif;
 ?>
-<div class='video-header' data-url="https://www.youtube.com/watch?v=Zk9J5xnTVMA">
-	<h1 class="video-title"><?php _e("[:en]Art of welcoming[:sv]Konsten att välkomna"); ?></h1>
-	<p><?php _e("[:en]Click here to see the trailer[:sv]Tryck här för att se trailern"); ?></p>
-	<div class="play-button"></div>
-	<div class="arrow-down"></div>
-</div>
 
-<section class="main-content documentary">
+<section class="main-content dynamicpage">
 	<div class="content-inner">
 		<div class="grid-holder">
-			<div class="grid-col-100 white-bg documentary-intro">
+			<div class="grid-col-100 white-bg dynamicpage-intro">
                 <?php
                 if ( have_posts() ) :
 				    while ( have_posts() ) : the_post();

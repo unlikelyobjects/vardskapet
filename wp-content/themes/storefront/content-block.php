@@ -10,13 +10,13 @@ while ( have_rows('layout') ) : the_row();
                 <?php if(get_row_layout() == 'expandable'): ?>
                     <div class="expandable">
                         <div class="entry">
-                            <div class="entry-title colored"><?php echo get_sub_field('title');?></div>
+                            <div class="entry-title colored col-hover"><?php echo get_sub_field('title');?></div>
                             <div class="entry-expanded">
                                 <?php if(have_rows('expandable_blocks')): ?>
                                 <?php while(have_rows('expandable_blocks')): the_row(); ?>
                                     <?php if(get_row_layout() == 'two_column_label'): ?>
                                         <div class="row-title colored"><?php echo get_sub_field('label_text');?></div>
-                                        <div class="row-text">
+                                        <article class="row-text">
                                             <?php echo get_sub_field('column_text');?>
                                             <?php if(have_rows('buttons')): ?>
                                                 <div class="button-row">
@@ -27,7 +27,7 @@ while ( have_rows('layout') ) : the_row();
                                                 <?php endwhile; ?>
                                                 </div>
                                             <?php endif; ?>
-                                        </div>
+                                        </article>
                                     <?php endif; ?>
                                     <?php if(get_row_layout() == 'book'): ?>
                                         <div class="language">
@@ -42,6 +42,15 @@ while ( have_rows('layout') ) : the_row();
                                         <div class="textblock">
                                             <?php echo get_sub_field('description'); ?>
                                         </div>
+                                        <?php if(have_rows('buttons')): ?>
+                                            <div class="button-row">
+                                            <?php while(have_rows('buttons')): the_row(); ?>
+                                                <div class="button colored">
+                                                    <a href="<?php echo get_sub_field('button_link');?>"><?php echo get_sub_field('button_text');?></a>
+                                                </div>
+                                            <?php endwhile; ?>
+                                            </div>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 <?php endwhile; ?>
                                 <?php endif; ?>

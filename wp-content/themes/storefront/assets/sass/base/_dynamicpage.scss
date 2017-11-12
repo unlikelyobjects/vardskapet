@@ -1,4 +1,4 @@
-section.documentary {
+section.dynamicpage {
 
     .grid-holder .grid-col-100.white-bg {
         h1 {
@@ -9,11 +9,11 @@ section.documentary {
 
     .grid-holder .grid-col-100 {
         padding: 80px 0 0;
-        max-width: 612px;
+        max-width: 712px;
         margin: auto;
     }
 
-    .grid-col-100.documentary-intro {
+    .grid-col-100.dynamicpage-intro {
         padding: 40px 12px 0;
         h1 {
             margin-bottom: 40px;
@@ -37,7 +37,7 @@ section.documentary {
     .entry {
         border-bottom: 1px solid $blue;
         &.active {
-            padding-bottom: 80px;
+            padding-bottom: 40px;
             .entry-title:after {
                 content: '\f463';
             }
@@ -62,7 +62,9 @@ section.documentary {
     }
     .entry-expanded {
         display: none;
-        margin-top:40px;
+    }
+    .row-title:first-child {
+        margin-top: 40px;
     }
     .row-title {
         width: 20%;
@@ -81,7 +83,17 @@ section.documentary {
         font-family: 'Roboto-light';
         &:last-child {
             padding-bottom: 0;
+            margin-bottom: 40px;
         }
+        &:first-of-type {
+            margin-top: 40px;
+        }
+    }
+    .language {
+        padding: 0 12px;
+    }
+    .textblock {
+        padding: 12px;
     }
     .button {
         margin-right: 12px;
@@ -89,5 +101,11 @@ section.documentary {
     .button-row {
         margin-top: 40px;
         text-align: center;
+    }
+    .textblock ~ .button-row {
+        margin-top: 0;
+        .button {
+            margin-top: 0;
+        }
     }
 }

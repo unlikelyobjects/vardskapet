@@ -1,10 +1,10 @@
-body.page{
+.show-video-header{
     section.main-content {
         margin: 0 auto;
 
         .content-inner {
-            margin-top: 84px;
-            padding-top: 30px;
+            margin-top: 0;
+            padding-top: 46px;
         }
     }
     &.page-template-documentary section.main-content  {
@@ -22,10 +22,8 @@ section.main-content {
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.23);
     .content-inner{
         width: 100%;
-        max-width: 834px;
-        margin: auto;
-        padding: 80px 0;
-        margin-bottom: 90px;
+        padding: 30px 60px 60px;
+        margin: 80px auto;
     }
 
     @media screen and (max-width:1020px){
@@ -364,68 +362,42 @@ section.main-content {
 .colored {
     color: $blue !important;
 }
-
+@mixin colorTheme($col,$colhover){
+    .colored {
+        color: $col !important;
+    }
+    .colored.col-hover:hover {
+        color: $colhover !important;
+    }
+    .colored-background {
+        background: $col;
+    }
+    .button.colored {
+        background: $col !important;
+        &:hover {
+            background: $colhover !important;
+        }
+    }
+    .expandable {
+        .entry {
+            border-bottom: 1px solid $col;
+        }
+    }
+    .row-text {
+        border-left: 1px solid $col !important;
+    }
+}
+.blue {
+    @include colorTheme($blue,$bluelight);
+}
 .green {
-    .colored {
-        color: $green !important;
-    }
-    .button.colored {
-        background: $green !important;
-        &:hover {
-            background: $green !important;
-            opacity: 0.7;
-        }
-    }
-    .expandable {
-        .entry {
-            border-bottom: 1px solid $green;
-        }
-    }
-    .row-text {
-        border-left: 1px solid $green !important;
-    }
+    @include colorTheme($green,$greenlight);
 }
-
 .purple {
-    .colored {
-        color: $purple !important;
-    }
-    .button.colored {
-        background: $purple !important;
-        &:hover {
-            background: $purple !important;
-            opacity: 0.7;
-        }
-    }
-    .expandable {
-        .entry {
-            border-bottom: 1px solid $purple;
-        }
-    }
-    .row-text {
-        border-left: 1px solid $purple !important;
-    }
+    @include colorTheme($purple,$purplelight);
 }
-
 .pink {
-    .colored {
-        color: $pink !important;
-    }
-    .button.colored {
-        background: $pink !important;
-        &:hover {
-            background: $pink !important;
-            opacity: 0.7;
-        }
-    }
-    .expandable {
-        .entry {
-            border-bottom: 1px solid $pink;
-        }
-    }
-    .row-text {
-        border-left: 1px solid $pink !important;
-    }
+    @include colorTheme($pink,$pinklight);
 }
 
 .text-two-rows {

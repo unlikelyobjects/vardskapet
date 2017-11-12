@@ -14,7 +14,7 @@
 
 	<?php do_action( 'storefront_before_footer' ); ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer colored-background" role="contentinfo">
 		<div class="footer-links">
 			<div class="footer-man">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/man.png">

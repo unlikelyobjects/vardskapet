@@ -32,6 +32,7 @@ $imgpath: "assets/images/";
             background: $blue;
             padding: 0 15px;
             margin-left: -15px;
+            margin-top: 9px;
         }
 
     }
@@ -39,11 +40,73 @@ $imgpath: "assets/images/";
 
 .menu.blue {
     background: $blue;
+    &.fixed {
+        background: $blue;
+        .menu-link-expanded {
+            background: $blue;
+        }
+    }
 }
+.show-video-header {
+    .menu.blue {
+        background: none;
+    }
+    .menu.blue.fixed {
+        background: $blue;
+    }
+}
+
 .menu.green {
     background: $green;
-    &.fixed.menu-link-expanded {
+    &.fixed {
         background: $green;
+        .menu-link-expanded {
+            background: $green;
+        }
+    }
+}
+.show-video-header {
+    .menu.green {
+        background: none;
+    }
+    .menu.green.fixed {
+        background: $green;
+    }
+}
+
+.menu.purple {
+    background: $purple;
+    &.fixed {
+        background: $purple;
+        .menu-link-expanded {
+            background: $purple;
+        }
+    }
+}
+.show-video-header {
+    .menu.purple {
+        background: none;
+    }
+    .menu.purple.fixed {
+        background: $purple;
+    }
+}
+
+.menu.pink {
+    background: $pink;
+    &.fixed {
+        background: $pink;
+        .menu-link-expanded {
+            background: $pink;
+        }
+    }
+}
+.show-video-header {
+    .menu.pink {
+        background: none;
+    }
+    .menu.pink.fixed {
+        background: $pink;
     }
 }
 
