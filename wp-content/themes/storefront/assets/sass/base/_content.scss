@@ -361,6 +361,73 @@ section.main-content {
     }
 }
 
+.colored {
+    color: $blue !important;
+}
+
+.green {
+    .colored {
+        color: $green !important;
+    }
+    .button.colored {
+        background: $green !important;
+        &:hover {
+            background: $green !important;
+            opacity: 0.7;
+        }
+    }
+    .expandable {
+        .entry {
+            border-bottom: 1px solid $green;
+        }
+    }
+    .row-text {
+        border-left: 1px solid $green !important;
+    }
+}
+
+.purple {
+    .colored {
+        color: $purple !important;
+    }
+    .button.colored {
+        background: $purple !important;
+        &:hover {
+            background: $purple !important;
+            opacity: 0.7;
+        }
+    }
+    .expandable {
+        .entry {
+            border-bottom: 1px solid $purple;
+        }
+    }
+    .row-text {
+        border-left: 1px solid $purple !important;
+    }
+}
+
+.pink {
+    .colored {
+        color: $pink !important;
+    }
+    .button.colored {
+        background: $pink !important;
+        &:hover {
+            background: $pink !important;
+            opacity: 0.7;
+        }
+    }
+    .expandable {
+        .entry {
+            border-bottom: 1px solid $pink;
+        }
+    }
+    .row-text {
+        border-left: 1px solid $pink !important;
+    }
+}
+
 .text-two-rows {
     column-count: 2;
     column-gap: 12px;

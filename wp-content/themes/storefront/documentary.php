@@ -13,12 +13,13 @@
 /* Template Name: Documentary */ 
 
 include 'head-block.php';
-
+$pagecolor = get_field('page_color');
+$menucolor = get_field('menu_color')
 ?>
-<body <?php body_class(); ?>>
+<body <?php body_class($pagecolor); ?>>
 <?php
 include 'menu.php';
-createMenu('frontpage');
+createMenu($menucolor);
 ?>
 <div class='video-header' data-url="https://www.youtube.com/watch?v=Zk9J5xnTVMA">
 	<h1 class="video-title"><?php _e("[:en]Art of welcoming[:sv]Konsten att välkomna"); ?></h1>
@@ -35,7 +36,7 @@ createMenu('frontpage');
                 if ( have_posts() ) :
 				    while ( have_posts() ) : the_post();
                     ?>
-                    <h1><?php the_title(); ?></h1>
+                    <h1 class="colored"><?php the_title(); ?></h1>
                     <div class="text-two-rows">
                         <?php the_content(); ?>
                     </div>

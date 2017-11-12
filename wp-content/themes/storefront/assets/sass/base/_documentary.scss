@@ -2,7 +2,6 @@ section.documentary {
 
     .grid-holder .grid-col-100.white-bg {
         h1 {
-            color: $purple;
             text-align: center;
             font-size: 41px;
         }
@@ -21,29 +20,22 @@ section.documentary {
         }
     }
 
-    .expandable {
-        .label {
-            color: $purple;
-        }
-    }
-
     .button {
-        background: $purple;
+        background: $blue;
         a {
             color: white;
         }
         color: white;
         font-family: 'Roboto-regular';
         &:hover {
-            background: #a38cec;
+            background: $blue;
         }
     }
 }
 
 .expandable {
-    margin-top: 80px;
     .entry {
-        border-bottom: 1px solid $purple;
+        border-bottom: 1px solid $blue;
         &.active {
             padding-bottom: 80px;
             .entry-title:after {
@@ -54,7 +46,7 @@ section.documentary {
     .entry-title {
         padding: 20px 12px;
         font-size: 24px;
-        color: $purple;
+        color: $blue;
         font-family: 'Playfair';
         cursor: pointer;
         position: relative;
@@ -76,7 +68,6 @@ section.documentary {
         width: 20%;
         display: inline-block;
         vertical-align: top;
-        color: $purple;
         font-family: 'Roboto-regular';
         padding-left: 12px;
     }
@@ -84,7 +75,7 @@ section.documentary {
         width: 79%;
         display: inline-block;
         vertical-align: top;
-        border-left: 1px solid $purple;
+        border-left: 1px solid $blue;
         padding-left: 30px;
         padding-bottom: 10px;
         font-family: 'Roboto-light';
