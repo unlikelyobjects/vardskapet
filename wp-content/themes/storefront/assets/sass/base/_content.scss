@@ -187,6 +187,35 @@ section.main-content {
             border-radius: 0;
             display: inline-block;
             margin-top: 30px;
+            border: 5px solid #ececec;
+            padding-bottom: 29%;
+            background-size: contain;
+            background-color: white;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            cursor: pointer;
+            .overlay {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.3);
+                text-align: center;
+                i {
+                    display: block;
+                    position: absolute;
+                    top: calc(50% - 20px);
+                    left: calc(50% - 20px);
+                    font-size: 40px;
+                    color: white;
+                }
+            }
+            &:hover {
+                .overlay {
+                    display: block;
+                }
+            }
         }
         .client:nth-of-type(2n) {
             margin-left: 1.5%;
@@ -275,18 +304,18 @@ section.main-content {
         height: 90px;
         width:100%;
         border-bottom: 1px solid white;
-        &.icon-speech {
-            background-image: url(assets/images/icon-speech.png);
-            background-size: 56px 46px;
-        }
-        &.icon-film {
-            background-size: 56px 48px;
-            background-image: url(assets/images/icon-film.png);
-        }
-        &.icon-hat {
-            background-size: 56px 48px;
-            background-image: url(assets/images/icon-hat.png);
-        }
+    }
+    &:nth-child(1n) .icon-bg {
+        background-size: 56px 48px;
+        background-image: url(assets/images/icon-film.png);
+    }
+    &:nth-child(2n) .icon-bg  {
+        background-image: url(assets/images/icon-speech.png);
+        background-size: 56px 46px;
+    }
+    &:nth-child(3n) .icon-bg  {
+        background-size: 56px 48px;
+        background-image: url(assets/images/icon-hat.png);
     }
     h2 {
         margin: 25px 0;
@@ -417,16 +446,15 @@ section.main-content {
     background-image: url(assets/images/teal-bg-square.png);
 }
 
-.purple-bg {
+.services:nth-child(1n) {
     background-image: url(assets/images/purple-bg.png);
 }
 
-
-.green-bg {
+.services:nth-child(2n) {
     background-image: url(assets/images/green-bg.png);
 }
 
-.red-bg {
+.services:nth-child(3n) {
     background-image: url(assets/images/red-bg.png);
 }
 
