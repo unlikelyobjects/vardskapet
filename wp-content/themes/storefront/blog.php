@@ -2,9 +2,9 @@
 
 /* Template Name: Blog */ 
 
-get_header(); ?>
-
-
+include 'head-block.php';
+?>
+<body <?php body_class(['green']); ?>>
 <?php
 include 'menu.php';
 createMenu('blue');

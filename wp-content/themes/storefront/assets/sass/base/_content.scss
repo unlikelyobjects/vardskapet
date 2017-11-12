@@ -6,6 +6,9 @@
             margin-top: 0;
             padding-top: 46px;
         }
+        &.active {
+            margin-top: -200px;
+        }
     }
     &.page-template-documentary section.main-content  {
         margin: -200px auto 0;
@@ -22,7 +25,7 @@ section.main-content {
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.23);
     .content-inner{
         width: 100%;
-        padding: 30px 60px 60px;
+        padding: 30px 60px 120px;
         margin: 80px auto;
     }
 
@@ -32,11 +35,6 @@ section.main-content {
             margin-bottom: 0;
         }
     }
-
-    &.active {
-        margin-top: -200px;
-    }
-
     h1,h2,h3 {
         color: white;
         font-family: $header-font;
@@ -127,9 +125,10 @@ section.main-content {
             }
         }
     }
-
-    .center {
-        text-align: center;
+    &:after {
+        display:block;
+        content:'';
+        clear:both;
     }
 }
 
@@ -404,6 +403,7 @@ section.main-content {
         background: $col;
     }
     .button.colored {
+        color: white !important;
         background: $col !important;
         &:hover {
             background: $colhover !important;
@@ -429,6 +429,9 @@ section.main-content {
 }
 .pink {
     @include colorTheme($pink,$pinklight);
+}
+.red {
+    @include colorTheme($red,$redlight);
 }
 
 .text-two-rows {
@@ -459,7 +462,6 @@ section.main-content {
 .services:nth-child(3n) {
     background-image: url(assets/images/red-bg.png);
 }
-
 
 .searchandfilter {
     background: #2a22ff;
@@ -588,6 +590,29 @@ section.main-content {
         }
         .search-icon.expanded {
             display: inline-block;
+        }
+    }
+}
+
+//Page specific
+
+.page-id-13 {
+    .content-inner {
+        background: $green;
+        h1 {
+            color: white !important;
+        }
+        p {
+            color: white !important;
+        }
+        .expandable .entry {
+            border-bottom: 1px solid white;
+        }
+        .entry-title {
+            color: white !important;
+            &:hover {
+                color: lightgray !important;
+            }
         }
     }
 }

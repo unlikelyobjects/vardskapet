@@ -52,12 +52,37 @@ while ( have_rows('layout') ) : the_row();
                                             </div>
                                         <?php endif; ?>
                                     <?php endif; ?>
+                                    <?php if(get_row_layout() == 'training_info'): ?>
+                                        <div class="textblock">
+                                            <?php echo get_sub_field('description'); ?>
+                                        </div>
+                                        <?php if(have_rows('course_facts')): ?>
+                                            <div class="course-facts">
+                                            <?php while(have_rows('course_facts')): the_row(); ?>
+                                                <div class="course-fact">
+                                                    <div class="course-fact-label colored regular">
+                                                        <?php echo get_sub_field('label');?>:
+                                                    </div>
+                                                    <div class="course-fact-information">
+                                                        <?php echo get_sub_field('information');?>
+                                                    </div>
+                                                </div>
+                                            <?php endwhile; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                    <?php if(get_row_layout() == 'text_block_wysiwyg'): ?>
+                                        <div class="textblock"><?php echo get_sub_field('body');?></div>
+                                    <?php endif; ?>
                                 <?php endwhile; ?>
                                 <?php endif; ?>
                             </div>
                         </div>
                     </div>
                 <?php endif; ?>
+                <?php if(get_row_layout() == 'headline'): ?>
+                    <h1 class="colored"><?php echo get_sub_field('headline');?></h1>
+                <?php endif ?>
                 <?php endwhile; ?>
                 <?php endif; ?>
             </div>

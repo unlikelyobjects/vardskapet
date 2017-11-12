@@ -10,7 +10,7 @@ $(document).ready(function(){
     slideURL = theURL;
   });
   $('.slick-slider-text').slick({
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     dots: true
   });

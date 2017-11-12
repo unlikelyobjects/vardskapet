@@ -15,6 +15,10 @@ $imgpath: "assets/images/";
     padding-top:30px;
     transition: all .3s ease-in-out;
     z-index: 100;
+    .menu-link-expanded {
+        padding: 0 15px;
+        margin-left: -15px;
+    }
     &.fixed {
         padding: 10px;
         background: $blue;
@@ -28,86 +32,40 @@ $imgpath: "assets/images/";
             height: 28px;
             margin-top:2px;
         }
-        .menu-link-expanded {
-            background: $blue;
-            padding: 0 15px;
-            margin-left: -15px;
-        }
-
     }
 }
 
-.menu.blue {
-    background: $blue;
-    &.fixed {
-        background: $blue;
+@mixin colorMenu($cname,$color){
+    .menu.#{$cname} {
+        background: $color;
         .menu-link-expanded {
-            background: $blue;
+            background: $color;
         }
     }
-}
-.show-video-header {
-    .menu.blue {
-        background: none;
-    }
-    .menu.blue.fixed {
-        background: $blue;
+    .show-video-header {
+        .menu.#{$cname}  {
+            background: none;
+            .menu-link-expanded {
+                background: none;
+            }
+        }
+        .menu.#{$cname}.fixed {
+            background: $color;
+            .menu-link-expanded {
+                background: $color;
+            }  
+        }
     }
 }
 
-.menu.green {
-    background: $green;
-    &.fixed {
-        background: $green;
-        .menu-link-expanded {
-            background: $green;
-        }
-    }
-}
-.show-video-header {
-    .menu.green {
-        background: none;
-    }
-    .menu.green.fixed {
-        background: $green;
-    }
-}
+@include colorMenu('blue',$blue);
+@include colorMenu('green',$green);
+@include colorMenu('red',$red);
+@include colorMenu('purple',$purple);
+@include colorMenu('pink',$pink);
 
-.menu.purple {
-    background: $purple;
-    &.fixed {
-        background: $purple;
-        .menu-link-expanded {
-            background: $purple;
-        }
-    }
-}
-.show-video-header {
-    .menu.purple {
-        background: none;
-    }
-    .menu.purple.fixed {
-        background: $purple;
-    }
-}
 
-.menu.pink {
-    background: $pink;
-    &.fixed {
-        background: $pink;
-        .menu-link-expanded {
-            background: $pink;
-        }
-    }
-}
-.show-video-header {
-    .menu.pink {
-        background: none;
-    }
-    .menu.pink.fixed {
-        background: $pink;
-    }
-}
+
 
 .menu-wrapper {
     width: 100%;

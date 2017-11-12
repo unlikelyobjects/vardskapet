@@ -1,6 +1,6 @@
 .blog-post-holder{
     .grid-holder .grid-col-50 {
-        height: 320px;
+        height: 420px;
     }
     .grid-holder:nth-child(2n+1){
         .text {
@@ -34,6 +34,11 @@
             text-overflow: ellipsis;
             margin-bottom: 10px;
         }
+    }
+}
+.page-template-blog {
+    .content-inner {
+        padding-bottom: 120px;
     }
 }
 
@@ -104,7 +109,12 @@
             text-decoration: underline;
         }
     }
-    margin-top: 32px;
+    margin: 32px 0 80px;
+    &:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
 }
 
 section.main-content {

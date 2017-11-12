@@ -1,0 +1,24 @@
+.course-fact-label {
+    font-size: 20px;
+}
+.course-fact {
+    display: inline-block;
+    width: 44%;
+    margin-right: 2.5%;
+    &:nth-child(2n){
+        margin-right: 0;
+        margin-left: 2.5%;
+    }
+    margin-bottom: 20px;
+}
+.course-facts {
+    margin-top: 20px;
+    padding: 0 12px;
+}
+.training-buttons {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    .button {
+        margin: 10px;
+    }
+}
