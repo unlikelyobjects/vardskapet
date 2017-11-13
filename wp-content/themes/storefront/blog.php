@@ -4,7 +4,7 @@
 
 include 'head-block.php';
 ?>
-<body <?php body_class(['green']); ?>>
+<body <?php body_class(['blue']); ?>>
 <?php
 include 'menu.php';
 createMenu('blue');

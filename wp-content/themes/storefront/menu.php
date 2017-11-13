@@ -20,8 +20,8 @@ function createMenu($style){
                 <div class="menu-link-holder link-expandable">
                     <a class="menu-link" href="#"><?php _e("[:en]Värdskapet[:sv]Värdskapet"); ?></a><i class="fa fa-angle-down" aria-hidden="true"></i>
                     <div class="menu-link-expanded">
-                        <a class="menu-link" href="/vardskapet"><?php _e("[:en]What is welcoming[:sv]Vad är värdskap?"); ?></a>
-                        <a class="menu-link" href="/vardskapet"><?php _e("[:en]About Värdskapet[:sv]Om Värdskapet"); ?></a>
+                        <a class="menu-link" href="/what-is-welcoming"><?php _e("[:en]What is welcoming[:sv]Vad är värdskap?"); ?></a>
+                        <a class="menu-link" href="/about-vardskapet"><?php _e("[:en]About Värdskapet[:sv]Om Värdskapet"); ?></a>
                     </div>
                 </div>
 

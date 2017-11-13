@@ -433,6 +433,9 @@ section.main-content {
 .red {
     @include colorTheme($red,$redlight);
 }
+.teal {
+    @include colorTheme($teal,$teallight);
+}
 
 .text-two-rows {
     column-count: 2;

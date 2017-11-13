@@ -1,0 +1,61 @@
+.employee {
+    padding: 12px;
+    &:after {
+        content:'';
+        display:block;
+        clear:both;
+    }
+}
+.employee-col, .employee-col {
+    display: block;
+    width:calc(50% - 12px);
+    padding-right: 6px;
+    padding-bottom: 55px;
+    float: left;
+    &:nth-child(2n){
+        padding-right:0;
+        padding-left:6px;
+        float:right;
+    }
+}
+.employee-image .image {
+    width: 100%;
+    width: 230px;
+    height: 230px;
+    background-size: cover;
+    margin:auto;
+}
+.employee .name {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.employee .description {
+    font-family: 'Roboto-Light';
+    margin-bottom: 16px;
+}
+.employee .movie {
+    cursor: pointer;
+    &:hover {
+        opacity: .8;
+    }
+}
+.mail-link {
+    color: black;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.phone,.email,.movie {
+    margin-bottom: 6px;
+}
+
+.employee:nth-child(2n){
+    .employee-col {
+        float: right;
+        &:nth-child(2n){
+            float: left;
+            text-align: right;
+        }
+    }
+}
