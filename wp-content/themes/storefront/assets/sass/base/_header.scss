@@ -1,6 +1,5 @@
 .video-header {
     text-align:center;
-    padding-top: 240px;
     background: url('assets/images/lappland.png');
     background-size: cover;
     background-position: center center;
@@ -67,6 +66,46 @@
         color: white;
         font-size: 16px;
     }
+}
+.drop-shadow-bar {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    width: 100%;
+    height: 140px;
+    z-index: 97;
+    position: absolute;
+}
+.hero {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 90;
+    left: 0;
+    right: 0;
+}
+#video-bg {
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: hidden;
+}
+#video-bg > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: initial;
+}
+/* 1. No object-fit support: */
+@media (min-aspect-ratio: 16/9) {
+  #video-bg > video { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  #video-bg > video { width: 300%; left: -100%; }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-video {
+    display: none;
+  }
 }
 
 
