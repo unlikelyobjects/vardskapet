@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: Blog */ 
+/* Template Name: Our stories */ 
 
 include 'head-block.php';
 $pagecolor = get_field('page_color');
@@ -19,9 +19,10 @@ createMenu($menucolor);
 if($showvideo == 'yes'):
     createVideoHeader('');
 endif;
+
 $cats = isset($_GET['categories']) ? $_GET['categories'] : '';
 if($cats == ''){
-	$cats == 'Consideration, Dignity, Respect';
+	$cats == 'Our Stories';
 }
 $dateStart = isset($_GET['datestart']) ? $_GET['datestart'] : '';
 $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
@@ -46,10 +47,12 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 
 		<div class="grid-holder">
 			<div class="grid-col-100 white-bg blog-intro">
-				<h1>Blogg</h1>
-				<p class="text-two-rows">
-					Lorem ipsum dolor sit amet, consectetur sa adipiscing elit. Integer porttitor ligula ut sdgs consequat consectetur. Mauris sed ligulased nibh luctus rutrum. Suspendisse non magna in dolor convallis bibendum. Integer pretium pharetra facilisis. Sed tempus maximushem ssapien, id rutrum dolor biben eget semsgjd. iaculis posuere. Curabitur dictum odio eu enim pulvinar, et porttitor mi varius. Ut sagittis faucibus dolor. Ut pellentesque dui ac arcu molestie congue. Donec mattis, ex ut cursus dignissim, sem tortor finibus sem, quis aliquam lectus ligula et massa. Donec condimentum nec libero eu interdum.
-				</p>
+                <?php while ( have_posts() ) : the_post(); ?>
+				<h1 class="colored"><?php the_title(); ?></h1>
+				<div class="text-two-rows">
+					<?php the_content(); ?> 
+                </div>
+                <?php endwhile; ?>
 			</div>
 		</div>
 		<div class="divider-black"></div>
@@ -84,7 +87,7 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 					</div>
 					<div class="grid-col-50 blog-post-small text">
 						<h3 class="colored"><?php the_title(); ?></h3>
-						<p class="blue date colored"><?php echo get_the_date('F j, Y'); ?></p>
+						<p class="colored date"><?php echo get_the_date('F j, Y'); ?></p>
 						<div class="blog-excerpt"><?php the_excerpt(); ?></div>
 						<p class="read-more colored"><a href="<?php the_permalink(); ?>"><?php _e('[:en]Read more[:sv]Läs mer') ?></a></p>
 					</div>
@@ -95,8 +98,8 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 			?>
 
 		</div>
-		<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-		<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+		<div class="nav-previous alignleft colored"><?php next_posts_link( 'Older posts' ); ?></div>
+		<div class="nav-next alignright colored"><?php previous_posts_link( 'Newer posts' ); ?></div>
 	</div>
 </section>
 

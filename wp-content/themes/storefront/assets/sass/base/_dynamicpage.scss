@@ -41,6 +41,9 @@ section.dynamicpage {
             .entry-title:after {
                 content: '\f463';
             }
+            .entry-expanded {
+                display: block;
+            }
         }
     }
     .entry-title {

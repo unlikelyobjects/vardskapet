@@ -16,9 +16,9 @@ createMenu('blue');
 	<div class="content-inner">
 		<div class="blog-post-single">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<h1><?php the_title(); ?></h1>
+				<h1 class="colored"><?php the_title(); ?></h1>
 				<div class="divider-small"></div>
-				<p class="date"><?php echo get_the_date('F j, Y'); ?></p>
+				<p class="date colored"><?php echo get_the_date('F j, Y'); ?></p>
 				<div class="blog-post-content">
 					<?php the_content(); ?>
 				</div>

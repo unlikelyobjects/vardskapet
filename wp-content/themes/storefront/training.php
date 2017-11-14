@@ -52,7 +52,7 @@ endif;
         <?php get_template_part( 'content-block' ); ?>
         <div class="training-buttons center">
             <div class="button colored"><a href="#"><?php _e('[:en]Get contacted[:sv]Bli kontaktad') ?></a></div>
-            <div class="button colored"><a href="/contact"><?php _e('[:en]Contact us[:sv]Kontakta oss') ?></a></div>
+            <div class="button colored"><a href="/about-vardskapet/#dynamic"><?php _e('[:en]Contact us[:sv]Kontakta oss') ?></a></div>
             <div class="button colored"><a href="mailto:info@vardskapet.se"><?php _e('[:en]Make a request[:sv]Gör en förfrågan')?></a></div>
         </div>
 	</div>

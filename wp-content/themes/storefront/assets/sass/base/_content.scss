@@ -397,6 +397,9 @@ section.main-content {
 @mixin colorTheme($col,$colhover){
     .colored {
         color: $col !important;
+        a {
+            color: $col;
+        }
     }
     .colored.col-hover:hover {
         color: $colhover !important;
@@ -418,6 +421,9 @@ section.main-content {
     }
     .row-text {
         border-left: 1px solid $col !important;
+    }
+    .searchandfilter {
+        background: $col;
     }
 }
 .blue {
@@ -469,7 +475,6 @@ section.main-content {
 }
 
 .searchandfilter {
-    background: #2a22ff;
     color: white;
     padding: 20px;
     text-align: left;
@@ -552,7 +557,6 @@ section.main-content {
     }
     .filter-toggle {
         text-align: center;
-        background: #2a22ff;
         font-size: 16px;
         font-family: 'Roboto-light';
         box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.23);

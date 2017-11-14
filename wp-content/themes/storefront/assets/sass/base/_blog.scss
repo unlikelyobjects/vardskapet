@@ -65,20 +65,17 @@
 
 .blog-post-small.grid-col-50 {
     .read-more a {
-        color: #2a22ff;
         font-family: 'Roboto-regular';
         &:hover {
             text-decoration: underline;
         }
     }
     h3 {
-        color: #2a22ff;
         font-size: 24px;
         margin-bottom: 5px;
     }
     .date {
         font-family: 'Roboto-regular';
-        color: #2a22ff;
         margin-bottom: 10px;
     }
     .blog-post-image {
@@ -126,7 +123,6 @@ section.main-content {
             margin: auto;
         }
         p.date {
-            color: blue;
             font-family: 'Roboto-regular';
             text-align: center;
         }
