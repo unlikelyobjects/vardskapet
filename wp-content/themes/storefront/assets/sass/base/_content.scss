@@ -116,7 +116,7 @@ section.main-content {
         a {
             color: black;
         }
-        &:hover {
+        &:hover a {
             color: gray;
         }
         &.blue {
@@ -197,22 +197,19 @@ section.main-content {
             position: relative;
             cursor: pointer;
             .overlay {
-                display: block;
                 position: absolute;
                 width: 100%;
                 height: 100%;
                 opacity: 0;
+                font-family: 'ion';
+                color: white;
+                -webkit-transition: .3s all ease-in-out;
                 transition: .3s all ease-in-out;
-                background: rgba(0,0,0,0.7);
-                text-align: center;
-                i {
-                    display: block;
-                    position: absolute;
-                    top: calc(50% - 20px);
-                    left: calc(50% - 20px);
-                    font-size: 40px;
-                    color: white;
-                }
+                background: rgba(0,0,0,.7);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 50px;
             }
             &:hover {
                 .overlay {
@@ -227,6 +224,9 @@ section.main-content {
         .client:nth-of-type(3n) {
             margin-left: 3%;
             margin-right: 0;
+        }
+        &.service-intro {
+            padding-top: 0;
         }
     }
 }
@@ -301,6 +301,7 @@ section.main-content {
     padding: 0 30px;
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.23);
     text-align: center;
+    cursor: pointer;
     .icon-bg {
         background-position: center center;
         background-repeat: no-repeat;
@@ -342,6 +343,11 @@ section.main-content {
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    transform: scale(1);
+    transition: .3s transform ease-in-out;
+    &:hover {
+        transform: scale(1.05);
     }
 }
 .services-holder {

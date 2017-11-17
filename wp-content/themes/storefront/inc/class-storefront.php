@@ -207,26 +207,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/**
 			 * Styles
 			 */
-			wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
+			
 			wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
-
-			wp_enqueue_style( 'storefront-icons', get_template_directory_uri() . '/assets/sass/base/icons.css', '', $storefront_version );
-
-			/**
-			 * Fonts
-			 */
-			$google_fonts = apply_filters( 'storefront_google_font_families', array(
-				'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,600,700,900',
-			) );
-
-			$query_args = array(
-				'family' => implode( '|', $google_fonts ),
-				'subset' => urlencode( 'latin,latin-ext' ),
-			);
-
-			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-
-			wp_enqueue_style( 'storefront-fonts', $fonts_url, array(), null );
 
 			/**
 			 * Scripts

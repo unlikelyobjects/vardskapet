@@ -18,7 +18,7 @@ include 'head-block.php';
 <?php
 include 'menu.php';
 include 'video-header.php';
-createMenu('blue');
+createMenu('green');
 createVideoHeader('');
 $greenbox = get_field('green_box');
 $tealbox = get_field('teal_box');
@@ -83,12 +83,12 @@ $newsletter = get_field('newsletter');
                 </p>
                 <?php
                 foreach( $clientsection['clients'] as $client){
-                    echo '<div class="client" style="background-image:url('.$client['client_logo'].'";" data-body="'.$client['popup_body'].'" data-title="'.$client['popup_title'].'" data-image="'.$client['popup_image'].'"><div class="overlay"><i class="fa fa-info-circle" aria-hidden="true"></i></div></div>';
+                    echo '<div class="client" style="background-image:url('.$client['client_logo'].'";" data-body="'.$client['popup_body'].'" data-title="'.$client['popup_title'].'" data-image="'.$client['popup_image'].'"><div class="overlay">&#xf48a;</div></div>';
                 }
                 ?>
 
 			</div>
-			<div class="grid-col-100 white-bg">
+			<div class="grid-col-100 white-bg service-intro">
 				<h1><?php echo $servicesection['title'] ?></h1>
 				<p class="text-two-rows">
 					<?php echo $servicesection['body'] ?>
@@ -97,12 +97,12 @@ $newsletter = get_field('newsletter');
 		</div>
 		<div class="grid-holder services-holder">
             <?php foreach($servicesection['colored_boxes'] as $box): ?>
-			<div class="grid-col-33 services purple-bg">
+			<div class="grid-col-33 services purple-bg" data-href="<?php echo $box['read_more_link'] ?>">
 				<div class="icon-bg icon-film"></div>
 				<div class="divider"></div>
 				<h2><?php echo $box['title'] ?></h2>
 				<p><?php echo $box['body'] ?></p>
-				<div class="button"><a href="<?php echo $box['read_more_link'] ?>">Läs mer här</a></div>
+				<div class="button"><a href="<?php echo $box['read_more_link'] ?>"><?php _e('[:en]Read more[:sv]Läs mer här') ?></a></div>
             </div>
             <? endforeach; ?>
 		</div>

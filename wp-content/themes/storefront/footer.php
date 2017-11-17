@@ -26,6 +26,7 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-insta.png" class="share share-insta">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-linked.png" class="share share-linked">
 			</div>
+			<!--
 			<div class="sitemap">
 				<a href="/">Hem</a> /
 				<a href="/blog">Blogg</a> /
@@ -33,6 +34,7 @@
 				<a href="/services">Våra Tjänster</a> /
 				<a href="/contact">Kontakta oss</a>
 			</div>
+			-->
 			<div class="divider"></div>
 			<div class="copyright">@ Copyright 2010 Värdskapet Utveckling AB</div>
 			<div class="developer"><a href="http://www.thirdact.se">Webbyrå Thirdact.se</a></div>
@@ -77,8 +79,6 @@
 		</div>
 	</div>
 </div>
-<script src="/wp-content/themes/storefront/assets/js/vendor/slick.min.js"></script>
-<script src="/wp-content/themes/storefront/assets/js/general.min.js"></script>
 <script>
     (function () {
       var el = document.createElement('script');

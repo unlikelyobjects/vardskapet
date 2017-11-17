@@ -6,8 +6,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
-<link rel="stylesheet" href="/wp-content/themes/storefront/assets/sass/vendors/slick.css">
-<link rel="stylesheet" href="/wp-content/themes/storefront/assets/sass/vendors/slick-theme.css">
 <script src="//www.youtube.com/iframe_api"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>

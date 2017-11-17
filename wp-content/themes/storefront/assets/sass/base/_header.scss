@@ -5,7 +5,6 @@
     background-position: center center;
     min-height: calc(100vh);
     background-attachment: fixed;
-    cursor: pointer;
     .hero:hover {
         .play-button::after {
             background-image: url(assets/images/playbutton-hover.png);
@@ -56,6 +55,9 @@
         left:0;
         right:0;
         position: absolute;
+        cursor: pointer;
+        padding: 30px;
+        background-position: center center;
     }
     .video-title {
         font-size: 56px;
@@ -81,6 +83,7 @@
     z-index: 90;
     left: 0;
     right: 0;
+    cursor: pointer;
 }
 #video-bg {
   top: 0; right: 0; bottom: 0; left: 0;

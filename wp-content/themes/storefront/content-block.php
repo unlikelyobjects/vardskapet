@@ -64,7 +64,7 @@ while ( have_rows('layout') ) : the_row();
                                             <?php while(have_rows('course_facts')): the_row(); ?>
                                                 <div class="course-fact">
                                                     <div class="course-fact-label colored regular">
-                                                        <?php echo get_sub_field('label');?>:
+                                                        <?php echo get_sub_field('label');?>
                                                     </div>
                                                     <div class="course-fact-information">
                                                         <?php echo get_sub_field('information');?>
@@ -87,7 +87,7 @@ while ( have_rows('layout') ) : the_row();
                                                 <div class="description"><?php echo get_sub_field('description'); ?></div>
                                                 <div class="email"><span class="strong colored"><?php _e('[:en]Email:[:sv]E-post:')?></span> <a class="mail-link" href="mailto:<?php echo get_sub_field('email'); ?>"><?php echo get_sub_field('email'); ?></a></div>
                                                 <div class="phone"><span class="strong colored"><?php _e('[:en]Phone:[:sv]Telefon:')?></span> <?php echo get_sub_field('phone'); ?></div>
-                                                <div class="movie colored" data-url="<?php echo get_sub_field('youtube_url'); ?>"><span class="ion">&#xf488;</span> <?php _e('[:en]Watch video presentation[:sv]See videopresentation') ?></div>
+                                                <!--<div class="movie colored" data-url="<?php echo get_sub_field('youtube_url'); ?>"><span class="ion">&#xf488;</span> <?php _e('[:en]Watch video presentation[:sv]See videopresentation') ?></div>-->
                                             </div>
                                         </div>
                                     <?php endif; ?>

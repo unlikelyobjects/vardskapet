@@ -35,7 +35,7 @@ footer.site-footer {
     }
     .footer-man {
         position: absolute;
-        top: 23px;
+        top: 0;
         left: 5px;
         width: 50px;
     }
@@ -74,7 +74,7 @@ footer.site-footer {
 
 
 @media screen and (max-width:1020px){
-    .footer.site-footer {
+    footer.site-footer {
         padding: 35px 20px 40px;
     }
 }
