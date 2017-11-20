@@ -148,6 +148,23 @@ $(document).ready(function(){
     $('.client-modal-body').text(body);
     $('.client-modal-image').css('background-image','url('+image+')');
   });
+  $('.get-contacted').click(function(){
+    console.log('click');
+    $('.get-contacted-popup').addClass('active');
+  });
+  $('.contact-form .button').click(function(){
+    var data = {
+      fullname: $('#contact-form-name').val(),
+      company: $('#contact-form-company').val(),
+      email: $('#contact-form-email').val(),
+      phone: $('#contact-form-phone').val()
+    };
+    console.log(data);
+    postContactForm(data,function(){
+      $('.contact-form').hide(300);
+      $('.contact-form-thanks').delay(300).show(300);
+    });
+  });
   $('.client-modal-close').click(function(){
     $('.client-modal').removeClass('active');
   });
@@ -172,6 +189,21 @@ $(document).ready(function(){
 });
 
 var slideURL = '';
+
+function postContactForm(data,callback){
+  $.ajax({
+    method:'POST',
+    data: data,
+    url: '/get-contacted',
+    success: function(e){
+      console.log(e);
+      callback();
+    },
+    error: function(e){
+        console.log('error signup',e,data);
+    }
+  });
+}
 
 function postSignup(data,callback){
   $.ajax({

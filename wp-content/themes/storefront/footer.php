@@ -68,17 +68,6 @@
 		</div>
 	</div>
 </div>
-<div class="client-modal">
-	<div class="client-modal-content">
-		<div class="client-modal-close ion">&#xf405;</div>
-		<div class="client-modal-wrapper">
-			<h1 class="client-modal-title center">Title</h1>
-			<p class="regular center"><?php _e('[:en]Client reference[:sv]Kundreferens') ?></p>
-			<p class="client-modal-body center light">Body</p>
-			<div class="client-modal-image"></div>
-		</div>
-	</div>
-</div>
 <script>
 (function () {
 	youTubeApiReady = function () {

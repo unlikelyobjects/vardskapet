@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    overflow-y: scroll;
+    overflow-y: auto;
     transform: scale(0);
     transition: all .3s ease-in-out;
     &.active {
@@ -39,6 +39,32 @@
         font-family: 'Playfair';
         margin-bottom: 5px;
     }
+
+    input {
+        border: 1px solid white;
+        border-radius: 5px;
+        background: none;
+        transition: all .3s ease-in-out;
+        &:focus {
+            box-shadow: 0 0 5px rgba(255,255,255,1);
+            background: none;
+            color: white;
+        }
+        color: white;
+        outline: none;
+        display: block;
+        margin: 10px auto;
+        padding: 10px 15px;
+        width: 100%;
+        &::placeholder {
+            color:white;
+        }
+    }
+    .button {
+        margin: 20px auto 0;
+        border-radius: 10px;
+        padding: 10px 30px;
+    }
 }
 
 .client-modal-close {
@@ -62,4 +88,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: white;
+}
+
+.get-contacted-popup {
+    .client-modal-content {
+        max-width: 470px;
+    }
 }

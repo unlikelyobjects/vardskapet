@@ -51,12 +51,34 @@ endif;
         </div>
         <?php get_template_part( 'content-block' ); ?>
         <div class="training-buttons center">
-            <div class="button colored"><a href="#"><?php _e('[:en]Get contacted[:sv]Bli kontaktad') ?></a></div>
+            <div class="button colored get-contacted"><?php _e('[:en]Get contacted[:sv]Bli kontaktad') ?></div>
             <div class="button colored"><a href="/about-vardskapet/#dynamic"><?php _e('[:en]Contact us[:sv]Kontakta oss') ?></a></div>
             <div class="button colored"><a href="mailto:info@vardskapet.se"><?php _e('[:en]Make a request[:sv]Gör en förfrågan')?></a></div>
         </div>
 	</div>
 </section>
+
+<div class="client-modal get-contacted-popup">
+    <div class="client-modal-content colored-background">
+        <div class="client-modal-close ion">&#xf405;</div>
+        <div class="client-modal-wrapper">
+            <div class="contact-form">
+                <h1>Er information</h1>
+                <input type="text" id="contact-form-name" placeholder="Ert namn...">
+                <input type="text" id="contact-form-company" placeholder="Ert företag...">
+                <input type="number" id="contact-form-phone" placeholder="Ert telefonnummer...">
+                <input type="email" id="contact-form-email" placeholder="Er email...">
+                <div class="center">
+                    <div class="button">Skicka in</div>
+                </div>
+            </div>
+            <div class="contact-form-thanks hidden">
+                <h1>Tack!</h1>
+                <p>Vi hör av oss så snart som möjligt.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php
 //do_action( 'storefront_sidebar' );
