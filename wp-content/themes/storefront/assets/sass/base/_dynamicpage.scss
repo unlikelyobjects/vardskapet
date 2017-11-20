@@ -113,3 +113,34 @@ section.dynamicpage {
         }
     }
 }
+
+.video-block {
+    margin: 40px auto 80px;
+    width: 100%;
+    padding-bottom:56%;
+    background-size:cover;
+    background-position: center center;
+    position: relative;
+    cursor: pointer;
+    &:after {
+        background-image: url(assets/images/playbutton.png);
+        width: 43px;
+        height: 43px;
+        margin: auto;
+        background-size: 43px 43px;
+        display:block;
+        text-align: center;
+        content: '';
+        font-size: 4em;
+        color: white;
+        position: absolute;
+        top: calc(50% - 22px);
+        left: 0;
+        right: 0;
+    }
+    &:hover {
+        &:after {
+            background-image: url(assets/images/playbutton-hover.png);
+        }
+    }
+}

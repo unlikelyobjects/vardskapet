@@ -63,8 +63,8 @@
 <div class="modal fade video-dialog" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="video-modal">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
-				<button type="button" data-dismiss="modal"></button>
-				<div id="videoDialogPlayer" class="vidflex"></div>
+				<button type="button" data-dismiss="modal">&#xf2d7;</button>
+				<div id="video-dialog-player" class="vidflex"></div>
 		</div>
 	</div>
 </div>
@@ -80,28 +80,45 @@
 	</div>
 </div>
 <script>
-    (function () {
-      var el = document.createElement('script');
-      el.src = "//www.youtube.com/iframe_api";
-	  var s = document.getElementsByTagName('script')[0];
-	  console.log(s);
-      s.parentNode.insertBefore(el, s);
-    
-      
-      window.onYouTubeIframeAPIReady = function () {
+(function () {
+	youTubeApiReady = function () {
 		console.log('ready yt');
-        window.videoDialogPlayer = new YT.Player('videoDialogPlayer', {
-            height: '360',
-            width: '640',
-            videoId: window.selectedYoutubeVideo,
-            events: {
-                'onReady': function(){
-                    window.videoDialogPlayer.playVideo();
-                }
-            }
-        });
-      }
-    }());
+		window.videoDialogPlayer = new YT.Player('video-dialog-player', {
+			height: '360',
+			width: '640',
+			videoId: window.selectedYoutubeVideo,
+			events: {
+				'onReady': function(){
+					window.videoDialogPlayer.playVideo();
+				},
+				'onStateChange': onPlayerStateChange
+			}
+		});
+	}
+	var el = document.createElement('script');
+	el.src = "//www.youtube.com/iframe_api";
+	var s = document.getElementsByTagName('script')[0];
+	console.log(s);
+	s.parentNode.insertBefore(el, s);
+	
+	// YT API is bugged and sometimes does not fire the ready event
+	var checkYT = setInterval(function () {
+		if(YT.loaded){
+			//...setup video here using YT.Player()
+			console.log('yt loaded loop');
+			youTubeApiReady();
+			clearInterval(checkYT);
+		}
+	}, 100);
+
+	function onPlayerStateChange(event) {
+		console.log(event);
+		if(event.data == YT.PlayerState.ENDED){
+			console.log('video ended');
+			$('#video-modal').modal('hide');
+		}
+	}
+}());
   </script>
 </body>
 </html>

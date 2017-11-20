@@ -37,34 +37,38 @@ $newsletter = get_field('newsletter');
 				<p class="colored-link"><a href="<?php echo $greenbox['read_more_link'] ?>"><?php _e("[:en]Read more[:sv]Läs mer här"); ?></a></p>
             </div>
             
-			<div class="grid-col-50 blue-bg-square colored-box latest-blogs">
-				<h2><?php _e("[:en]Latest blog post[:sv]Senaste blogginlägget"); ?></h2>
-				<div class="divider-short"></div>
-				
+			<div class="grid-col-50 colored-box latest-blogs">
 				<div class="slick-slider-text">
 					<?php
-					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-					$args = array(
-						'post_type' => 'post',
-						'posts_per_page' => 3
-					);
-					$wp_query = new WP_Query($args);
-					$postcount = $wp_query->found_posts;
-					if ( have_posts() ) :
-						while ( have_posts() ) : the_post();
-						?>
-						<div class="slidething" data-url="<?php the_permalink(); ?>">
-							<div class="date"><?php echo get_the_date('F j, Y'); ?></div>
-							<div class="slider-excerpt"><?php the_excerpt(); ?></div>
-						</div>
-					<?php
-						endwhile;
-					endif;
-					?>
+					$cats = array('Blog','Our stories','Events');
+					$catClass = array('blog-bg','stories-bg','events-bg');
+					$catTitle = array("[:en]Latest blog post[:sv]Senaste blogginlägget","[:en]Latest story[:sv]Senaste berättelsen","[:en]Upcoming events[:sv]Kommande events");
+					for($x = 0; $x <= 2; $x++) : ?>
+						<?php
+						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+						$args = array(
+							'post_type' => 'post',
+							'category_name' => $cats[$x],
+							'posts_per_page' => 1
+						);
+						$wp_query = new WP_Query($args);
+						$postcount = $wp_query->found_posts;
+						if ( have_posts() ) :
+							while ( have_posts() ) : the_post();
+							?>
+							<div class="slidething <?php echo $catClass[$x]; ?>" data-url="<?php the_permalink(); ?>">
+								<h2><?php _e($catTitle[$x]); ?></h2>
+								<div class="divider-short"></div>
+								<div class="date"><?php echo get_the_date('F j, Y'); ?></div>
+								<div class="slider-excerpt"><?php the_excerpt(); ?></div>
+							</div>
+							<?php
+							endwhile;
+						endif;
+					endfor; ?>
 				</div>
-				<div class="divider"></div>
-				<div class="colored-link"><?php _e("[:en]Read more[:sv]Läs mer här"); ?></div>
-			</div>
+			<div class="divider"></div>
+			<div class="colored-link"><?php _e("[:en]Read more[:sv]Läs mer här"); ?></div>
 		</div>
 		<div class="grid-holder">
 			<div class="grid-col-100 teal-bg-square colored-box">

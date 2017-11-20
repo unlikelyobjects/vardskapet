@@ -3,10 +3,8 @@ var $ = jQuery;
 var console;
 console.log('waddup');
 $(document).ready(function(){
-  $('.slick-slider-text').on('afterChange init', function(event, slick, currentSlide, nextSlide){
+  $('.slick-slider-text').on('afterChange init', function(event, slick, currentSlide){
     var theURL = $(slick.$slides.get(currentSlide)).attr('data-url');
-    console.log(theURL);
-    console.log(this,event,slick,currentSlide,nextSlide);
     slideURL = theURL;
   });
   $('.slick-slider-text').slick({
@@ -46,12 +44,28 @@ $(document).ready(function(){
     var url = $('#video-bg').attr('data-url');
     var myregexp = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i;
     window.selectedYoutubeVideo = url.match(myregexp)[1];
+    console.log(window.videoDialogPlayer);
     window.videoDialogPlayer.loadVideoById(window.selectedYoutubeVideo);
+    window.headerVideoOpen = true;
+    $('#video-modal').modal('show');
+  });
+
+  $('.video-block').click(function(e){
+    console.log(e);
+    var url = $(e.currentTarget).attr('data-href');
+    var myregexp = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i;
+    window.selectedYoutubeVideo = url.match(myregexp)[1];
+    console.log(window.videoDialogPlayer);
+    window.videoDialogPlayer.loadVideoById(window.selectedYoutubeVideo);
+    window.headerVideoOpen = false;
     $('#video-modal').modal('show');
   });
 
   $('.video-dialog').on('hide.bs.modal', function() {
     window.videoDialogPlayer.stopVideo();
+    if(window.headerVideoOpen){
+      window.headerVideoOpen = false;
+    }
   });
 
   $('li.cat-item-1').remove();

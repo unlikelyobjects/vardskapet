@@ -67,7 +67,15 @@ while ( have_rows('layout') ) : the_row();
                                                         <?php echo get_sub_field('label');?>
                                                     </div>
                                                     <div class="course-fact-information">
+                                                        <?php if(get_sub_field('link') != '') :
+                                                        ?>
+                                                            <a href="<?php echo get_sub_field('link');?>">
+                                                        <?php endif;?>
                                                         <?php echo get_sub_field('information');?>
+                                                        <?php if(get_sub_field('link') != '') :
+                                                        ?>
+                                                            </a>
+                                                        <?php endif; ?>
                                                     </div>
                                                 </div>
                                             <?php endwhile; ?>
@@ -99,6 +107,9 @@ while ( have_rows('layout') ) : the_row();
                 <?php endif; ?>
                 <?php if(get_row_layout() == 'headline'): ?>
                     <h1 class="colored"><?php echo get_sub_field('headline');?></h1>
+                <?php endif ?>
+                <?php if(get_row_layout() == 'video'): ?>
+                    <div class="video-block" data-href="<?php echo get_sub_field('youtube_url');?>" style="background-image:url(<?php echo get_sub_field('video_image') ?>)"></div>
                 <?php endif ?>
                 <?php endwhile; ?>
                 <?php endif; ?>
