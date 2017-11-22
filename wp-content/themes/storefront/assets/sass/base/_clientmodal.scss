@@ -1,3 +1,7 @@
+body.popup-active {
+    overflow-y: hidden;
+}
+
 .client-modal {
     background: none;
     position: fixed;
@@ -11,12 +15,22 @@
     overflow-y: auto;
     transform: scale(0);
     transition: all .3s ease-in-out;
+    pointer-events: none;
     &.active {
         transform: scale(1);
+    }
+    &.fullscreen {
+        .client-modal-content {
+            top: 0;
+            transform: none;
+            left: 0;
+            max-width:100%;
+        }
     }
 }
 .client-modal-content {
     background: $green;
+    pointer-events: all;
     width: 100%;
     max-width: 712px;
     margin: auto;
@@ -37,10 +51,13 @@
     h1 {
         color: white;
         font-family: 'Playfair';
-        margin-bottom: 5px;
+        margin-bottom: 25px;
+    }
+    .pad25 {
+        margin: 25px auto;
     }
 
-    input {
+    input,textarea {
         border: 1px solid white;
         border-radius: 5px;
         background: none;
@@ -59,6 +76,9 @@
         &::placeholder {
             color:white;
         }
+    }
+    textarea {
+        height: 150px;
     }
     .button {
         margin: 20px auto 0;
@@ -95,3 +115,104 @@
         max-width: 470px;
     }
 }
+
+
+.request-form {
+    input,select {
+        width: calc(49% - 10px);
+        margin-right: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    #request-form-date {
+        width: calc(40% - 10px);
+    }
+    #request-form-time, #request-form-pass {
+        width: calc(30% - 10px);
+    }
+    #request-form-address,#request-form-purpose {
+        width: calc(100% - 16px);
+        margin: 10px 0;
+    }
+}
+
+$background: #e74c3c;
+$select-color: #fff;
+$select-background: #c0392b;
+$select-width: calc(49% - 10px);;
+$select-height: 47px; 
+
+.select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+  .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: $select-color;
+    width: $select-width;
+    height: $select-height;
+    margin: 10px 10px 10px 0;
+  }
+  .select-styled {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $select-background;
+    padding: 8px 15px;
+    border-radius: 5px;
+    line-height: 1.9;
+    border: 1px solid white;
+    @include transition(all 0.2s ease-in);
+    &:after {
+        content: "\f123";
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        font-family: ion;
+        transition: all .3s ease-in-out;
+    }
+    &:active, &.active {
+        box-shadow: 0 0 5px rgba(255,255,255,1);
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
+  .select-options {
+    display: none; 
+    position: absolute;
+    top: 98%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    li {
+      margin: 0;
+      padding: 12px 0;
+      text-indent: 15px;
+      border-bottom: 1px solid white;
+      @include transition(all 0.15s ease-in);
+      &:hover {
+        color: $select-background;
+        background: $select-color;
+      }
+      &[rel="hide"] {
+        display: none;
+      }
+      &:last-child {
+          border-bottom: none;
+      }
+    }
+  }

@@ -144,6 +144,7 @@ $(document).ready(function(){
     var body = $el.attr('data-body');
     var image = $el.attr('data-image');
     $('.client-modal').addClass('active');
+    $('body').addClass('popup-active');
     $('.client-modal-title').text(title);
     $('.client-modal-body').text(body);
     $('.client-modal-image').css('background-image','url('+image+')');
@@ -151,6 +152,7 @@ $(document).ready(function(){
   $('.get-contacted').click(function(){
     console.log('click');
     $('.get-contacted-popup').addClass('active');
+    $('body').addClass('popup-active');
   });
   $('.contact-form .button').click(function(){
     var data = {
@@ -165,8 +167,14 @@ $(document).ready(function(){
       $('.contact-form-thanks').delay(300).show(300);
     });
   });
+  $('.make-a-request').click(function(){
+    console.log('click');
+    $('.request-popup').addClass('active');
+    $('body').addClass('popup-active');
+  });
   $('.client-modal-close').click(function(){
     $('.client-modal').removeClass('active');
+    $('body').removeClass('popup-active');
   });
 
   $(window).scroll(checkMenu);
@@ -186,6 +194,56 @@ $(document).ready(function(){
   }
 
   checkMenu();
+
+  /*
+  Reference: http://jsfiddle.net/BB3JK/47/
+  */
+
+  $('select').each(function(){
+    var $this = $(this), numberOfOptions = $(this).children('option').length;
+
+    $this.addClass('select-hidden'); 
+    $this.wrap('<div class="select"></div>');
+    $this.after('<div class="select-styled colored-background"></div>');
+
+    var $styledSelect = $this.next('div.select-styled');
+    $styledSelect.text($this.children('option').eq(0).text());
+
+    var $list = $('<ul />', {
+        'class': 'select-options colored-background'
+    }).insertAfter($styledSelect);
+
+    for (var i = 0; i < numberOfOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($list);
+    }
+
+    var $listItems = $list.children('li');
+
+    $styledSelect.click(function(e) {
+        e.stopPropagation();
+        $('div.select-styled.active').not(this).each(function(){
+            $(this).removeClass('active').next('ul.select-options').hide();
+        });
+        $(this).toggleClass('active').next('ul.select-options').toggle();
+    });
+
+    $listItems.click(function(e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('active');
+        $this.val($(this).attr('rel'));
+        $list.hide();
+        //console.log($this.val());
+    });
+
+    $(document).click(function() {
+        $styledSelect.removeClass('active');
+        $list.hide();
+    });
+
+  });
 });
 
 var slideURL = '';
