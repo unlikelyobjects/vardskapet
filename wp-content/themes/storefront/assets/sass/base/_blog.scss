@@ -101,17 +101,28 @@
 
 .nav-previous, .nav-next {
     a {
-        color: $blue;
+        color: white;
         &:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
     }
-    margin: 32px 0 80px;
     &:after {
         display: block;
         content: '';
         clear: both;
     }
+}
+.nav-next a:after {
+    font-family: 'ion';
+    content: '\f125';
+    display: inline;
+    margin-left: 8px;
+}
+.nav-previous a:before {
+    font-family: 'ion';
+    content: '\f124';
+    display: inline;
+    margin-right: 8px;
 }
 
 section.main-content {

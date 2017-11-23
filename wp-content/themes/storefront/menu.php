@@ -10,6 +10,8 @@ function createMenu($style){
     <div class="menu cf <?php echo $style; ?>">
         <div class="menu-wrapper">
             <div class="menu-logo"></div>
+            <img class="mobile-logo" src="/wp-content/themes/storefront/assets/images/logo-mobile.png" alt="">
+            <div class="hamburger show-mobile"></div>
             <div class="menu-links">
                 <div class="menu-link-holder">
                     <a class="menu-link" href="/"><?php _e("[:en]Home[:sv]Hem"); ?></a>

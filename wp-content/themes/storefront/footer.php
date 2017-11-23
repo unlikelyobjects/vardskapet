@@ -59,7 +59,24 @@
 
 <?php wp_footer(); ?>
 
-
+<div class="client-modal get-contacted-popup">
+    <div class="client-modal-content colored-background">
+        <div class="client-modal-close ion">&#xf405;</div>
+        <div class="client-modal-wrapper">
+			<h1 class="center"><?php _e('[:en]Watch the first five minutes of <br>The art of welcoming![:sv]Se de fem första minuterna av The art of welcoming!');?></h1>
+			<p class="center"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Premurera på vårat värdskapsbrev för att följa ämnet och se de första fem minuterna av vår dokumentärfilm eller läs mer om hur du kan uppleva våran dokumentär.') ?></p>
+			<input type="text" id="header-popup-email" placeholder="<?php _e('[:en]Write your email here[:sv]Skriv in er emailadress här');?>">
+			<div class="center">		
+				<div class="button popup-subscribe"><?php _e('[:en]Submit[:sv]Skicka');?></div>
+				<div class="button"><a href="/the-art-of-welcoming"><?php _e('[:en]Read more[:sv]Läs mer');?></a></div>
+			</div>
+			<div class="get-contacted-thanks">
+				<h1 class="center"><?php _e('[:en]Thanks![:sv]Tack!');?></h1>
+                <p class="center"><?php _e('[:en]We´ve sent you an email with a link to the first five minutes of The art of welcoming[:sv]Vi har mailat en länk med de fem första minuterna av The art of welcoming.');?></p>
+			</div>
+		</div>
+	</div>
+</div>
 <div class="modal fade video-dialog" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="video-modal">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -80,7 +97,7 @@
 				'onReady': function(){
 					window.videoDialogPlayer.playVideo();
 				},
-				'onStateChange': onPlayerStateChange
+				'onStateChange': window.onVideoStateChange
 			}
 		});
 	}
@@ -99,14 +116,6 @@
 			clearInterval(checkYT);
 		}
 	}, 100);
-
-	function onPlayerStateChange(event) {
-		console.log(event);
-		if(event.data == YT.PlayerState.ENDED){
-			console.log('video ended');
-			$('#video-modal').modal('hide');
-		}
-	}
 }());
   </script>
 </body>

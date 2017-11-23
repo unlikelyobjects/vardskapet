@@ -123,7 +123,7 @@ $newsletter = get_field('newsletter');
 	</div>
 </section>
 
-<div class="client-modal">
+<div class="client-modal customer-popup">
 	<div class="client-modal-content">
 		<div class="client-modal-close ion">&#xf405;</div>
 		<div class="client-modal-wrapper">

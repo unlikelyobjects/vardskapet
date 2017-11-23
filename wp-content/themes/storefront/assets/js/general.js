@@ -17,9 +17,9 @@ $(document).ready(function(){
     var text = $('#newsletter-input').val();
     if(ValidateEmail(text)){
       $('.newsletter .form').removeClass('error');
-      postSignup({email:text},function(){
+      /*postSignup({email:text},function(){
         console.log('success');
-      });
+      });*/
     }
     else {
       $('.newsletter .form').addClass('error');
@@ -143,7 +143,7 @@ $(document).ready(function(){
     var title = $el.attr('data-title');
     var body = $el.attr('data-body');
     var image = $el.attr('data-image');
-    $('.client-modal').addClass('active');
+    $('.customer-popup').addClass('active');
     $('body').addClass('popup-active');
     $('.client-modal-title').text(title);
     $('.client-modal-body').text(body);
@@ -172,6 +172,33 @@ $(document).ready(function(){
     $('.request-popup').addClass('active');
     $('body').addClass('popup-active');
   });
+  $('.request-form .button').click(function(){
+    var data = {};
+    $('.request-form input, .request-form select, .request-form textarea').each(function(){
+      var id = String( $(this).attr('id').replace('request-form-',''));
+      var val = $(this).val();
+      if(val === 'hide'){
+        val = '';
+      }
+      data[id] = val;
+      postRequestForm(data,function(){
+        $('.request-form').hide(300);
+        $('.request-form-thanks').delay(300).show(300);
+      });
+    });
+  });
+
+  $('.hamburger').click(function(){
+    $('.menu').toggleClass('expanded');
+    if($('.menu').hasClass('expanded')){
+      $('body').addClass('popup-active');
+    }
+    else {
+      $('body').removeClass('popup-active');
+    }
+    
+  });
+
   $('.client-modal-close').click(function(){
     $('.client-modal').removeClass('active');
     $('body').removeClass('popup-active');
@@ -263,20 +290,36 @@ function postContactForm(data,callback){
   });
 }
 
-function postSignup(data,callback){
+function postRequestForm(data,callback){
   $.ajax({
     method:'POST',
     data: data,
-    url: '/save-signup',
+    url: '/make-a-request',
     success: function(e){
       console.log(e);
       callback();
     },
     error: function(e){
-        console.log('error signup',e);
+        console.log('error signup',e,data);
     }
   });
 }
+
+window.onVideoStateChange = function(event){
+  console.log(event);
+  var YT = window.YT;
+  if(event.data === YT.PlayerState.ENDED){
+    console.log('video ended');
+    
+    if(window.headerVideoOpen){
+      window.headerVideoOpen = false;
+      $('.get-contacted-popup').addClass('active');
+      $('body').addClass('popup-active');
+    }
+
+    $('#video-modal').modal('hide');
+  }
+};
 
 function ValidateEmail(inputText){  
   var mailformat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; 

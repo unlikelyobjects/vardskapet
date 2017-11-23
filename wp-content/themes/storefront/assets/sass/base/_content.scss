@@ -462,6 +462,20 @@ section.main-content {
     .searchandfilter {
         background: $col;
     }
+    .nav-previous,.nav-next {
+        a {
+            color: white;
+            background: $col;
+            padding:10px 20px;
+            &:hover {
+                background: $colhover;
+                text-decoration: none;
+            }
+        }
+    }
+    .menu.expanded {
+        background: $col;
+    }
 }
 .blue {
     @include colorTheme($blue,$bluelight);

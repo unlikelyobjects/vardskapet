@@ -95,8 +95,12 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 			?>
 
 		</div>
-		<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-		<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+		<div class="grid-holder">
+			<div class="grid-col-100">
+				<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+				<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+			</div>
+		</div>
 	</div>
 </section>
 

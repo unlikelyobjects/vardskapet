@@ -87,8 +87,8 @@ endif;
             <div class="request-form">
                 <h1 class="center">Er information</h1>
                 <input type="text" id="request-form-name" placeholder="Ert namn...">
-                <input type="number" id="contact-form-phone" placeholder="Ert telefonnummer...">
-                <input type="email" id="contact-form-email" placeholder="Er email...">
+                <input type="number" id="request-form-phone" placeholder="Ert telefonnummer...">
+                <input type="email" id="request-form-email" placeholder="Er email...">
                 <select id="request-form-company">
                 value="hide"
                     <option value="hide">Typ av organisation</option>
@@ -144,7 +144,7 @@ endif;
                     <div class="button">Skicka in</div>
                 </div>
             </div>
-            <div class="contact-form-thanks hidden">
+            <div class="request-form-thanks hidden">
                 <h1>Tack!</h1>
                 <p>Vi hör av oss så snart som möjligt.</p>
             </div>

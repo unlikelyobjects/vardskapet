@@ -84,6 +84,9 @@ body.popup-active {
         margin: 20px auto 0;
         border-radius: 10px;
         padding: 10px 30px;
+        a {
+            font-family: 'Roboto-Regular';
+        }
     }
 }
 
@@ -216,3 +219,28 @@ $select-height: 47px;
       }
     }
   }
+
+.get-contacted-popup {
+    .client-modal-content {
+    max-width: 850px;
+    width: 100%;
+    background: #252522;
+    }
+    .client-modal-wrapper {
+        padding: 40px;
+        max-width: 630px;
+        width: 100%;
+    }
+    .button {
+        margin-left:8px;
+        margin-right: 8px;
+        a {
+            color: black;
+            font-family: 'Roboto-Regular';
+        }
+    }
+}
+#header-popup-email {
+    width: 100%;
+    max-width: 350px;
+}
