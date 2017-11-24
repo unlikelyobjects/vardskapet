@@ -676,3 +676,103 @@ section.main-content {
         }
     }
 }
+
+
+@media screen and (max-width: 782px){
+    section.main-content h1 {
+        font-size: 32px;
+    }
+    .video-header {
+        background: url(assets/images/mobile-bg.jpg);
+    }
+    .grid-holder .grid-col-50 {
+        width: 100%;
+        margin: 0 0 5%;
+        padding: 20px 30px 0 30px;
+        &.latest-blogs {
+            padding: 0;
+            height: 320px;
+        }
+        &.green-bg-square {
+            height: 297px;
+        }
+    }
+    .grid-holder .grid-col-100 {
+        margin: 0 0 5%;
+        padding: 20px 30px 30px 30px;
+    }
+    .grid-holder .grid-col-50:nth-child(2n) {
+        margin-left: 0;
+    }
+    section.main-content .divider {
+        right: 30px;
+        width: calc(100% - 30*2px);
+        bottom: 45px;
+    }
+    section.main-content .latest-blogs {
+        .slick-dots {
+            bottom: 18px;
+        }
+    }
+    section.main-content .slick-dots {
+        left: 27px;
+    }
+    section.main-content .slick-slider-text .slidething {
+        padding: 20px 30px 30px 30px;
+        height: 320px;
+    }
+    .colored-box .colored-link {
+        right: 30px;
+        bottom: 15px;
+    }
+    .show-video-header section.main-content .content-inner {
+        padding: 5% 5% 15%;
+    }
+    .text-two-rows {
+        column-count: 1;
+    }
+    .grid-col-33.services {
+        width: 100%;
+        margin: 0 0 5%!important;
+        /* padding: 0; */
+        height: auto;
+        &:hover {
+            transform: none;
+        }
+    }
+    .newsletter {
+        width: 100%;
+        max-width: 602px;
+        margin: 0 0 5%;
+        padding: 20px 30px 30px 30px;
+    }
+    .grid-holder .grid-col-100 .client {
+        width: calc(50% - 6%);
+        margin-top:3%;
+        &:nth-of-type(3n){
+            margin-left: 0;
+            margin-right: 3%
+        }
+    }
+    .services-holder {
+        margin: 0;
+    }
+    .services .button {
+        margin-bottom: 10%;
+    }
+    footer.site-footer {
+        .developer,.copyright {
+            position: initial !important;
+            margin: 10px;
+        }
+    }
+    .client-modal-wrapper {
+        padding: 50px 5%;
+    }
+    .video-header .video-title {
+        font-size: 36px;
+    }
+    .footer-links {
+        padding-bottom: 0 !important;
+    }
+}

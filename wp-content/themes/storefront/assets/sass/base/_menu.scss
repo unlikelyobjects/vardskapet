@@ -171,6 +171,11 @@
 }
 
 @media screen and (max-width: 782px){
+    :not(.show-video-header){
+        .menu {
+            padding: 10px;
+        }
+    }
     .logged-in .menu.fixed {
         top: 0;
     }
@@ -244,5 +249,12 @@
                 content: '\f405';
             }
         }
+    }
+}
+
+@media screen and (max-width: 374px){
+    .menu.expanded .menu-links a {
+        font-size: 16px;
+        padding: 2px 0;
     }
 }
