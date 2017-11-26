@@ -1,5 +1,6 @@
 body.popup-active {
     overflow-y: hidden;
+    max-height: 100vh;
 }
 
 .client-modal {
@@ -246,4 +247,15 @@ $select-height: 47px;
 #header-popup-email {
     width: 100%;
     max-width: 350px;
+}
+
+@media screen and (max-width: 782px){
+    .client-modal-wrapper {
+        padding: 50px 5%;
+    }
+    .client-modal-content {
+        top: 0;
+        left: 0;
+        transform: none;
+    }
 }

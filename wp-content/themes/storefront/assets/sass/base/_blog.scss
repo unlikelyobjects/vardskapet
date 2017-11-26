@@ -157,3 +157,14 @@ section.main-content {
         }
     }
 }
+
+@media screen and (max-width:782px){
+    section.main-content .blog-post-single .blog-post-content {
+        column-count: 1;
+        margin: 25px 0 25px;
+        padding: 0;
+        img {
+            width: 100%;
+        }
+    }
+}

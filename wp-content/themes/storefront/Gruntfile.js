@@ -253,7 +253,7 @@ module.exports = function( grunt ) {
 					'assets/js/admin/welcome-screen/*js',
 					'!assets/js/admin/welcome-screen/*.min.js'
 				],
-				tasks: ['jshint', 'uglify']
+				tasks: [ 'uglify']
 			}
 		},
 
@@ -409,7 +409,6 @@ module.exports = function( grunt ) {
 	// Register tasks
 	grunt.registerTask( 'default', [
 		'css',
-		'jshint',
 		'uglify'
 	]);
 

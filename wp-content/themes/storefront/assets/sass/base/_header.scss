@@ -3,7 +3,7 @@
     background-size: cover;
     background: white;
     background-position: center center;
-    min-height: calc(100vh);
+    min-height: 100vh;
     background-attachment: fixed;
     .hero:hover {
         .play-button::after {
@@ -88,6 +88,7 @@
 #video-bg {
   top: 0; right: 0; bottom: 0; left: 0;
   overflow: hidden;
+  position: absolute;
 }
 #video-bg > video {
   position: absolute;
@@ -97,20 +98,39 @@
   height: 100%;
   max-width: initial;
 }
-/* 1. No object-fit support: */
-@media (min-aspect-ratio: 16/9) {
-  #video-bg > video { height: 300%; top: -100%; }
-}
-@media (max-aspect-ratio: 16/9) {
-  #video-bg > video { width: 300%; left: -100%; }
+body {
+    max-width: 100vw;
 }
 
-@media (max-width: 767px) {
+/* 1. No object-fit support: */
+@media (min-aspect-ratio: 16/9) {
+  #video-bg > video {
+      height: 300%; top: -100%;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+  #video-bg > video {
+      width: 330%; left: -115%;
+    }
+}
+
+#video-bg > .canvas {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+@media (max-width: 782px) {
   .fullscreen-video {
-    display: none;
+    //display: none;
   }
   .video-header {
-      background: url('assets/images/lappland.png');
+      background-image: url(assets/images/mobile-bg.jpg);
   }
 }
 

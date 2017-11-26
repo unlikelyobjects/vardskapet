@@ -3,6 +3,7 @@ var $ = jQuery;
 var console;
 console.log('waddup');
 $(document).ready(function(){
+  
   $('.slick-slider-text').on('afterChange init', function(event, slick, currentSlide){
     var theURL = $(slick.$slides.get(currentSlide)).attr('data-url');
     slideURL = theURL;
@@ -25,6 +26,20 @@ $(document).ready(function(){
       $('.newsletter .form').addClass('error');
     }
   });
+
+  $('.link-expandable').click(function(e){
+    var $el = $(e.currentTarget);
+    if($('body').outerWidth() < 783){
+      if($el.hasClass('mobile-expanded')){
+        $el.removeClass('mobile-expanded');
+        $('.menu-link-expanded').slideUp(300);
+      }
+      else {
+        $el.addClass('mobile-expanded');
+        $el.find('.menu-link-expanded').slideDown(300);
+      }
+    }
+  })
 
   $('.menu-logo').click(function(){
     window.location.href = '/';

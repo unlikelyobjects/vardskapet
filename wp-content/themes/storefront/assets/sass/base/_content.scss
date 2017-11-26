@@ -1,13 +1,13 @@
 .show-video-header{
     section.main-content {
-        margin: 0 auto;
+        margin: 100vh auto 0;
 
         .content-inner {
             margin-top: 0;
             padding-top: 46px;
         }
         &.active {
-            margin-top: -200px;
+            margin-top: calc(100vh - 200px);
         }
     }
     &.page-template-documentary section.main-content  {
@@ -682,9 +682,6 @@ section.main-content {
     section.main-content h1 {
         font-size: 32px;
     }
-    .video-header {
-        background: url(assets/images/mobile-bg.jpg);
-    }
     .grid-holder .grid-col-50 {
         width: 100%;
         margin: 0 0 5%;
@@ -765,9 +762,6 @@ section.main-content {
             position: initial !important;
             margin: 10px;
         }
-    }
-    .client-modal-wrapper {
-        padding: 50px 5%;
     }
     .video-header .video-title {
         font-size: 36px;

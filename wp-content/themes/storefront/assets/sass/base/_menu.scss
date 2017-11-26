@@ -7,6 +7,7 @@
     margin: auto;
     padding: 16px;
     position: fixed;
+    touch-action: manipulation;
     top: 0;
     left: 0;
     right: 0;
@@ -118,18 +119,20 @@
         color: white;
         margin-left: 5px;
     }
-    &.link-expandable:hover {
+    .menu-link-expanded {
+        .menu-link {
+            display: block;
+        }
+    }
+}
+@media screen and (min-width:782px){
+    .menu-link-holder .link-expandable:hover {
         .menu-link-expanded {
             display: block;
             height: 56px;
         }
         .menu-link-expanded.menu-services {
             height: 135px;
-        }
-    }
-    .menu-link-expanded {
-        .menu-link {
-            display: block;
         }
     }
 }
@@ -230,17 +233,19 @@
             display: none;
         }
         .menu-link-expanded {
-            height: auto !important;
+            height: auto;
             position: initial;
             margin-left: 20px;
+            display: none;
+            transition: none;
         }
-        .menu-link:not(*[href="#"]){
-            &:before {
+        .menu-link[href="#"]{
+            &:after {
                 font-family: 'ion';
-                content: '\f363';
+                content: '\f123';
                 display: inline;
                 color: white;
-                margin-right: 6px;
+                margin-left: 6px;
 
             }
         }
@@ -248,6 +253,20 @@
             &:after {
                 content: '\f405';
             }
+        }
+    }
+
+    .flag {
+        position: absolute;
+        bottom: 30px;
+        background-size: 62px 36px;
+        width: 62px;
+        height: 36px;
+        &[data-href="en"]{
+            left: calc(50% - 32px - 40px);
+        }
+        &[data-href="sv"]{
+            left: calc(50% - 32px + 40px);
         }
     }
 }

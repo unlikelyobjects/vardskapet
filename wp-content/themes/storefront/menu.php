@@ -1,10 +1,11 @@
 <?php
 function createMenu($style){
-    if($_COOKIE["qtrans_front_language"] == 'sv'){
-        $lang = 'sv';
-        setlocale(LC_ALL, "sv_SE");
-    } else {
-        $lang = 'en';
+    $lang = 'en';
+    if(isset($_COOKIE["qtrans_front_language"])){
+        if($_COOKIE["qtrans_front_language"] == 'sv'){
+            $lang = 'sv';
+            setlocale(LC_ALL, "sv_SE");
+        }    
     }
     ?>
     <div class="menu cf <?php echo $style; ?>">
@@ -16,8 +17,13 @@ function createMenu($style){
                 <div class="menu-link-holder">
                     <a class="menu-link" href="/"><?php _e("[:en]Home[:sv]Hem"); ?></a>
                 </div>
-                <div class="menu-link-holder">
-                    <a class="menu-link" href="/blog"><?php _e("[:en]Blog[:sv]Blogg"); ?></a>
+                <div class="menu-link-holder link-expandable">
+                    <a class="menu-link" href="#"><?php _e("[:en]Inspiration[:sv]Inspiration"); ?></a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="menu-link-expanded">
+                        <a class="menu-link" href="/blog"><?php _e("[:en]Blog[:sv]Blogg"); ?></a>
+                        <a class="menu-link" href="/our-stories"><?php _e("[:en]Our stories[:sv]Våra berättelser"); ?></a>
+                    </div>
+                    
                 </div>
                 <div class="menu-link-holder link-expandable">
                     <a class="menu-link" href="#"><?php _e("[:en]Värdskapet[:sv]Värdskapet"); ?></a><i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -35,7 +41,6 @@ function createMenu($style){
                         <a class="menu-link" href="/training"><?php _e("[:en]Training[:sv]Träning"); ?></a>
                         <a class="menu-link" href="/books"><?php _e("[:en]Books[:sv]Böcker"); ?></a>
                         <!--<a class="menu-link" href="/online-courses"><?php _e("[:en]Online courses[:sv]Online kurser"); ?></a>-->
-                        <a class="menu-link" href="/our-stories"><?php _e("[:en]Our stories[:sv]Våra berättelser"); ?></a>
                     </div>
                 </div>
                 <div class="menu-link-holder">
