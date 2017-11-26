@@ -100,6 +100,11 @@
     float: left;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    @media (max-width:815px){
+        width: 142px;
+        height: 36px;
+        background-size: 142px 36px;
+    }
 }
 
 
@@ -125,14 +130,14 @@
         }
     }
 }
-@media screen and (min-width:782px){
-    .menu-link-holder .link-expandable:hover {
+@media (min-width:782px){
+    .menu-link-holder.link-expandable:hover {
         .menu-link-expanded {
             display: block;
             height: 56px;
         }
         .menu-link-expanded.menu-services {
-            height: 135px;
+            height: 107px;
         }
     }
 }
@@ -246,7 +251,14 @@
                 display: inline;
                 color: white;
                 margin-left: 6px;
+                display: inline-block;
+                transition: .3s all ease-in-out;
 
+            }
+        }
+        .mobile-expanded .menu-link[href="#"] {
+            &:after {
+                transform: scaleY(-1);
             }
         }
         .hamburger {
@@ -256,7 +268,7 @@
         }
     }
 
-    .flag {
+    .menu-links .flag {
         position: absolute;
         bottom: 30px;
         background-size: 62px 36px;

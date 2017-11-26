@@ -1,6 +1,5 @@
-body.popup-active {
+body.popup-active,html.popup-active {
     overflow-y: hidden;
-    max-height: 100vh;
 }
 
 .client-modal {
@@ -16,7 +15,6 @@ body.popup-active {
     overflow-y: auto;
     transform: scale(0);
     transition: all .3s ease-in-out;
-    pointer-events: none;
     &.active {
         transform: scale(1);
     }
@@ -85,8 +83,10 @@ body.popup-active {
         margin: 20px auto 0;
         border-radius: 10px;
         padding: 10px 30px;
+        font-weight: normal;
         a {
             font-family: 'Roboto-Regular';
+            font-weight: normal;
         }
     }
 }
@@ -221,7 +221,7 @@ $select-height: 47px;
     }
   }
 
-.get-contacted-popup {
+.movie-preview-popup{
     .client-modal-content {
     max-width: 850px;
     width: 100%;
@@ -257,5 +257,23 @@ $select-height: 47px;
         top: 0;
         left: 0;
         transform: none;
+        min-height: 100%;
+    }
+    .request-form input,.select {
+        width: 100%;
+    }
+    .request-form #request-form-address, .request-form #request-form-purpose {
+        width: 100%;
+    }
+    .client-modal-wrapper h1 {
+        font-size: 32px;
+    }
+    .movie-preview-popup .button {
+        margin: 20px 0;
+        width:100%;
+        &:last-child {
+            border: 1px solid white;
+            margin: 0;
+        }
     }
 }

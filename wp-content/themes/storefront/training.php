@@ -69,7 +69,7 @@ endif;
                 <input type="number" id="contact-form-phone" placeholder="Ert telefonnummer...">
                 <input type="email" id="contact-form-email" placeholder="Er email...">
                 <div class="center">
-                    <div class="button">Skicka in</div>
+                    <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button"></div>
                 </div>
             </div>
             <div class="contact-form-thanks hidden">
@@ -141,7 +141,7 @@ endif;
                 <textarea id="request-form-purpose" rows="5" placeholder="Ert syfte med föreläsningen..."></textarea>
 
                 <div class="center">
-                    <div class="button">Skicka in</div>
+                    <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button"></div>
                 </div>
             </div>
             <div class="request-form-thanks hidden">

@@ -59,7 +59,7 @@
 
 <?php wp_footer(); ?>
 
-<div class="client-modal get-contacted-popup">
+<div class="client-modal movie-preview-popup">
     <div class="client-modal-content colored-background">
         <div class="client-modal-close ion">&#xf405;</div>
         <div class="client-modal-wrapper">
@@ -67,7 +67,7 @@
 			<p class="center"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Premurera på vårat värdskapsbrev för att följa ämnet och se de första fem minuterna av vår dokumentärfilm eller läs mer om hur du kan uppleva våran dokumentär.') ?></p>
 			<input type="text" id="header-popup-email" placeholder="<?php _e('[:en]Write your email here[:sv]Skriv in er emailadress här');?>">
 			<div class="center">		
-				<div class="button popup-subscribe"><?php _e('[:en]Submit[:sv]Skicka');?></div>
+				<input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
 				<div class="button"><a href="/the-art-of-welcoming"><?php _e('[:en]Read more[:sv]Läs mer');?></a></div>
 			</div>
 			<div class="get-contacted-thanks">
