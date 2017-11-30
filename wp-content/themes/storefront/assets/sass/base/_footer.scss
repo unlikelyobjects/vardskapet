@@ -39,6 +39,12 @@ footer.site-footer {
         left: 5px;
         width: 50px;
     }
+    .footer-logo {
+        position: absolute;
+        top: 52px;
+        right: -16px;
+        width: 150px;
+    }
     .footer-links {
         max-width: 1020px;
         width: 100%;
@@ -77,6 +83,11 @@ footer.site-footer {
     footer.site-footer {
         padding: 35px 20px 40px;
     }
+}
+
+@media (max-width: 782px ){
+    position: static;
+    margin: 0 auto 23px;
 }
 
 .storefront-handheld-footer-bar {

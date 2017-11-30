@@ -85,6 +85,9 @@ while ( have_rows('layout') ) : the_row();
                                     <?php if(get_row_layout() == 'text_block_wysiwyg'): ?>
                                         <div class="textblock"><?php echo get_sub_field('body');?></div>
                                     <?php endif; ?>
+                                    <?php if(get_row_layout() == 'button'): ?>
+                                        <div class="button colored expandable-button"><a href="<?php echo get_sub_field('link')?>"><?php echo get_sub_field('text');?></a></div>
+                                    <?php endif; ?>
                                     <?php if(get_row_layout() == 'employee'): ?>
                                         <div class="employee">
                                             <div class="employee-image employee-col">

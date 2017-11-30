@@ -19,6 +19,9 @@
 			<div class="footer-man">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/man.png">
 			</div>
+			<div class="footer-logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-old.png">
+			</div>
 			<div class="footer-social">
 				<p class="medium">Våra sociala medier:</p>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-fb.png" class="share share-fb">
@@ -58,6 +61,28 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+<div class="client-modal get-contacted-popup">
+    <div class="client-modal-content colored-background">
+        <div class="client-modal-close ion">&#xf405;</div>
+        <div class="client-modal-wrapper">
+            <div class="contact-form">
+                <h1><?php _e('[:en]We will contact you[:sv]Vi kontaktar dig')?></h1>
+                <input type="text" id="contact-form-name" placeholder="<?php _e('[:en]Your name[:sv]Kontaktperson')?>">
+                <input type="text" id="contact-form-company" placeholder="<?php _e('[:en]Company name[:sv]Företagsnamn')?>">
+                <input type="number" id="contact-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
+                <input type="email" id="contact-form-email" placeholder="<?php _e('[:en]Email[:sv]Email')?>">
+                <div class="center">
+                    <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button"></div>
+                </div>
+            </div>
+            <div class="contact-form-thanks hidden">
+                <h1><?php _e('[:en]Thanks![:sv]Tack!')?></h1>
+                <p><?php _e('[:en]We´ll contact you as soon as possbile.[:sv]Vi hör av oss så snart som möjligt.')?></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="client-modal movie-preview-popup">
     <div class="client-modal-content colored-background">
@@ -118,5 +143,11 @@
 	}, 100);
 }());
   </script>
+<script>
+  window.intercomSettings = {
+    app_id: "as7tzi7p"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/as7tzi7p';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
 </body>
 </html>

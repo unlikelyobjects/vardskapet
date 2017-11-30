@@ -58,95 +58,53 @@ endif;
 	</div>
 </section>
 
-<div class="client-modal get-contacted-popup">
-    <div class="client-modal-content colored-background">
-        <div class="client-modal-close ion">&#xf405;</div>
-        <div class="client-modal-wrapper">
-            <div class="contact-form">
-                <h1>Er information</h1>
-                <input type="text" id="contact-form-name" placeholder="Ert namn...">
-                <input type="text" id="contact-form-company" placeholder="Ert företag...">
-                <input type="number" id="contact-form-phone" placeholder="Ert telefonnummer...">
-                <input type="email" id="contact-form-email" placeholder="Er email...">
-                <div class="center">
-                    <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button"></div>
-                </div>
-            </div>
-            <div class="contact-form-thanks hidden">
-                <h1>Tack!</h1>
-                <p>Vi hör av oss så snart som möjligt.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="client-modal request-popup fullscreen">
     <div class="client-modal-content colored-background">
         <div class="client-modal-close ion">&#xf405;</div>
         <div class="client-modal-wrapper">
             <div class="request-form">
-                <h1 class="center">Er information</h1>
-                <input type="text" id="request-form-name" placeholder="Ert namn...">
-                <input type="number" id="request-form-phone" placeholder="Ert telefonnummer...">
-                <input type="email" id="request-form-email" placeholder="Er email...">
+                <h1 class="center"><?php _e('[:en]We will contact you[:sv]Vi kontaktar dig')?></h1>
+                <input type="text" id="request-form-name" placeholder="<?php _e('[:en]Name[:sv]Kontaktperson');?>">
+                <input type="number" id="request-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
+                <input type="email" id="request-form-email" placeholder="<?php _e('[:en]Email[:sv]Email')?>">
                 <select id="request-form-company">
                 value="hide"
-                    <option value="hide">Typ av organisation</option>
-                    <option value="Näringsliv">Näringsliv</option>
-                    <option value="Utbildning">Utbildning</option>
+                    <option value="hide"><?php _e('[:en]Organizational form[:sv] Organisationsform')?></option>
+                    <option value="Ideell organisation"><?php _e('[:en]Non-profit organization[:sv]Ideell organisation')?></option>
+                    <option value="Frivillig organisation"><?php _e('[:en]voluntary organisation[:sv]Frivillig organisation') ?></option>
+                    <option value="Offentlig finansierad verksamhet"><?php _e('[:en]Publicly funded organization[:sv]Offentlig finansierad verksamhet') ?></option>
+                    <option value="Aktiebolag"><?php _e('[:en]Corporation[:sv]Aktiebolag') ?></option>
                 </select>
-                <select id="request-form-employees">
-                    <option value="hide">Antal anställda</option>
-                    <option value="mindre än 10">mindre än 10</option>
-                    <option value="10 till 20">10 till 20</option>
-                    <option value="20 till 50">20 till 50</option>
-                    <option value="50+">50+</option>
-                </select>
-                <h1 class="center pad25">Om föreläsningen</h1>
+                <h1 class="center pad25"><?php _e('[:en]About the lecture[:sv]Om föreläsningen')?></h1>
                 <select id="request-form-audience">
-                    <option value="hide">Vilken målgrupp?</option>
-                    <option value="Målgrupp 1">Målgrupp 1</option>
-                    <option value="Målgrupp 2">Målgrupp 2</option>
-                    <option value="Målgrupp 3">Målgrupp 3</option>
+                    <option value="hide"><?php _e('[:en]Target audience[:sv]Målgrupp')?></option>
+                    <option value="Alla anställda"><?php _e('[:en]All employees[:sv]Alla anställda')?></option>
+                    <option value="ledningsgruppen"><?php _e('[:en]Board members[:sv]ledningsgruppen')?></option>
+                    <option value="endast chefer och ledare"><?php _e('[:en]Only managers and leaders[:sv]Endast chefer och ledare')?></option>
+                    <option value="medlemmar"><?php _e('[:en]Members[:sv]Medlemmar')?></option>
+                    <option value="kunder"><?php _e('[:en]Clients[:sv]Kunder')?></option>
+                    <option value="leverantörer"><?php _e('[:en]Suppliers[:sv]leverantörer')?></option>
+                    <option value="politiska beslutsfattare"><?php _e('[:en]Political Decisionmakers[:sv]Politiska beslutsfattare')?></option>
+                    <option value="invånare"><?php _e('[:en]Inhabitants[:sv]invånare')?></option>
+                    <option value="annan"><?php _e('[:en]Other[:sv]Annan')?></option>
                 </select>
-                <select id="request-form-participants">
-                    <option value="hide">Antal deltagare?</option>
-                    <option value="mindre än 10">mindre än 10</option>
-                    <option value="10 till 20">10 till 20</option>
-                    <option value="20 till 50">20 till 50</option>
-                    <option value="50+">50+</option>
-                </select>
-                <select id="request-form-time">
-                    <option value="hide">Tid?</option>
-                    <option value="09:00">09:00</option>
-                    <option value="10:00">10:00</option>
-                    <option value="11:00">11:00</option>
-                    <option value="13:00">13:00</option>
-                </select>
+                <input type="text" id="request-form-participants" placeholder="<?php _e('[:en]Number of participants[:sv]Antal deltagare')?>">
                 <select id="request-form-pass">
-                    <option value="hide">Pass?</option>
-                    <option value="Pass 1">Pass 1</option>
-                    <option value="Pass 2">Pass 2</option>
-                    <option value="Pass 3">Pass 3</option>
-                    <option value="Pass 4">Pass 4</option>
+                    <option value="hide">Pass</option>
+                    <option value="förmiddag"><?php _e('[:en]Morning[:sv]Förmiddag')?></option>
+                    <option value="eftermiddag"><?php _e('[:en]Afternoon[:sv]Eftermiddag')?></option>
+                    <option value="heldag"><?php _e('[:en]Whole dau[:sv]Heldag')?></option>
                 </select>
-                <input type="text" id="request-form-address" placeholder="Address...">
-                <select id="request-form-facility">
-                    <option value="hide">Typ av lokal?</option>
-                    <option value="Lokal 1">Lokal 1</option>
-                    <option value="Lokal 2">Lokal 2</option>
-                    <option value="Lokal 3">Lokal 3</option>
-                    <option value="Lokal 4">Lokal 4</option>
-                </select>
-                <textarea id="request-form-purpose" rows="5" placeholder="Ert syfte med föreläsningen..."></textarea>
+                <input type="text" id="request-form-address" placeholder="<?php _e('[:en]District[:sv]Ort')?>">
+                <textarea id="request-form-purpose" rows="5" placeholder="Ert syfte med föreläsningen"></textarea>
 
                 <div class="center">
                     <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button"></div>
                 </div>
             </div>
             <div class="request-form-thanks hidden">
-                <h1>Tack!</h1>
-                <p>Vi hör av oss så snart som möjligt.</p>
+                <h1><?php _e('[:en]Thanks![:sv]Tack!')?></h1>
+                <p><?php _e('[:en]We´ll contact you as soon as possbile.[:sv]Vi hör av oss så snart som möjligt.')?></p>
             </div>
         </div>
     </div>

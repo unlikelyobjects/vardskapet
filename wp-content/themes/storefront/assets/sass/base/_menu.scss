@@ -137,7 +137,7 @@
             height: 56px;
         }
         .menu-link-expanded.menu-services {
-            height: 107px;
+            height: 132px;
         }
     }
 }
@@ -177,12 +177,22 @@
 .show-mobile {
     display: none;
 }
+.mobile-logo {
+    float: left;
+    width: 110px;
+    margin-top: 4px;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 782px){
     :not(.show-video-header){
         .menu {
             padding: 10px;
         }
+    }
+    .mobile-logo {
+        padding-top: 8px;
+        margin-left: 8px;
     }
     .logged-in .menu.fixed {
         top: 0;
@@ -192,12 +202,6 @@
     }
     .menu-logo {
         display: none;
-    }
-    .mobile-logo {
-        float: left;
-        width: 110px;
-        padding-top: 8px;
-        margin-left: 8px;
     }
     .hamburger {
         float: right;

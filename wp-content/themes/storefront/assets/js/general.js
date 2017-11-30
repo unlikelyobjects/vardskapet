@@ -172,9 +172,7 @@ $(document).ready(function(){
     $('.client-modal-image').css('background-image','url('+image+')');
   });
   $('.get-contacted').click(function(){
-    console.log('click');
-    $('.get-contacted-popup').addClass('active');
-    $('body,html').addClass('popup-active');
+    openContactForm();
   });
   $('.contact-form .button').click(function(){
     var data = {
@@ -294,6 +292,12 @@ $(document).ready(function(){
 
   });
 });
+
+function openContactForm(){
+  console.log('click');
+  $('.get-contacted-popup').addClass('active');
+  $('body,html').addClass('popup-active');
+}
 
 var slideURL = '';
 
