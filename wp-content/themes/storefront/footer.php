@@ -70,10 +70,10 @@
                 <h1><?php _e('[:en]We will contact you[:sv]Vi kontaktar dig')?></h1>
                 <input type="text" id="contact-form-name" placeholder="<?php _e('[:en]Your name[:sv]Kontaktperson')?>">
                 <input type="text" id="contact-form-company" placeholder="<?php _e('[:en]Company name[:sv]Företagsnamn')?>">
-                <input type="number" id="contact-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
+                <input type="text" id="contact-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
                 <input type="email" id="contact-form-email" placeholder="<?php _e('[:en]Email[:sv]Email')?>">
                 <div class="center">
-                    <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button"></div>
+                    <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
                 </div>
             </div>
             <div class="contact-form-thanks hidden">
@@ -88,16 +88,17 @@
     <div class="client-modal-content colored-background">
         <div class="client-modal-close ion">&#xf405;</div>
         <div class="client-modal-wrapper">
-			<h1 class="center"><?php _e('[:en]Watch the first five minutes of <br>The art of welcoming![:sv]Se de fem första minuterna av The art of welcoming!');?></h1>
-			<p class="center"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Premurera på vårat värdskapsbrev för att följa ämnet och se de första fem minuterna av vår dokumentärfilm eller läs mer om hur du kan uppleva våran dokumentär.') ?></p>
-			<input type="text" id="header-popup-email" placeholder="<?php _e('[:en]Write your email here[:sv]Skriv in er emailadress här');?>">
-			<div class="center">		
-				<input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
-				<div class="button"><a href="/the-art-of-welcoming"><?php _e('[:en]Read more[:sv]Läs mer');?></a></div>
+			<div class="form">
+				<h1 class="center"><?php _e('[:en]Watch the first five minutes of <br>Art of welcoming![:sv]Se de fem första minuterna av Art of welcoming!');?></h1>
+				<p class="center"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Premurera på vårat värdskapsbrev för att följa ämnet och se de första fem minuterna av vår dokumentärfilm eller läs mer om hur du kan uppleva våran dokumentär.') ?></p>
+				<?php echo do_shortcode('[mc4wp_form id="258"]'); ?>
+				<div class="center">		
+					<div class="button colored read-more"><a href="/the-art-of-welcoming"><?php _e('[:en]Read more[:sv]Läs mer');?></a></div>
+				</div>
 			</div>
 			<div class="get-contacted-thanks">
 				<h1 class="center"><?php _e('[:en]Thanks![:sv]Tack!');?></h1>
-                <p class="center"><?php _e('[:en]We´ve sent you an email with a link to the first five minutes of The art of welcoming[:sv]Vi har mailat en länk med de fem första minuterna av The art of welcoming.');?></p>
+                <p class="center"><?php _e('[:en]We´ve sent you an email with a link to the first five minutes of Art of welcoming[:sv]Vi har mailat en länk med de fem första minuterna av Art of welcoming.');?></p>
 			</div>
 		</div>
 	</div>
@@ -145,7 +146,8 @@
   </script>
 <script>
   window.intercomSettings = {
-    app_id: "as7tzi7p"
+	app_id: "as7tzi7p"
+	<?php if($_COOKIE["qtrans_front_language"] == 'sv'){echo ",language_override: 'sv'";} ?>
   };
 </script>
 <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/as7tzi7p';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>

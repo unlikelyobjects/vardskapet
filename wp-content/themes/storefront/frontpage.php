@@ -113,12 +113,10 @@ $newsletter = get_field('newsletter');
 		<div class="newsletter">
 			<h1><?php echo $newsletter['title'] ?></h1>
 			<p><?php echo $newsletter['body'] ?></p>
-			<div class="form">
-				<input id="newsletter-input" type="email" placeholder="<?php _e("[:en]Write your e-mail here[:sv]Skriv er emailadress här"); ?>">
-				<p class="form-error"><?php _e("[:en]Malformed e-mail[:sv]Felaktig emailadress")?></p>
-				<p class="form-sent"><?php _e("[:en]Thank you![:sv]Tack!")?></p>
+			<div class="thank-you">
+				<p class="regular center"><?php _e('[:en]Thanks![:sv]Tack!') ?></p>
 			</div>
-			<div class="button" id="newsletter-send"><?php echo $newsletter['button_text'] ?></div>
+			<?php echo do_shortcode('[mc4wp_form id="258"]'); ?>
 		</div>
 	</div>
 </section>

@@ -42,6 +42,77 @@
     }
 }
 
+
+.searchandfilter {
+    p.regular {
+        text-align: center;
+        font-family: Roboto-regular;
+        display: block;
+        margin-bottom: 1em;
+        margin-top: 0;
+    }
+    .category-column {
+        float: left;
+        padding-right: 32px;
+        border-right: 1px solid white;
+    }
+    .date-column {
+        float: left;
+        padding-left: 32px;
+        &>div {
+            margin-bottom: 16px;
+        }
+        .datepicker-field {
+            border: none;
+            border-bottom: 2px solid white;
+            background: none;
+            color: white;
+            outline: none;
+            width: 210px;
+        }
+    }
+    .date-label {
+        width: 45px;
+        margin-right: 8px;
+        display: inline-block;
+        text-align: right;
+    }
+    .filter-button {
+        margin-top: 16px;
+        border: 2px solid white;
+        border-radius: 0;
+        background: none;
+        color: white;
+        font-family: 'Roboto-regular';
+        transition: all .2s ease-in-out;
+        user-select: none;
+        &:hover {
+            background:rgba(255,255,255,.4);
+            border: 2px solid white;
+            color: white;
+        }
+    }
+    .cat-checkbox {
+        cursor: pointer;
+        user-select: none;
+        font-family: 'Roboto-regular';
+        &:before {
+            content: '\f3a6';
+            font-family: 'ion';
+            font-size: 20px;
+            color: white;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        &.active:before {
+            content: '\f3a7';
+        }
+    }
+}
+.blog-post-single {
+    padding-top: 40px;
+}
+
 .blog-intro {
     padding-bottom: 30px;
 }

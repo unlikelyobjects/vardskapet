@@ -45,7 +45,10 @@ function createMenu($style){
                     </div>
                 </div>
                 <div class="menu-link-holder">
-                    <a class="menu-link" href="/about-vardskapet#dynamic"><?php _e("[:en]Contact us[:sv]Kontakta oss"); ?></a>
+                    <a class="menu-link" href="/about-vardskapet#dynamic"><?php _e("[:en]About us[:sv]Om oss"); ?></a>
+                </div>
+                <div class="menu-link-holder">
+                    <a class="menu-link" href="/about-vardskapet"><?php _e("[:en]Contact[:sv]Kontakt"); ?></a>
                 </div>
                 <div class="flag" data-href="en" <?php if($lang == 'en'){echo 'data-active="active"';} ?>></div>
                 <div class="flag" data-href="sv" <?php if($lang == 'sv'){echo 'data-active="active"';} ?>></div>

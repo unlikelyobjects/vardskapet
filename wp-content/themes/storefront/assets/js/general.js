@@ -14,6 +14,44 @@ $(document).ready(function(){
     dots: true
   });
 
+  var signedup = findGetParameter('signed-up');
+  if(signedup === 'true'){
+    $('.movie-preview-popup').addClass('active').addClass('thanks');
+  }
+
+  var langindex = 1;
+  if(window.location.href.indexOf('/sv/') !== -1){
+    langindex = 2;
+  }
+  $(".newsletter input, .movie-preview-popup input").each(function () {
+    var newVal = $(this).attr('value').match(/\[\:en\](.*)\[\:sv\](.*)/);
+    if(newVal){
+      console.log('found [:]',newVal);
+      $(this).attr('value',newVal[langindex]);
+    }
+  });
+  $(".newsletter input, .movie-preview-popup input").each(function () {
+    var newVal = $(this).attr('placeholder');
+    if(newVal){
+      newVal = newVal.match(/\[\:en\](.*)\[\:sv\](.*)/);
+      if(newVal){
+        console.log('found [:]',newVal);
+        $(this).attr('placeholder',newVal[langindex]);
+      }
+    }
+  });
+  $(".newsletter .form-error, .movie-preview-popup .form-error").each(function () {
+    var newVal = $(this).text();
+    console.log('newVal',newVal);
+    if(newVal){
+      newVal = newVal.match(/\[\:en\](.*)\[\:sv\](.*)/);
+      if(newVal){
+        console.log('found [:]',newVal);
+        $(this).text(newVal[2]);
+      }
+    }
+  });
+
   $('#newsletter-send').click(function(){
     var text = $('#newsletter-input').val();
     if(ValidateEmail(text)){
@@ -185,6 +223,7 @@ $(document).ready(function(){
     postContactForm(data,function(){
       $('.contact-form').hide(300);
       $('.contact-form-thanks').delay(300).show(300);
+      $('.request-popup').removeClass('fullscreen');
     });
   });
   $('.make-a-request').click(function(){
@@ -194,17 +233,18 @@ $(document).ready(function(){
   });
   $('.request-form .button').click(function(){
     var data = {};
-    $('.request-form input, .request-form select, .request-form textarea').each(function(){
-      var id = String( $(this).attr('id').replace('request-form-',''));
+    $('.request-form input[type="text"],.request-form input[type="email"], .request-form select, .request-form textarea').each(function(){
+      var idtag = String( $(this).attr('id').replace('request-form-',''));
       var val = $(this).val();
       if(val === 'hide'){
         val = '';
       }
-      data[id] = val;
-      postRequestForm(data,function(){
-        $('.request-form').hide(300);
-        $('.request-form-thanks').delay(300).show(300);
-      });
+      data[idtag] = val;
+    });
+    console.log(data);
+    postRequestForm(data,function(){
+      $('.request-form').hide(300);
+      $('.request-form-thanks').delay(300).show(300);
     });
   });
 
@@ -230,11 +270,13 @@ $(document).ready(function(){
     var scrollTop = $(window).scrollTop();
     if(scrollTop > 0){
       $('.menu').addClass('fixed');
+      $('body').addClass('has-scrolled');
       $('section.main-content').addClass('active');
       $('.video-header').addClass('inactive');
     }
     else {
       $('.menu').removeClass('fixed');
+      $('body').removeClass('has-scrolled');
       $('.video-header').removeClass('inactive');
       $('section.main-content').removeClass('active');
     }    
@@ -314,6 +356,19 @@ function postContactForm(data,callback){
         console.log('error signup',e,data);
     }
   });
+}
+
+function findGetParameter(parameterName) {
+  var result = null,
+      tmp = [];
+  location.search
+      .substr(1)
+      .split("&")
+      .forEach(function (item) {
+        tmp = item.split("=");
+        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+      });
+  return result;
 }
 
 function postRequestForm(data,callback){

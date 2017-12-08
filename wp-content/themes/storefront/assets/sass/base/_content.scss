@@ -352,9 +352,12 @@ section.main-content {
         margin: 25px 0;
         text-align: center;
     }
-    button {
-        margin: 25px 0;
-        width:100%;
+    .button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 20px 20px;
     }
 
     $font-size: 16px;
@@ -423,6 +426,27 @@ section.main-content {
             display: block;
         }
     }
+    .thank-you {
+        display: none;
+    }
+    .button {
+        display: block;
+        margin-top: 24px;
+    }
+    &.thanks {
+        .thank-you {
+            display: block;
+        }
+        .form {
+            display: none;
+        }
+        input[type="submit"]{
+            display: none;
+        }
+    }
+}
+.form-error {
+    display: none;
 }
 
 .colored {
@@ -611,10 +635,10 @@ section.main-content {
         font-size: 16px;
         font-family: 'Roboto-light';
         box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.23);
-        width: 195px;
-        padding: 10px 10px 3px;
+        padding: 10px 15px 3px;
         display: inline-block;
         cursor:pointer;
+        user-select: none;
         p {
             display: inline-block;
             vertical-align: top;
@@ -674,6 +698,11 @@ section.main-content {
                 color: lightgray !important;
             }
         }
+    }
+}
+@media (max-width:840px){
+    .services {
+        padding: 0 20px;
     }
 }
 
@@ -740,7 +769,7 @@ section.main-content {
     .newsletter {
         width: 100%;
         max-width: 602px;
-        margin: 0 0 5%;
+        margin: 0 auto 5%;
         padding: 20px 30px 30px 30px;
     }
     .grid-holder .grid-col-100 .client {
@@ -755,6 +784,7 @@ section.main-content {
         margin: 0;
     }
     .services .button {
+        margin: 0;
         margin-bottom: 10%;
     }
     footer.site-footer {

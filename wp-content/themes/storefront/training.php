@@ -64,8 +64,8 @@ endif;
         <div class="client-modal-wrapper">
             <div class="request-form">
                 <h1 class="center"><?php _e('[:en]We will contact you[:sv]Vi kontaktar dig')?></h1>
-                <input type="text" id="request-form-name" placeholder="<?php _e('[:en]Name[:sv]Kontaktperson');?>">
-                <input type="number" id="request-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
+                <input type="text" id="request-form-fullname" placeholder="<?php _e('[:en]Name[:sv]Kontaktperson');?>">
+                <input type="text" id="request-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
                 <input type="email" id="request-form-email" placeholder="<?php _e('[:en]Email[:sv]Email')?>">
                 <select id="request-form-company">
                 value="hide"
@@ -90,16 +90,15 @@ endif;
                 </select>
                 <input type="text" id="request-form-participants" placeholder="<?php _e('[:en]Number of participants[:sv]Antal deltagare')?>">
                 <select id="request-form-pass">
-                    <option value="hide">Pass</option>
+                    <option value="heldag"><?php _e('[:en]Whole day[:sv]Heldag')?></option>
                     <option value="förmiddag"><?php _e('[:en]Morning[:sv]Förmiddag')?></option>
                     <option value="eftermiddag"><?php _e('[:en]Afternoon[:sv]Eftermiddag')?></option>
-                    <option value="heldag"><?php _e('[:en]Whole dau[:sv]Heldag')?></option>
                 </select>
                 <input type="text" id="request-form-address" placeholder="<?php _e('[:en]District[:sv]Ort')?>">
                 <textarea id="request-form-purpose" rows="5" placeholder="Ert syfte med föreläsningen"></textarea>
 
                 <div class="center">
-                    <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button"></div>
+                    <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
                 </div>
             </div>
             <div class="request-form-thanks hidden">

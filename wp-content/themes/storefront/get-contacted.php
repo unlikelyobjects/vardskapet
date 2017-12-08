@@ -18,12 +18,13 @@ if(isset($_POST['email'])){
     $email = $_POST['email'];
 }
 
+$headers = array('Content-Type: text/html; charset=UTF-8');
 
-$mailBody = "Kontaktförfrågan\nNamn: ".$fullname."\nFöretag: ".$company."\nTelefon: ".$phone."\nEmail: ".$email;
+$mailBody = "Kontaktförfrågan<br>Namn: ".$fullname."<br>Företag: ".$company."<br>Telefon: ".$phone."<br>Email: ".$email;
 $mailTitle = "Kontakförfrågan";
 
-wp_mail('info@vardskapet.se',$mailTitle,$mailBody);
+wp_mail("info@vardskapet.se",$mailTitle,$mailBody,$headers);
 
-echo 'ok';
+echo 'ok' . $email . $mailTitle . $mailBody;
 
 ?>

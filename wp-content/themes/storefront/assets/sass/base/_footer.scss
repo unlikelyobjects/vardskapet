@@ -78,6 +78,11 @@ footer.site-footer {
     }
 }
 
+@media (max-width:540px){
+    footer.site-footer .footer-logo {
+        display: none;
+    }
+}
 
 @media screen and (max-width:1020px){
     footer.site-footer {

@@ -233,6 +233,11 @@ $select-height: 47px;
         padding: 40px;
         max-width: 630px;
         width: 100%;
+        text-align: center;
+    }
+    input[type="email"]{
+        display: inline-block;
+        width: 400px;
     }
     .button {
         margin-left:8px;
@@ -243,7 +248,34 @@ $select-height: 47px;
             color: black;
             font-family: 'Roboto-Regular';
         }
+        &.read-more {
+            border: none;
+            margin-top:0;
+            a {
+                color: white;
+            }
+        }
     }
+    &.thanks {
+        .form {
+            display: none;
+        }
+        .get-contacted-thanks {
+            display: block;
+        }
+    }
+}
+.contact-form-thanks {
+    h1 {
+        font-family: 'Playfair';
+        color: white;
+        margin-top: 16px;
+    }
+    p {
+        color: white;
+        font-family: 'Roboto-light';
+    }
+
 }
 .get-contacted-thanks {
     display: none;

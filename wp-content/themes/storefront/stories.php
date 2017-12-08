@@ -19,40 +19,67 @@ createMenu($menucolor);
 if($showvideo == 'yes'):
     createVideoHeader('');
 endif;
-
 $cats = isset($_GET['categories']) ? $_GET['categories'] : '';
 if($cats == ''){
-	$cats == 'Our Stories';
+	$cats == 'Our stories';
 }
+$catArray = explode(',',$cats);
 $dateStart = isset($_GET['datestart']) ? $_GET['datestart'] : '';
 $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
+
 ?>
 
 <section class="main-content">
 	<div class="content-inner">
 		<div class="filter-search">
-			<div class="date-from"><?php _e('[:en]From:[:sv]Från:') ?></div>
-			<div class="date-to"><?php _e('[:en]To:[:sv]Till:') ?></div>
 			<div id="filter-toggle" class="filter-toggle colored-background">
 				<p><?php _e('[:en]Search Alternatives[:sv]Sökalternativ') ?></p>
 				<img class="search-icon contracted" src="/wp-content/themes/storefront/assets/images/search-icon.png">
 				<img class="search-icon expanded"  src="/wp-content/themes/storefront/assets/images/search-icon-expanded.png">
 			</div>
-			<?php
-			$buttonName = translate("[:en]Filter[:sv]Filtrera");
-			$categoryName = translate("[:en]Category[:sv]Kategori");
-			echo do_shortcode( '[searchandfilter fields="category,post_date" types="radio,daterange" submit_label="'.$buttonName.'" headings="'.$categoryName.',Datum,Datum"]' );
-			?>
+			<div class="searchandfilter">
+				<div class="category-column">
+					<p class="regular"><?php _e('[:en]Category[:sv]Kategori')?></p>
+					<?php
+						$args = array('child_of' => 19); //18 = Our stories
+						$categories = get_categories($args);
+						foreach($categories as $category){
+							$isActive = '';
+							foreach($catArray as $pagedCat){
+								if(strtolower($category->category_nicename) == $pagedCat){
+									$isActive = 'active';
+								}
+							}
+							echo "<div data-cat=".$category->category_nicename." class='cat-checkbox ".$isActive."'>".$category->name."</div>";
+						}
+					?>
+				</div>
+				<div class="date-column">
+					<p class="regular"><?php _e('[:en]Date[:sv]Datum')?></p>
+					<div>
+						<span class="date-label"><?php _e('[:en]From:[:sv]Från:')?></span>
+						<input data-toggle="datepicker" id="datepicker-from" class="datepicker-field"  value="<?php echo $dateStart ?>">
+					</div>
+					<div>
+						<span class="date-label"><?php _e('[:en]To:[:sv]Till:')?></span>
+						<input data-toggle="datepicker" id="datepicker-to"  class="datepicker-field" value="<?php echo $dateEnd ?>">
+					</div>
+					<div id="date-container"></div>
+				</div>
+				<div class="cf"></div>
+				<div class="button filter-button"><?php _e('[:en]Search[:sv]Sök') ?></div>
+			</div>
 		</div>
 
 		<div class="grid-holder">
 			<div class="grid-col-100 white-bg blog-intro">
-                <?php while ( have_posts() ) : the_post(); ?>
 				<h1 class="colored"><?php the_title(); ?></h1>
-				<div class="text-two-rows">
-					<?php the_content(); ?> 
-                </div>
-                <?php endwhile; ?>
+				<p class="text-two-rows">
+					<?php
+					if(have_posts()): while(have_posts()): the_post();
+					the_content();
+					endwhile; endif;?>
+				</p>
 			</div>
 		</div>
 		<div class="divider-black"></div>
@@ -87,13 +114,17 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 					</div>
 					<div class="grid-col-50 blog-post-small text">
 						<h3 class="colored"><?php the_title(); ?></h3>
-						<p class="colored date"><?php echo get_the_date('F j, Y'); ?></p>
+						<p class="blue date colored"><?php echo get_the_date('F j, Y'); ?></p>
 						<div class="blog-excerpt"><?php the_excerpt(); ?></div>
 						<p class="read-more colored"><a href="<?php the_permalink(); ?>"><?php _e('[:en]Read more[:sv]Läs mer') ?></a></p>
 					</div>
 				</div>
 			<?php
 				endwhile;
+			else:
+				?>
+				<p class="colored center"> <?php _e('[:en]No posts found...[:sv]Inga inlägg hittades') ?> </p>
+				<?
 			endif;
 			?>
 
