@@ -141,6 +141,7 @@ $(document).ready(function(){
   $('input[type="date"]').last().appendTo($('input[type="date"]').first().parent());
   $('.filter-toggle').click(function(){
     $('.filter-search').toggleClass('active');
+    $('body').toggleClass('popup-active');
   });
   $('.date-from').insertBefore($('input[type="date"]').first());
   $('.date-to').insertBefore($('input[type="date"]').last());
