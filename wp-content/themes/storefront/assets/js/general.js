@@ -272,6 +272,7 @@ $(document).ready(function(){
     if(scrollTop > 0){
       $('.menu').addClass('fixed');
       $('body').addClass('has-scrolled');
+      $('body').addClass('intercom-ok');
       $('section.main-content').addClass('active');
       $('.video-header').addClass('inactive');
     }

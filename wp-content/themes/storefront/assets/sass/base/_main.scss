@@ -140,6 +140,10 @@ body,html {
         pointer-events: all;
     }
 }
+.intercom-ok #intercom-container {
+    opacity: 1;
+    pointer-events: all;
+}
 
 .form-error {
     margin-top: 4px;
