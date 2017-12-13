@@ -60,11 +60,11 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 					<p class="regular"><?php _e('[:en]Date[:sv]Datum')?></p>
 					<div>
 						<span class="date-label"><?php _e('[:en]From:[:sv]Från:')?></span>
-						<input data-toggle="datepicker" id="datepicker-from" class="datepicker-field"  value="<?php echo $dateStart ?>">
+						<input data-toggle="datepicker" id="datepicker-from" readonly class="datepicker-field"  value="<?php echo $dateStart ?>">
 					</div>
 					<div>
 						<span class="date-label"><?php _e('[:en]To:[:sv]Till:')?></span>
-						<input data-toggle="datepicker" id="datepicker-to"  class="datepicker-field" value="<?php echo $dateEnd ?>">
+						<input data-toggle="datepicker" readonly id="datepicker-to"  class="datepicker-field" value="<?php echo $dateEnd ?>">
 					</div>
 					<div id="date-container"></div>
 				</div>
