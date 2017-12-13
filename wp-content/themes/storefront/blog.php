@@ -75,7 +75,7 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 
 		<div class="grid-holder">
 			<div class="grid-col-100 white-bg blog-intro">
-				<h1 class="colored"><?php the_title(); ?></h1>
+				<h1 class="colored center"><?php the_title(); ?></h1>
 				<p class="text-two-rows">
 					<?php
 					if(have_posts()): while(have_posts()): the_post();

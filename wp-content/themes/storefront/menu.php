@@ -27,9 +27,9 @@ function createMenu($style){
                 </div>
                 <div class="menu-link-holder link-expandable">
                     <a class="menu-link" href="#"><?php _e("[:en]Värdskap[:sv]Värdskap"); ?></a><i class="fa fa-angle-down" aria-hidden="true"></i>
-                    <div class="menu-link-expanded">
+                    <div class="menu-link-expanded menu-vardskap">
                         <a class="menu-link" href="/what-is-welcoming"><?php _e("[:en]What is welcoming[:sv]Vad är värdskap"); ?></a>
-                        <a class="menu-link" href="/about-vardskapet"><?php _e("[:en]About Värdskapet[:sv]Om Värdskapet"); ?></a>
+                        <!--<a class="menu-link" href="/about-vardskapet"><?php _e("[:en]About Värdskapet[:sv]Om Värdskapet"); ?></a>-->
                     </div>
                 </div>
 
@@ -45,10 +45,10 @@ function createMenu($style){
                     </div>
                 </div>
                 <div class="menu-link-holder">
-                    <a class="menu-link" href="/about-vardskapet#dynamic"><?php _e("[:en]About us[:sv]Om oss"); ?></a>
+                    <a class="menu-link" href="/about-vardskapet"><?php _e("[:en]About us[:sv]Om oss"); ?></a>
                 </div>
                 <div class="menu-link-holder">
-                    <a class="menu-link" href="/about-vardskapet"><?php _e("[:en]Contact[:sv]Kontakt"); ?></a>
+                    <a class="menu-link" href="/about-vardskapet#dynamic"><?php _e("[:en]Contact[:sv]Kontakt"); ?></a>
                 </div>
                 <div class="flag" data-href="en" <?php if($lang == 'en'){echo 'data-active="active"';} ?>></div>
                 <div class="flag" data-href="sv" <?php if($lang == 'sv'){echo 'data-active="active"';} ?>></div>

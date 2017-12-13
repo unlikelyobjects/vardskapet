@@ -126,7 +126,7 @@
     float: left;
     i {
         color: white;
-        margin-left: 5px;
+        margin-left: 0;
     }
     .menu-link-expanded {
         .menu-link {
@@ -142,6 +142,9 @@
         }
         .menu-link-expanded.menu-services {
             height: 132px;
+        }
+        .menu-link-expanded.menu-vardskap {
+            height: 30px;
         }
     }
 }
@@ -196,12 +199,12 @@
         }
     }
     .mobile-logo {
-        padding-top: 8px;
         margin-left: 8px;
         width:110px;
         margin-top:0;
+        padding-top: 4px;
     }
-    .fixed .mobile-logo {
+    .menu.fixed .mobile-logo {
         margin-top:0;
     }
     .logged-in .menu.fixed {
@@ -215,13 +218,14 @@
     }
     .hamburger {
         float: right;
+        line-height: 0;
         &:after {
             content: '\f394';
             font-family: 'ion';
             font-size: 40px;
             color: white;
             cursor: pointer;
-            line-height: 1;
+            line-height: .8;
             padding: 0 10px;
         }
         &:hover {
