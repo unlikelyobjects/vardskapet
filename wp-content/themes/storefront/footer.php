@@ -98,7 +98,7 @@
 			</div>
 			<div class="get-contacted-thanks">
 				<h1 class="center"><?php _e('[:en]Thanks![:sv]Tack!');?></h1>
-                <p class="center"><?php _e('[:en]We´ve sent you an email with a link to the first five minutes of Art of welcoming[:sv]Vi har mailat en länk med de fem första minuterna av Art of welcoming.');?></p>
+                <p class="center"><?php _e('[:en]You have been subscribed to our newsletter[:sv]Du prenumererar nu på vårt nyhetsbrev.');?></p>
 			</div>
 		</div>
 	</div>

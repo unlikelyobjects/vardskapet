@@ -272,6 +272,40 @@ section.main-content {
 
     h1 {
         margin-bottom: 10px;
+        font-size: 38px;
+        @media(max-width: 1010px){
+            font-size: 25px;
+        }
+    }
+    $font-size: 16px;
+    $line-height: 1.6;
+    $lines-to-show: 7;
+    .colored-body {
+        display: block; /* Fallback for non-webkit */
+        display: -webkit-box;
+        height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+        font-size: $font-size;
+        line-height: $line-height;
+        -webkit-line-clamp: $lines-to-show;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    @media(max-width: 1010px){
+        $lines-to-show: 8;
+        .colored-body {
+            height: $font-size*$line-height*$lines-to-show;
+            -webkit-line-clamp: $lines-to-show;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    @media(max-width:782px){
+        .colored-body {
+            height: auto;
+            -webkit-line-clamp: initial;
+        }
     }
 
     .divider,.divider-short {
@@ -292,12 +326,6 @@ section.main-content {
         text-align: center;
         margin-top:15px;
         margin-bottom: 10px;
-    }
-
-    .colored-body {
-        height: 130px;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 
     .colored-link {
@@ -710,6 +738,7 @@ section.main-content {
 @media screen and (max-width: 782px){
     section.main-content h1 {
         font-size: 32px;
+        text-align: center;
     }
     .grid-holder .grid-col-50 {
         width: 100%;
@@ -720,7 +749,8 @@ section.main-content {
             height: 320px;
         }
         &.green-bg-square {
-            height: 297px;
+            height: auto;
+            padding-bottom: 40px;
         }
     }
     .grid-holder .grid-col-100 {
@@ -772,13 +802,6 @@ section.main-content {
         margin: 0 auto 5%;
         padding: 20px 30px 30px 30px;
     }
-    .grid-holder .grid-col-100 .client {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        margin-top:3%;
-        padding-bottom: 60%;
-    }
     .services-holder {
         margin: 0;
     }
@@ -797,5 +820,15 @@ section.main-content {
     }
     .footer-links {
         padding-bottom: 0 !important;
+    }
+}
+
+@media(max-width:450px){
+    .grid-holder .grid-col-100 .client {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top:3%;
+        padding-bottom: 60%;
     }
 }
