@@ -5438,6 +5438,12 @@ section.main-content {
 .blue .menu.expanded {
   background: #362ffe; }
 
+.blue .dynamicpage-intro p a {
+  color: #362ffe; }
+
+.blue .expandable p a {
+  color: #362ffe; }
+
 .green .colored {
   color: #29b15b !important; }
   .green .colored a {
@@ -5476,6 +5482,12 @@ section.main-content {
 
 .green .menu.expanded {
   background: #29b15b; }
+
+.green .dynamicpage-intro p a {
+  color: #29b15b; }
+
+.green .expandable p a {
+  color: #29b15b; }
 
 .purple .colored {
   color: #7551e5 !important; }
@@ -5516,6 +5528,12 @@ section.main-content {
 .purple .menu.expanded {
   background: #7551e5; }
 
+.purple .dynamicpage-intro p a {
+  color: #7551e5; }
+
+.purple .expandable p a {
+  color: #7551e5; }
+
 .pink .colored {
   color: #e91589 !important; }
   .pink .colored a {
@@ -5554,6 +5572,12 @@ section.main-content {
 
 .pink .menu.expanded {
   background: #e91589; }
+
+.pink .dynamicpage-intro p a {
+  color: #e91589; }
+
+.pink .expandable p a {
+  color: #e91589; }
 
 .red .colored {
   color: #ef224e !important; }
@@ -5594,6 +5618,12 @@ section.main-content {
 .red .menu.expanded {
   background: #ef224e; }
 
+.red .dynamicpage-intro p a {
+  color: #ef224e; }
+
+.red .expandable p a {
+  color: #ef224e; }
+
 .teal .colored {
   color: #329daf !important; }
   .teal .colored a {
@@ -5632,6 +5662,12 @@ section.main-content {
 
 .teal .menu.expanded {
   background: #329daf; }
+
+.teal .dynamicpage-intro p a {
+  color: #329daf; }
+
+.teal .expandable p a {
+  color: #329daf; }
 
 .text-two-rows {
   column-count: 1;

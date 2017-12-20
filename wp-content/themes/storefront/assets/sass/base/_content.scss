@@ -525,6 +525,14 @@ section.main-content {
     .menu.expanded {
         background: $col;
     }
+    .dynamicpage-intro {
+        p a {
+            color: $col;
+        }
+    }
+    .expandable p a {
+        color: $col;
+    }
 }
 .blue {
     @include colorTheme($blue,$bluelight);
