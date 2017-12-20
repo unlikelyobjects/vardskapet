@@ -83,13 +83,13 @@ section.main-content {
             background-position: center center;
             padding: 50px 60px;
             &.blog-bg {
-                background-image: url(assets/images/blue-bg-square.png);
+                background-image: url(assets/images/blue-bg-square.jpg);
             }
             &.stories-bg {
                 background-image: url(assets/images/teal-bg-small.jpg);
             }
             &.events-bg {
-                background-image: url(assets/images/red-bg-square.png);
+                background-image: url(assets/images/red-bg-square.jpg);
             }
         }
 
@@ -411,7 +411,7 @@ section.main-content {
 
 .newsletter {
     width: 602px;
-    background: url(assets/images/yellow-bg-square.png);
+    background: url(assets/images/yellow-bg-square.jpg);
     background-size: cover;
     margin: 30px auto 30px;
     padding: 60px;
@@ -555,30 +555,30 @@ section.main-content {
 }
 
 .green-bg-square {
-    background-image: url(assets/images/green-bg-square.png);
+    background-image: url(assets/images/green-bg-square.jpg);
 }
 
 .blue-bg-square {
-    background-image: url(assets/images/blue-bg-square.png);
+    background-image: url(assets/images/blue-bg-square.jpg);
 }
 
 .teal-bg-square {
-    background-image: url(assets/images/teal-bg-square.png);
+    background-image: url(assets/images/teal-bg-square.jpg);
     iframe {
         margin-top: 16px;
     }
 }
 
 .services:nth-child(1n) {
-    background-image: url(assets/images/purple-bg.png);
+    background-image: url(assets/images/purple-bg.jpg);
 }
 
 .services:nth-child(2n) {
-    background-image: url(assets/images/green-bg.png);
+    background-image: url(assets/images/green-bg.jpg);
 }
 
 .services:nth-child(3n) {
-    background-image: url(assets/images/red-bg.png);
+    background-image: url(assets/images/red-bg.jpg);
 }
 
 .searchandfilter {
