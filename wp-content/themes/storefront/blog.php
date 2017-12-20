@@ -33,6 +33,7 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 
 <section class="main-content">
 	<div class="content-inner">
+		<!--
 		<div class="filter-search">
 			<div id="filter-toggle" class="filter-toggle colored-background">
 				<p><?php _e('[:en]Search Alternatives[:sv]Sökalternativ') ?></p>
@@ -72,6 +73,7 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 				<div class="button filter-button"><?php _e('[:en]Search[:sv]Sök') ?></div>
 			</div>
 		</div>
+					-->
 
 		<div class="grid-holder">
 			<div class="grid-col-100 white-bg blog-intro">

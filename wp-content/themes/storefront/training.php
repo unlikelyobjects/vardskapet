@@ -52,11 +52,24 @@ endif;
         <?php get_template_part( 'content-block' ); ?>
         <div class="training-buttons center">
             <div class="button colored get-contacted"><?php _e('[:en]Get contacted[:sv]Bli kontaktad') ?></div>
-            <div class="button colored"><a href="/about-vardskapet/#dynamic"><?php _e('[:en]Contact us[:sv]Kontakta oss') ?></a></div>
+            <div class="button colored"><a class="show-contact-popup"><?php _e('[:en]Contact us[:sv]Kontakta oss') ?></a></div>
             <div class="button colored make-a-request"><?php _e('[:en]Make a request[:sv]Gör en förfrågan')?></div>
         </div>
 	</div>
 </section>
+
+
+<div class="client-modal contact-popup">
+    <div class="client-modal-content colored-background">
+        <div class="client-modal-close ion">&#xf405;</div>
+        <div class="client-modal-wrapper">
+            <div class="contact-popup-content">
+                <h1><?php _e('[:en]Contact us[:sv]Kontakta oss')?></h1>
+                <p><?php _e('[:en]Call or e-mail us and we will help you.<br>Phone: 08-714 06 10<br><a href="mailto:info@vardskapet.se">info@vardskapet.se</a>[:sv]Ring eller mejla oss så hjälper vi dig.<br>Tfn: 08-714 06 10<br><a href="mailto:info@vardskapet.se">info@vardskapet.se</a>')?></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="client-modal request-popup fullscreen">
     <div class="client-modal-content colored-background">

@@ -14,6 +14,10 @@ $(document).ready(function(){
     dots: true
   });
 
+  $('.show-contact-popup').click(function(e){
+    $('.contact-popup').addClass('active');
+  });
+
   var signedup = findGetParameter('signed-up');
   if(signedup === 'true'){
     $('.movie-preview-popup').addClass('active').addClass('thanks');

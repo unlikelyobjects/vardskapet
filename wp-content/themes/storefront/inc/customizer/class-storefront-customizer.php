@@ -45,7 +45,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			return apply_filters( 'storefront_setting_default_values', $args = array(
 				'storefront_heading_color'               => '#333333',
 				'storefront_text_color'                  => '#6d6d6d',
-				'storefront_accent_color'                => '#96588a',
+				'storefront_accent_color'                => 'white',
 				'storefront_header_background_color'     => '#ffffff',
 				'storefront_header_text_color'           => '#6d6d6d',
 				'storefront_header_link_color'           => '#333333',
@@ -362,7 +362,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Button background color
 			 */
 			$wp_customize->add_setting( 'storefront_button_background_color', array(
-				'default'           	=> apply_filters( 'storefront_default_button_background_color', '#96588a' ),
+				'default'           	=> apply_filters( 'storefront_default_button_background_color', 'white' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 

@@ -111,6 +111,10 @@
     }
 }
 
+.show-contact-popup {
+    cursor: pointer;
+}
+
 
 .menu-link-expanded {
     display: block;
@@ -141,7 +145,7 @@
             height: 56px;
         }
         .menu-link-expanded.menu-services {
-            height: 132px;
+            height: 158px;
         }
         .menu-link-expanded.menu-vardskap {
             height: 30px;

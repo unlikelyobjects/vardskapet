@@ -249,9 +249,6 @@ section.main-content {
             margin-left: 3%;
             margin-right: 0;
         }
-        &.service-intro {
-            padding-top: 0;
-        }
     }
 }
 
@@ -416,7 +413,7 @@ section.main-content {
     width: 602px;
     background: url(assets/images/yellow-bg-square.png);
     background-size: cover;
-    margin: 150px auto 30px;
+    margin: 30px auto 30px;
     padding: 60px;
     text-align: center;
     font-size: initial;
@@ -563,6 +560,9 @@ section.main-content {
 
 .teal-bg-square {
     background-image: url(assets/images/teal-bg-square.png);
+    iframe {
+        margin-top: 16px;
+    }
 }
 
 .services:nth-child(1n) {

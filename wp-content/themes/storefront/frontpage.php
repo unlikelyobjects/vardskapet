@@ -42,7 +42,7 @@ $newsletter = get_field('newsletter');
 					<?php
 					$cats = array('Blog','Our stories','Events');
 					$catClass = array('blog-bg','stories-bg','events-bg');
-					$catTitle = array("[:en]Latest blog post[:sv]Senaste blogginlägget","[:en]Latest story[:sv]Senaste berättelsen","[:en]Upcoming events[:sv]Kommande events");
+					$catTitle = array("[:en]Latest blog post[:sv]Senaste blogginlägget","[:en]Latest story[:sv]Senaste berättelsen","[:en]Upcoming events[:sv]Aktuellt");
 					for($x = 0; $x <= 2; $x++) : ?>
 						<?php
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -78,20 +78,6 @@ $newsletter = get_field('newsletter');
 					<div class="button"><a href="<?php echo $tealbox['read_more_link'] ?>"><?php _e("[:en]Read more[:sv]Läs mer här"); ?></a></div>
 				</div>
 			</div>
-		</div>
-		<div class="grid-holder">
-			<div class="grid-col-100 white-bg">
-				<h1 class="center"><?php echo $clientsection['title'] ?></h1>
-				<p class="text-two-rows">
-					<?php echo $clientsection['body'] ?>
-                </p>
-                <?php
-                foreach( $clientsection['clients'] as $client){
-                    echo '<div class="client" style="background-image:url('.$client['client_logo'].'";" data-body="'.$client['popup_body'].'" data-title="'.$client['popup_title'].'" data-image="'.$client['popup_image'].'"><div class="overlay">&#xf48a;</div></div>';
-                }
-                ?>
-
-			</div>
 			<div class="grid-col-100 white-bg service-intro">
 				<h1><?php echo $servicesection['title'] ?></h1>
 				<p class="text-two-rows">
@@ -110,6 +96,22 @@ $newsletter = get_field('newsletter');
             </div>
             <? endforeach; ?>
 		</div>
+		<div class="grid-holder">
+			<div class="grid-col-100 white-bg">
+				<h1 class="center"><?php echo $clientsection['title'] ?></h1>
+				<p class="text-two-rows">
+					<?php echo $clientsection['body'] ?>
+                </p>
+                <?php
+                foreach( $clientsection['clients'] as $client){
+                    echo '<div class="client" style="background-image:url('.$client['client_logo'].'";" data-body="'.$client['popup_body'].'" data-title="'.$client['popup_title'].'" data-image="'.$client['popup_image'].'"><div class="overlay">&#xf48a;</div></div>';
+                }
+                ?>
+
+			</div>
+			
+		</div>
+		
 		<div class="newsletter">
 			<h1><?php echo $newsletter['title'] ?></h1>
 			<p><?php echo $newsletter['body'] ?></p>

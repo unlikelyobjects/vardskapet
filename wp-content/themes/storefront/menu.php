@@ -38,7 +38,8 @@ function createMenu($style){
                     <div class="menu-link-expanded menu-services">
                         <a class="menu-link" href="/the-art-of-welcoming"><?php _e("[:en]Art of welcoming[:sv]Art of welcoming"); ?></a>
                         <a class="menu-link" href="/lectures"><?php _e("[:en]Lectures[:sv]Föreläsningar"); ?></a>
-                        <a class="menu-link" href="/training"><?php _e("[:en]Training programs[:sv]Träningsprogram"); ?></a>
+                        <a class="menu-link" href="/training"><?php _e("[:en]Training programmes[:sv]Träningsprogram"); ?></a>
+                        <a class="menu-link" href="/open-training-programmes"><?php _e("[:en]Open training programmes[:sv]Öppna Träningsprogram"); ?></a>
                         <a class="menu-link" href="/books"><?php _e("[:en]Books[:sv]Böcker"); ?></a>
                         <a class="menu-link" href="/our-stories"><?php _e("[:en]Our stories[:sv]Våra berättelser"); ?></a>
                         <!--<a class="menu-link" href="/online-courses"><?php _e("[:en]Online courses[:sv]Online kurser"); ?></a>-->
@@ -48,7 +49,7 @@ function createMenu($style){
                     <a class="menu-link" href="/about-vardskapet"><?php _e("[:en]About us[:sv]Om oss"); ?></a>
                 </div>
                 <div class="menu-link-holder">
-                    <a class="menu-link" href="/about-vardskapet#dynamic"><?php _e("[:en]Contact[:sv]Kontakt"); ?></a>
+                    <a class="menu-link" href="/contact"><?php _e("[:en]Contact[:sv]Kontakt"); ?></a>
                 </div>
                 <div class="flag" data-href="en" <?php if($lang == 'en'){echo 'data-active="active"';} ?>></div>
                 <div class="flag" data-href="sv" <?php if($lang == 'sv'){echo 'data-active="active"';} ?>></div>

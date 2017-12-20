@@ -124,7 +124,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 				'id'       => 'woocommerce_email_base_color',
 				'type'     => 'color',
 				'css'      => 'width:6em;',
-				'default'  => '#96588a',
+				'default'  => 'white',
 				'autoload' => false,
 				'desc_tip' => true,
 			),

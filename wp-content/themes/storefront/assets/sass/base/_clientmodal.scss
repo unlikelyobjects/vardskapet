@@ -18,6 +18,10 @@ body.popup-active,html.popup-active {
     overflow-y: auto;
     transform: scale(0);
     transition: all .3s ease-in-out;
+    p a {
+        color: white;
+        text-decoration: underline;
+    }
     &.active {
         transform: scale(1);
     }
