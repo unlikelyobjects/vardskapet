@@ -525,6 +525,10 @@ section.main-content {
     .menu.expanded {
         background: $col;
     }
+    .main-content a {
+        color: $col;
+        text-decoration: underline;
+    }
 }
 .blue {
     @include colorTheme($blue,$bluelight);
@@ -726,6 +730,10 @@ section.main-content {
                 color: lightgray !important;
             }
         }
+    }
+    .main-content a {
+        color: white;
+        text-decoration: underline;
     }
 }
 @media (max-width:840px){
