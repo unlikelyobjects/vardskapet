@@ -131,8 +131,10 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 		</div>
 		<div class="grid-holder">
 			<div class="grid-col-100">
-				<div class="nav-previous alignleft"><?php next_posts_link( _e('[:en]Older posts[:sv]Äldre inlägg') ); ?></div>
-				<div class="nav-next alignright"><?php previous_posts_link( _e('[:en]Newer posts[:sv]Nyare inlägg') ); ?></div>
+				<?php $prev = __('[:en]Older posts[:sv]Äldre inlägg');
+				$next = __('[:en]Newer posts[:sv]Nyare inlägg');?>
+				<div class="nav-previous alignleft"><?php next_posts_link($next); ?></div>
+				<div class="nav-next alignright"><?php previous_posts_link($prev ); ?></div>
 			</div>
 		</div>
 	</div>
