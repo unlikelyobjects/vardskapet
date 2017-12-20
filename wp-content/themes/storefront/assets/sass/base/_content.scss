@@ -525,10 +525,6 @@ section.main-content {
     .menu.expanded {
         background: $col;
     }
-    .main-content a {
-        color: $col;
-        text-decoration: underline;
-    }
 }
 .blue {
     @include colorTheme($blue,$bluelight);
