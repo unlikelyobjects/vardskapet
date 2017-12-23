@@ -49,7 +49,7 @@ if ( is_admin() ) {
 	require 'inc/admin/class-storefront-plugin-install.php';
 }
 
-define ('VERSION', '4.9.17');
+define ('VERSION', '4.9.18');
 
 function version_id() {
   if ( WP_DEBUG )
