@@ -9,6 +9,7 @@ $participants = "";
 $pass = "";
 $phone = "";
 $purpose = "";
+$programme = "";
 
 
 
@@ -40,10 +41,13 @@ if(isset($_POST['phone'])){
 if(isset($_POST['purpose'])){
     $purpose = $_POST['purpose'];
 }
+if(isset($_POST['programme'])){
+    $purpose = $_POST['programme'];
+}
 
 $headers = array('Content-Type: text/html; charset=UTF-8');
 
-$mailBody = "Föreläsningsförfrågan<br>Namn: ".$fullname."<br>Företag: ".$company."<br>Telefon: ".$phone."<br>Email: ".$email."<br>Adress: ".$address."<br>Publik: ".$audience."<br>Deltagare: ".$audience."<br>Pass: ".$pass."<br>Syfte: ".$purpose;
+$mailBody = "Föreläsningsförfrågan<br>Namn: ".$fullname."<br>Företag: ".$company."<br>Telefon: ".$phone."<br>Email: ".$email."<br>Adress: ".$address."<br>Publik: ".$audience."<br>Deltagare: ".$audience."<br>Pass: ".$pass."<br>Syfte: ".$purpose."<br>Program: ".$programme;
 $mailTitle = "Föreläsningsförfrågan";
 
 wp_mail('info@vardskapet.se',$mailTitle,$mailBody,$headers);

@@ -8,7 +8,7 @@ while ( have_rows('layout') ) : the_row();
                 <?php if(have_rows('content_blocks')):?>
                 <?php while ( have_rows('content_blocks') ) : the_row();?>
                 <?php if(get_row_layout() == 'expandable'): ?>
-                    <div class="expandable">
+                    <div class="expandable" id="<?php echo get_sub_field('idname'); ?>">
                         <?php
                             $isOpen = get_sub_field('open_by_default') == true ? 'active' : '';
                         ?>
@@ -113,6 +113,13 @@ while ( have_rows('layout') ) : the_row();
                 <?php endif ?>
                 <?php if(get_row_layout() == 'video'): ?>
                     <div class="video-block" data-href="<?php echo get_sub_field('youtube_url');?>" style="background-image:url(<?php echo get_sub_field('video_image') ?>)"></div>
+                <?php endif ?>
+                <?php if(get_row_layout() == 'button'): ?>
+                    <div class="button-block">
+                        <div class="button colored">
+                            <a href="<?php echo get_sub_field('button_link');?>"><?php echo get_sub_field('button_text');?></a>
+                        </div>
+                    </div>
                 <?php endif ?>
                 <?php endwhile; ?>
                 <?php endif; ?>

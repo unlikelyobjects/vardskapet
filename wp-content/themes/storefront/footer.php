@@ -20,7 +20,7 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/man.png">
 			</div>
 			<div class="footer-logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-old.png">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-logo.png">
 			</div>
 			<div class="footer-social">
 				<p class="medium">Våra sociala medier:</p>
@@ -118,6 +118,7 @@
 		window.videoDialogPlayer = new YT.Player('video-dialog-player', {
 			height: '360',
 			width: '640',
+			showinfo: '0',
 			videoId: window.selectedYoutubeVideo,
 			events: {
 				'onReady': function(){

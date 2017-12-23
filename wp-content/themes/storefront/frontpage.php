@@ -104,7 +104,7 @@ $newsletter = get_field('newsletter');
                 </p>
                 <?php
                 foreach( $clientsection['clients'] as $client){
-                    echo '<div class="client" style="background-image:url('.$client['client_logo'].'";" data-body="'.$client['popup_body'].'" data-title="'.$client['popup_title'].'" data-image="'.$client['popup_image'].'"><div class="overlay">&#xf48a;</div></div>';
+                    echo '<div class="client" style="background-image:url('.$client['client_logo'].'";" data-body="'.$client['popup_body'].'" data-title="'.$client['popup_title'].'" data-image="'.$client['popup_image'].'" data-youtube="'.$client['youtube_url'].'"><div class="overlay">&#xf48a;</div></div>';
                 }
                 ?>
 
@@ -131,6 +131,9 @@ $newsletter = get_field('newsletter');
 			<p class="regular center"><?php _e('[:en]Client reference[:sv]Kundreferens') ?></p>
 			<p class="client-modal-body center light">Body</p>
 			<div class="client-modal-image"></div>
+			<div class="client-modal-youtube">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/yHZH8bLQ_Xo?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			</div>
 		</div>
 	</div>
 </div>

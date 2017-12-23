@@ -107,6 +107,12 @@ endif;
                     <option value="förmiddag"><?php _e('[:en]Morning[:sv]Förmiddag')?></option>
                     <option value="eftermiddag"><?php _e('[:en]Afternoon[:sv]Eftermiddag')?></option>
                 </select>
+                <select id="request-form-programme">
+                    <option value="hide"><?php _e('[:en]Programme[:sv]Val av program') ?></option>
+                    <option value="diplmera-värd"><?php _e('[:en]Dipl Mera värd[:sv]Dipl Mera värd')?></option>
+                    <option value="ledare"><?php _e('[:en]Dipl Mera värd ledare[:sv]Dipl Mera värd ledare')?></option>
+                    <option value="världskapstränare"><?php _e('[:en]Dipl Värdskapstränare[:sv]Dipl Värdskapstränare')?></option>
+                </select>
                 <input type="text" id="request-form-address" placeholder="<?php _e('[:en]District[:sv]Ort')?>">
                 <textarea id="request-form-purpose" rows="5" placeholder="Ert syfte med föreläsningen"></textarea>
 

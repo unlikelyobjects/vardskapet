@@ -108,7 +108,14 @@ $(document).ready(function(){
     window.selectedYoutubeVideo = url.match(myregexp)[1];
     console.log(window.videoDialogPlayer);
     window.videoDialogPlayer.loadVideoById(window.selectedYoutubeVideo);
-    window.headerVideoOpen = true;
+    //only show signup popup on frontpage
+    if($('body').hasClass('page-id-13')){
+      window.headerVideoOpen = false;
+    }
+    else {
+      window.headerVideoOpen = true;
+    }
+    
     $('#video-modal').modal('show');
   });
 
@@ -177,7 +184,7 @@ $(document).ready(function(){
   if(hash.length > 1){
     setTimeout(function(){
       $('html, body').animate({
-          scrollTop: ($('.' + (hash.replace('#', ''))).offset().top) - 30
+          scrollTop: ($('.' + (hash.replace('#', ''))).offset().top) - 60
       }, 500);
     },500);
   }
@@ -202,17 +209,36 @@ $(document).ready(function(){
     $(this).parent().toggleClass('active');
 
   });
-
+  if($('body').hasClass('page-id-13') && window.location.hash){
+    if(window.location.hash.length > 1){
+      $(window.location.hash + ' .entry-expanded').slideDown();
+      $(window.location.hash + ' .entry').addClass('active');
+    }
+    
+  }
   $('.client').click(function(e){
     var $el = $(e.currentTarget);
     var title = $el.attr('data-title');
     var body = $el.attr('data-body');
     var image = $el.attr('data-image');
+    var youtube = $el.attr('data-youtube');
     $('.customer-popup').addClass('active');
     $('body,html').addClass('popup-active');
     $('.client-modal-title').text(title);
     $('.client-modal-body').text(body);
     $('.client-modal-image').css('background-image','url('+image+')');
+    if(youtube != ''){
+      var myregexp = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i;
+      var ytid = youtube.match(myregexp)[1];
+      $('.client-modal-youtube').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/'+ytid+'?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>');
+      $('.client-modal-youtube').show();
+    }
+    if($('.client-modal-content').outerHeight() > $(window).height()){
+      $('.client-modal').addClass('fullscreen');
+    }
+    else {
+      $('.client-modal').removeClass('fullscreen');
+    }
   });
   $('.get-contacted').click(function(){
     openContactForm();
@@ -234,6 +260,14 @@ $(document).ready(function(){
   $('.make-a-request').click(function(){
     console.log('click');
     $('.request-popup').addClass('active');
+    if($('body').hasClass('page-id-190')){
+      if(window.location.href.indexOf('/sv/') !== -1){
+        $('.request-popup h1').first().text('Om ditt träningsprogram');
+      }
+      else {
+        $('.request-popup h1').first().text('About your träning programme');
+      }
+    }
     $('body,html').addClass('popup-active');
   });
   $('.request-form .button').click(function(){
@@ -261,11 +295,12 @@ $(document).ready(function(){
     else {
       $('body,html').removeClass('popup-active');
     }
-    
   });
 
-  $('.client-modal-close').click(function(){
+  $('.client-modal-content').click(function(e){e.stopPropagation()});
+  $('.client-modal-close, .client-modal').click(function(){
     $('.client-modal').removeClass('active');
+    $('.client-modal-youtube').empty();
     $('body,html').removeClass('popup-active');
   });
 
