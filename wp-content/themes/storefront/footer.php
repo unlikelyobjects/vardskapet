@@ -89,8 +89,8 @@
         <div class="client-modal-close ion">&#xf405;</div>
         <div class="client-modal-wrapper">
 			<div class="form">
-				<h1 class="center"><?php _e('[:en]Watch the first five minutes of <br>Art Of Welcoming![:sv]Se de fem första minuterna av Art Of Welcoming!');?></h1>
-				<p class="center"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Välkommen att fylla i din mejl adress här så skickar vi fem minuter Art Of Welcoming eller att läsa mer.') ?></p>
+				<h1 class="center"><?php _e('[:en]Watch the first five minutes of <br>Art Of Welcoming![:sv]Se de fem första minuterna av filmen Art of Welcoming!');?></h1>
+				<p class="center"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Välkommen att fylla i din E-mail adress här så skickar vi fem minuter Art Of Welcoming eller att läsa mer.') ?></p>
 				<?php echo do_shortcode('[mc4wp_form id="258"]'); ?>
 				<div class="center">		
 					<div class="button colored read-more"><a href="/the-art-of-welcoming"><?php _e('[:en]Read more[:sv]Läs mer');?></a></div>

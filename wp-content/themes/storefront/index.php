@@ -111,7 +111,7 @@ createVideoHeader('');
 			<p>Aliquam neque quisque quis adipiscingsfelis aliquam vitaeag
 mollis diam gasa sgfusce quia nulls sa sgfus.</p>
 			<div class="form">
-				<input id="newsletter-input" type="email" placeholder="<?php _e("[:en]Write your e-mail here[:sv]Skriv er emailadress här"); ?>">
+				<input id="newsletter-input" type="email" placeholder="<?php _e("[:en]Write your E-mail here[:sv]Skriv er E-mailadress här"); ?>">
 				<p class="form-error"><?php _e("[:en]Malformed e-mail[:sv]Felaktig emailadress")?></p>
 				<p class="form-sent"><?php _e("[:en]Thank you![:sv]Tack!")?></p>
 			</div>

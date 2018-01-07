@@ -7,6 +7,7 @@ function createVideoHeader($style){
         <video class='video' src="/wp-content/themes/storefront/assets/videos/vad_ar_vardskap_small.mp4?cache=123" playsinline="" autoplay="" muted="" loop="" type="video/mp4"></video>
         <div class="hero">
             <h1 class="video-title"><?php _e("[:en]What is welcoming[:sv]Vad är värdskap"); ?></h1>
+            <p><?php _e("[:en]Click here to see the movie[:sv]Klicka för att se filmen"); ?></p>
             <div class="play-button"></div>
         </div>
         <div class="arrow-down"></div>
@@ -23,8 +24,8 @@ function createVideoHeader($style){
         <div class="drop-shadow-bar"></div>
         <video class='video' src="/wp-content/themes/storefront/assets/videos/vardskapet_small_2.mp4?cache=123" playsinline="" autoplay="" muted="" loop="" type="video/mp4"></video>
         <div class="hero">
-            <h1 class="video-title"><?php _e("[:en]Art of welcoming[:sv]Art Of welcoming"); ?></h1>
-            <p><?php _e("[:en]Click here to see the trailer[:sv]Välkommen att se trailern för Art Of Welcoming"); ?></p>
+            <h1 class="video-title"><?php _e("[:en]Art of Welcoming[:sv]Art of Welcoming"); ?></h1>
+            <p><?php _e("[:en]Click here to see the trailer[:sv]Välkommen att se trailern för Art of Welcoming"); ?></p>
             <div class="play-button"></div>
         </div>
         <div class="arrow-down"></div>
@@ -38,7 +39,7 @@ function createVideoHeader($style){
             <div class="drop-shadow-bar"></div>
             <video class='video' src="/wp-content/themes/storefront/assets/videos/vardskapet_small.mp4?cache=123" playsinline="" autoplay="" muted="" loop="" type="video/mp4"></video>
             <div class="hero">
-                <h1 class="video-title"><?php _e("[:en]Art of welcoming[:sv]Art of welcoming"); ?></h1>
+                <h1 class="video-title"><?php _e("[:en]Art of Welcoming[:sv]Art of Welcoming"); ?></h1>
                 <p><?php _e("[:en]Click here to see the trailer[:sv]Tryck här för att se trailern"); ?></p>
                 <div class="play-button"></div>
             </div>

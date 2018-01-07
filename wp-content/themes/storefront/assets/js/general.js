@@ -55,6 +55,11 @@ $(document).ready(function(){
       }
     }
   });
+  var fiveminSubscribeButton = "Send";
+  if(langindex == 2){
+    fiveminSubscribeButton = "Skicka";
+  }
+  $('.newsletter-send').first().attr('value',fiveminSubscribeButton);
 
   $('#newsletter-send').click(function(){
     var text = $('#newsletter-input').val();

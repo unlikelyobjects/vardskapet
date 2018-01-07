@@ -11,7 +11,7 @@ function createMenu($style){
     <div class="menu cf <?php echo $style; ?>">
         <div class="menu-wrapper">
             <!--<div class="menu-logo"></div>-->
-            <img class="mobile-logo" src="/wp-content/themes/storefront/assets/images/logo-mobile.png" alt="">
+            <img class="mobile-logo" src="/wp-content/themes/storefront/assets/images/footer-logo.png" alt="">
             <div class="hamburger show-mobile"></div>
             <div class="menu-links">
                 <div class="menu-link-holder">
@@ -40,7 +40,7 @@ function createMenu($style){
                 <div class="menu-link-holder link-expandable">
                     <a class="menu-link" href="#"><?php _e("[:en]Our Services[:sv]Våra tjänster"); ?></a><i class="fa fa-angle-down" aria-hidden="true"></i>
                     <div class="menu-link-expanded menu-services">
-                        <a class="menu-link" href="/the-art-of-welcoming"><?php _e("[:en]Art of welcoming[:sv]Art of welcoming"); ?></a>
+                        <a class="menu-link" href="/the-art-of-welcoming"><?php _e("[:en]Art of Welcoming[:sv]Art of Welcoming"); ?></a>
                         <a class="menu-link" href="/lectures"><?php _e("[:en]Lectures[:sv]Föreläsningar"); ?></a>
                         <a class="menu-link" href="/training"><?php _e("[:en]Training programmes[:sv]Träningsprogram"); ?></a>
                         <a class="menu-link" href="/open-training-programmes"><?php _e("[:en]Open training programmes[:sv]Öppna Träningsprogram"); ?></a>
