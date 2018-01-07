@@ -89,7 +89,7 @@
         <div class="client-modal-close ion">&#xf405;</div>
         <div class="client-modal-wrapper">
 			<div class="form">
-				<h1 class="center"><?php _e('[:en]Watch the first five minutes of <br>Art Of Welcoming![:sv]Se de fem första minuterna av filmen Art of Welcoming!');?></h1>
+				<h1 class="center"><?php _e('[:en]Watch the first five minutes of <br>Art of Welcoming![:sv]Se de fem första minuterna av filmen Art of Welcoming!');?></h1>
 				<p class="center"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Välkommen att fylla i din E-mail adress här så skickar vi fem minuter Art Of Welcoming eller att läsa mer.') ?></p>
 				<?php echo do_shortcode('[mc4wp_form id="258"]'); ?>
 				<div class="center">		
@@ -98,7 +98,7 @@
 			</div>
 			<div class="get-contacted-thanks">
 				<h1 class="center"><?php _e('[:en]Thanks![:sv]Tack!');?></h1>
-                <p class="center"><?php _e('[:en]Five minutes of Art Of Welcoming is now headed your way.[:sv]Fem minuter av filmen Art Of Welcoming är nu på väg till dig.');?></p>
+                <p class="center"><?php _e('[:en]Five minutes of Art of Welcoming is now headed your way.[:sv]Fem minuter av filmen Art of Welcoming är nu på väg till dig.');?></p>
 			</div>
 		</div>
 	</div>
