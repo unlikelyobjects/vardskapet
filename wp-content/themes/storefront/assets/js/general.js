@@ -59,7 +59,7 @@ $(document).ready(function(){
   if(langindex == 2){
     fiveminSubscribeButton = "Skicka";
   }
-  $('.newsletter-send').first().attr('value',fiveminSubscribeButton);
+  $('.form input[type="submit"]').last().val(fiveminSubscribeButton);
 
   $('#newsletter-send').click(function(){
     var text = $('#newsletter-input').val();
