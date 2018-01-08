@@ -538,6 +538,9 @@ section.main-content {
     .expandable p a {
         color: $col;
     }
+    .blog-post-small.grid-col-50 .blog-post-image {
+        background-color: $col;
+    }
 }
 .blue {
     @include colorTheme($blue,$bluelight);

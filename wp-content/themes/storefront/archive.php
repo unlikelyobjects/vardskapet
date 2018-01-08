@@ -68,7 +68,7 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 						<?php
 							$imageurl = get_the_post_thumbnail_url($post->ID,'large');
 							if(empty($imageurl)){
-								$imageurl = '/wp-content/themes/storefront/assets/images/main_page_bg.png';
+								$imageurl = '/wp-content/themes/storefront/assets/images/default-img.png';
 							}
 						?>
 						<div class="blog-post-image" style='background-image: url("<?php echo $imageurl;?>");'></div>

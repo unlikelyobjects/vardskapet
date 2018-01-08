@@ -40,7 +40,7 @@
 			-->
 			<div class="divider"></div>
 			<div class="copyright">@ Copyright 2010 Värdskapet Utveckling AB</div>
-			<div class="developer"><a href="http://www.thirdact.se">Webbyrå Thirdact.se</a></div>
+			<div class="developer">Made by <a href="http://www.thirdact.se">Thirdact.se</a></div>
 		</div>
 		<div class="col-full">
 
