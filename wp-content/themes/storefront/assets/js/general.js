@@ -23,9 +23,9 @@ $(document).ready(function(){
     $('.movie-preview-popup').addClass('active').addClass('thanks');
   }
 
-  var langindex = 1;
-  if(window.location.href.indexOf('/sv/') !== -1){
-    langindex = 2;
+  var langindex = 2;
+  if(window.location.href.indexOf('/en/') !== -1){
+    langindex = 1;
   }
   $(".newsletter input, .movie-preview-popup input").each(function () {
     var newVal = $(this).attr('value').match(/\[\:en\](.*)\[\:sv\](.*)/);
@@ -278,11 +278,11 @@ $(document).ready(function(){
     console.log('click');
     $('.request-popup').addClass('active');
     if($('body').hasClass('page-id-190')){
-      if(window.location.href.indexOf('/sv/') !== -1){
-        $('.request-popup h1').first().text('Om ditt träningsprogram');
+      if(window.location.href.indexOf('/en/') !== -1){
+        $('.request-popup h1').first().text('About your träning programme');
       }
       else {
-        $('.request-popup h1').first().text('About your träning programme');
+        $('.request-popup h1').first().text('Om ditt träningsprogram');
       }
     }
     $('body,html').addClass('popup-active');
