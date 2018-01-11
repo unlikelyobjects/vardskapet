@@ -53,7 +53,12 @@ endif;
         <div class="training-buttons center">
             <div class="button colored get-contacted"><?php _e('[:en]Get contacted[:sv]Bli kontaktad') ?></div>
             <div class="button colored"><a class="show-contact-popup"><?php _e('[:en]Contact us[:sv]Kontakta oss') ?></a></div>
-            <div class="button colored make-a-request"><?php _e('[:en]Make a request[:sv]Gör en förfrågan')?></div>
+            <?php
+            //öppna träningsprogram
+            if(get_the_ID() != 447): ?>
+                <div class="button colored make-a-request"><?php _e('[:en]Make a request[:sv]Gör en förfrågan')?></div>
+            <?php endif; ?>
+            
         </div>
 	</div>
 </section>
@@ -76,54 +81,50 @@ endif;
         <div class="client-modal-close ion">&#xf405;</div>
         <div class="client-modal-wrapper">
             <div class="request-form">
-                <h1 class="center"><?php _e('[:en]We will contact you[:sv]Vi kontaktar dig')?></h1>
-                <input type="text" id="request-form-fullname" placeholder="<?php _e('[:en]Name[:sv]Kontaktperson');?>">
-                <input type="text" id="request-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
-                <input type="email" id="request-form-email" placeholder="<?php _e('[:en]E-mail[:sv]E-mail')?>">
-                <select id="request-form-company">
-                    <option value="hide"><?php _e('[:en]Organizational form[:sv] Organisationsform')?></option>
-                    <option value="Ideell organisation"><?php _e('[:en]Non-profit organization[:sv]Ideell organisation')?></option>
-                    <option value="Frivillig organisation"><?php _e('[:en]voluntary organisation[:sv]Frivillig organisation') ?></option>
-                    <option value="Offentlig finansierad verksamhet"><?php _e('[:en]Publicly funded organization[:sv]Offentlig finansierad verksamhet') ?></option>
-                    <option value="Aktiebolag"><?php _e('[:en]Corporation[:sv]Aktiebolag') ?></option>
-                </select>
-                <!-- 19 = föreläsningar, 190 = träningsprogram -->
-                <?php if(get_the_ID() == 19): ?><h1 class="center pad25"><?php _e('[:en]About the lecture[:sv]Om föreläsningen')?></h1><?php endif; ?>
-                <select id="request-form-audience">
-                    <option value="hide"><?php _e('[:en]Target audience[:sv]Målgrupp')?></option>
-                    <option value="Alla anställda"><?php _e('[:en]All employees[:sv]Alla anställda')?></option>
-                    <option value="ledningsgruppen"><?php _e('[:en]Board members[:sv]Ledningsgruppen')?></option>
-                    <option value="endast chefer och ledare"><?php _e('[:en]Managers and Leaders[:sv]Chefer och Ledare')?></option>
-                    <option value="medlemmar"><?php _e('[:en]Members[:sv]Medlemmar')?></option>
-                    <option value="kunder"><?php _e('[:en]Clients[:sv]Kunder')?></option>
-                    <option value="leverantörer"><?php _e('[:en]Suppliers[:sv]Leverantörer')?></option>
-                    <option value="politiska beslutsfattare"><?php _e('[:en]Political Decisionmakers[:sv]Politiska Beslutsfattare')?></option>
-                    <option value="invånare"><?php _e('[:en]Inhabitants[:sv]invånare')?></option>
-                    <option value="annan"><?php _e('[:en]Other[:sv]Annan')?></option>
-                </select>
-                <input type="text" id="request-form-participants" placeholder="<?php _e('[:en]Number of participants[:sv]Antal deltagare')?>">
-                <?php if(get_the_ID() == 190): ?>
-                <select id="request-form-pass">
-                    <option value="heldag"><?php _e('[:en]Whole day[:sv]Heldag')?></option>
-                    <option value="förmiddag"><?php _e('[:en]Morning[:sv]Förmiddag')?></option>
-                    <option value="eftermiddag"><?php _e('[:en]Afternoon[:sv]Eftermiddag')?></option>
-                </select>
-                <?php endif; ?>
-                <?php if(get_the_ID() != 19): ?>
-                <select id="request-form-programme">
-                    <option value="hide"><?php _e('[:en]Programme[:sv]Val av program') ?></option>
-                    <option value="dipl-medarbetare"><?php _e('[:en]Diplomerad värd coworker[:sv]Diplomerad värd medarbetare')?></option>
-                    <option value="dipl-ledare"><?php _e('[:en]Diplomerad värd leader[:sv]Diplomerad värd ledare')?></option>
-                    <option value="dipl-tränare"><?php _e('[:en]Diplomerad värd trainer[:sv]Diplomerad värd tränare')?></option>
-                    <option value="dipl-skräddarsydd"><?php _e('[:en]Custom program[:sv]Skräddarsytt träningsprogram')?></option>
-                </select>
-                <?php endif; ?>
-                <input type="text" id="request-form-address" placeholder="<?php _e('[:en]District[:sv]Ort')?>">
-                <textarea id="request-form-purpose" rows="5" placeholder="Ert syfte med föreläsningen"></textarea>
+                <form id="request-form">
+                    <h1 class="center"><?php _e('[:en]We will contact you[:sv]Vi kontaktar dig')?></h1>
+                    <input required type="text" id="request-form-fullname" placeholder="<?php _e('[:en]Name[:sv]Kontaktperson');?>">
+                    <input required type="text" id="request-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
+                    <input required type="email" id="request-form-email" placeholder="<?php _e('[:en]E-mail[:sv]E-mail')?>">
+                    <input required type="text" id="request-form-company" placeholder="<?php _e('[:en]Organization name[:sv]Verksamhetens namn')?>">
+                    <!-- 19 = föreläsningar, 190 = träningsprogram -->
+                    <?php if(get_the_ID() == 19): ?><h1 class="center pad25"><?php _e('[:en]About the lecture[:sv]Om föreläsningen')?></h1><?php endif; ?>
+                    <select id="request-form-audience">
+                        <option value="hide"><?php _e('[:en]Target audience[:sv]Målgrupp')?></option>
+                        <option value="Alla anställda"><?php _e('[:en]All employees[:sv]Alla anställda')?></option>
+                        <option value="ledningsgruppen"><?php _e('[:en]Board members[:sv]Ledningsgruppen')?></option>
+                        <option value="endast chefer och ledare"><?php _e('[:en]Managers and Leaders[:sv]Chefer och Ledare')?></option>
+                        <option value="medlemmar"><?php _e('[:en]Members[:sv]Medlemmar')?></option>
+                    </select>
+                    <input type="text" id="request-form-participants" placeholder="<?php _e('[:en]Number of participants[:sv]Antal deltagare')?>">
+                    <?php if(get_the_ID() == 190): ?>
+                    <select id="request-form-pass">
+                        <option value="heldag"><?php _e('[:en]Whole day[:sv]Heldag')?></option>
+                        <option value="förmiddag"><?php _e('[:en]Half a day[:sv]Halvdag')?></option>
+                    </select>
+                    <?php endif; ?>
+                    <?php if(get_the_ID() != 19): ?>
+                    <select id="request-form-programme">
+                        <option value="hide"><?php _e('[:en]Programme[:sv]Val av program') ?></option>
+                        <option value="dipl-medarbetare"><?php _e('[:en]Diplomerad värd coworker[:sv]Diplomerad värd medarbetare')?></option>
+                        <option value="dipl-ledare"><?php _e('[:en]Diplomerad värd leader[:sv]Diplomerad värd ledare')?></option>
+                        <option value="dipl-tränare"><?php _e('[:en]Diplomerad värd trainer[:sv]Diplomerad värd tränare')?></option>
+                        <option value="dipl-skräddarsydd"><?php _e('[:en]Custom program[:sv]Skräddarsytt träningsprogram')?></option>
+                    </select>
+                    <?php endif; ?>
+                    <input type="text" id="request-form-address" placeholder="<?php _e('[:en]District[:sv]Ort')?>">
+                    <?php
+                        $purposeText = '[:en]Purpose of the lecture[:sv]Syfte med föreläsningen';
+                        if(get_the_ID() == 190){
+                            $purposeText = '[:en]Purpose of the program[:sv]Syfte med programmet';
+                        }
+                    ?>
+                    <textarea id="request-form-purpose" rows="5" placeholder="<?php _e($purposeText) ?>"></textarea>
 
-                <div class="center">
-                    <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
-                </div>
+                    <div class="center">
+                        <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
+                    </div>
+                </form>
             </div>
             <div class="request-form-thanks hidden">
                 <h1><?php _e('[:en]Thanks![:sv]Tack!')?></h1>

@@ -20,8 +20,8 @@ if($showvideo == 'yes'):
     createVideoHeader('');
 endif;
 $cats = isset($_GET['categories']) ? $_GET['categories'] : '';
-if($cats == ''){
-	$cats == 'Blog';
+if(empty($cats)){
+	$cats = 'Blog';
 }
 $catArray = explode(',',$cats);
 $dateStart = isset($_GET['datestart']) ? $_GET['datestart'] : '';
@@ -89,6 +89,7 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 		<div class="divider-black"></div>
 		<div class="blog-post-holder">
 			<?php
+			echo "<h1>Kategorier: " . $cats . "</h1>";
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 			$args = array(
 				'post_type' => 'post',

@@ -67,14 +67,16 @@
         <div class="client-modal-close ion">&#xf405;</div>
         <div class="client-modal-wrapper">
             <div class="contact-form">
-                <h1><?php _e('[:en]We will contact you[:sv]Vi kontaktar dig')?></h1>
-                <input type="text" id="contact-form-name" placeholder="<?php _e('[:en]Your name[:sv]Kontaktperson')?>">
-                <input type="text" id="contact-form-company" placeholder="<?php _e('[:en]Company name[:sv]Företagsnamn')?>">
-                <input type="text" id="contact-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
-                <input type="email" id="contact-form-email" placeholder="<?php _e('[:en]Email[:sv]Email')?>">
-                <div class="center">
-                    <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
-                </div>
+				<form id="contact-form">
+					<h1><?php _e('[:en]We will contact you[:sv]Vi kontaktar dig')?></h1>
+					<input required type="text" id="contact-form-name" placeholder="<?php _e('[:en]Your name[:sv]Kontaktperson')?>">
+					<input required type="text" id="contact-form-company" placeholder="<?php _e('[:en]Company name[:sv]Företagsnamn')?>">
+					<input required type="text" id="contact-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
+					<input required type="email" id="contact-form-email" placeholder="<?php _e('[:en]Email[:sv]Email')?>">
+					<div class="center">
+						<input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
+					</div>
+				</form>
             </div>
             <div class="contact-form-thanks hidden">
                 <h1><?php _e('[:en]Thanks![:sv]Tack!')?></h1>
@@ -89,8 +91,8 @@
         <div class="client-modal-close ion">&#xf405;</div>
         <div class="client-modal-wrapper">
 			<div class="form">
-				<h1 class="center"><?php _e('[:en]Watch the first five minutes of <br>Art of Welcoming![:sv]Se de fem första minuterna av filmen Art of Welcoming!');?></h1>
-				<p class="center"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Välkommen att fylla i din E-mail adress här så skickar vi fem minuter Art Of Welcoming eller att läsa mer.') ?></p>
+				<h1 class="center"><?php _e('[:en]Watch the first five minutes of <br>Art of Welcoming![:sv]Se fem minuter av filmen Art of Welcoming!');?></h1>
+				<p class="center"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Välkommen att fylla i din e-postadress så skickar vi fem minuter Art of Welcoming till dig.') ?></p>
 				<?php echo do_shortcode('[mc4wp_form id="258"]'); ?>
 				<div class="center">		
 					<div class="button colored read-more"><a href="/the-art-of-welcoming"><?php _e('[:en]Read more[:sv]Läs mer');?></a></div>
@@ -98,7 +100,7 @@
 			</div>
 			<div class="get-contacted-thanks">
 				<h1 class="center"><?php _e('[:en]Thanks![:sv]Tack!');?></h1>
-                <p class="center"><?php _e('[:en]Five minutes of Art of Welcoming is now headed your way.[:sv]Fem minuter av filmen Art of Welcoming är nu på väg till dig.');?></p>
+                <!--<p class="center"><?php //_e('[:en]Five minutes of Art of Welcoming is now headed your way.[:sv]Fem minuter av filmen Art of Welcoming är nu på väg till dig.');?></p>-->
 			</div>
 		</div>
 	</div>

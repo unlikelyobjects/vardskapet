@@ -171,6 +171,9 @@
     .flag[data-href="sv"]{
         background-image: url($imgpath + 'sweden.png');
     }
+    .flag[data-href="en"]{
+        display:none;
+    }
     .flag[data-active="active"] {
         opacity: 1;
     }
@@ -301,6 +304,7 @@
         }
         &[data-href="sv"]{
             left: calc(50% - 32px + 40px);
+            left: calc(50% - 32px);
         }
     }
 }

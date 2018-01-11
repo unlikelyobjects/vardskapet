@@ -20,8 +20,8 @@ if($showvideo == 'yes'):
     createVideoHeader('');
 endif;
 $cats = isset($_GET['categories']) ? $_GET['categories'] : '';
-if($cats == ''){
-	$cats == 'Our stories';
+if(empty($cats)){
+	$cats = 'Our stories';
 }
 $catArray = explode(',',$cats);
 $dateStart = isset($_GET['datestart']) ? $_GET['datestart'] : '';
