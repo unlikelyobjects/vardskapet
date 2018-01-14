@@ -28,11 +28,11 @@ function createMenu($style){
                 <div class="menu-link-holder link-expandable">
                     <a class="menu-link" href="#"><?php _e("[:en]Värdskap[:sv]Värdskap"); ?></a><i class="fa fa-angle-down" aria-hidden="true"></i>
                     <div class="menu-link-expanded menu-vardskap">
-                        <a class="menu-link" href="/what-is-welcoming"><?php _e("[:en]What is welcoming[:sv]Vad är värdskap"); ?></a>
-                        <a class="menu-link" href="/what-is-welcoming#philosophy"><?php _e("[:en]The welcoming philosophy[:sv]Filosofin om värdskap"); ?></a>
                         <a class="menu-link" href="/what-is-welcoming#why"><?php _e("[:en]Why welcoming[:sv]Varför värdskap"); ?></a>
                         <a class="menu-link" href="/what-is-welcoming#working"><?php _e("[:en]Working with welcoming[:sv]Att arbeta med värskap"); ?></a>
                         <a class="menu-link" href="/what-is-welcoming#leadership"><?php _e("[:en]Welcoming and leadership[:sv]Värdskap och ledarskap"); ?></a>
+                        <a class="menu-link" href="/what-is-welcoming#philosophy"><?php _e("[:en]The welcoming philosophy[:sv]Filosofin om värdskap"); ?></a>
+                        <a class="menu-link" href="/what-is-welcoming"><?php _e("[:en]What is welcoming[:sv]Vad är värdskap"); ?></a>
                         <!--<a class="menu-link" href="/about-vardskapet"><?php _e("[:en]About Värdskapet[:sv]Om Värdskapet"); ?></a>-->
                     </div>
                 </div>

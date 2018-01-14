@@ -43,9 +43,9 @@ section.main-content {
         }
     }
     h1,h2,h3 {
-        color: white;
         font-family: $header-font;
         line-height: 1.4;
+        border: none;
     }
     p {
         font-family: 'Roboto-Light';
@@ -267,7 +267,8 @@ section.main-content {
         padding: 0;
     }
 
-    h1 {
+    h1,h2 {
+        color: white;
         margin-bottom: 10px;
         font-size: 38px;
         @media(max-width: 1010px){
@@ -323,6 +324,7 @@ section.main-content {
         text-align: center;
         margin-top:15px;
         margin-bottom: 10px;
+        display: none;
     }
 
     .colored-link {
@@ -375,6 +377,7 @@ section.main-content {
         background-image: url(assets/images/icon-hat.png);
     }
     h2 {
+        color: white;
         margin: 25px 0;
         text-align: center;
     }
@@ -728,8 +731,12 @@ section.main-content {
 .page-id-13 {
     .content-inner {
         background: $green;
-        h1 {
+        h1,h2,h3,h4,h5,h6,a,ul,ol {
             color: white !important;
+        }
+        a {
+            font-family: Roboto-medium;
+            text-decoration: underline;
         }
         p {
             color: white !important;

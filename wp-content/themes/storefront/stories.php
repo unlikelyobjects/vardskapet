@@ -54,6 +54,7 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 						}
 					?>
 				</div>
+				<!--
 				<div class="date-column">
 					<p class="regular"><?php _e('[:en]Date[:sv]Datum')?></p>
 					<div>
@@ -66,6 +67,7 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 					</div>
 					<div id="date-container"></div>
 				</div>
+					-->
 				<div class="cf"></div>
 				<div class="button filter-button"><?php _e('[:en]Search[:sv]Sök') ?></div>
 			</div>

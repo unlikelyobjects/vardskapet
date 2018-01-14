@@ -44,6 +44,7 @@
 
 
 .searchandfilter {
+    max-width: 566px;
     p.regular {
         text-align: center;
         font-family: Roboto-regular;
@@ -53,8 +54,8 @@
     }
     .category-column {
         float: left;
-        padding-right: 32px;
-        border-right: 1px solid white;
+        //padding-right: 32px;
+        //border-right: 1px solid white;
     }
     .date-column {
         float: left;
@@ -96,12 +97,14 @@
         cursor: pointer;
         user-select: none;
         font-family: 'Roboto-regular';
+        float: left;
+        margin-right: 15px;
         &:before {
             content: '\f3a6';
             font-family: 'ion';
             font-size: 20px;
             color: white;
-            display: inline-block;
+            display: inline;
             margin-right: 8px;
         }
         &.active:before {

@@ -72,7 +72,7 @@
 					<input required type="text" id="contact-form-name" placeholder="<?php _e('[:en]Your name[:sv]Kontaktperson')?>">
 					<input required type="text" id="contact-form-company" placeholder="<?php _e('[:en]Company name[:sv]Företagsnamn')?>">
 					<input required type="text" id="contact-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
-					<input required type="email" id="contact-form-email" placeholder="<?php _e('[:en]Email[:sv]Email')?>">
+					<input required type="email" id="contact-form-email" placeholder="<?php _e('[:en]E-mail[:sv]E-postadress')?>">
 					<div class="center">
 						<input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
 					</div>
@@ -93,7 +93,14 @@
 			<div class="form">
 				<h1 class="center"><?php _e('[:en]Watch the first five minutes of <br>Art of Welcoming![:sv]Se fem minuter av filmen Art of Welcoming!');?></h1>
 				<p class="center"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Välkommen att fylla i din e-postadress så skickar vi fem minuter Art of Welcoming till dig.') ?></p>
-				<?php echo do_shortcode('[mc4wp_form id="258"]'); ?>
+				<form action="https://vardskapet.us15.list-manage.com/subscribe/post" method="POST">
+					<input type="hidden" name="u" value="8e89414b6065ae3f0464ac530">
+					<input type="hidden" name="id" value="6bd7ff0546">	
+					<input type="email" placeholder="<?php _e('[:en]E-mail address[:sv]E-postadress') ?>" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+					<input type="submit" class="button" value="<?php _e('[:en]Send[:sv]Skicka')?>">
+				</form>
+				
+				<?php //echo do_shortcode('[mc4wp_form id="258"]'); ?>
 				<div class="center">		
 					<div class="button colored read-more"><a href="/the-art-of-welcoming"><?php _e('[:en]Read more[:sv]Läs mer');?></a></div>
 				</div>

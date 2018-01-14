@@ -85,7 +85,7 @@ endif;
                     <h1 class="center"><?php _e('[:en]We will contact you[:sv]Vi kontaktar dig')?></h1>
                     <input required type="text" id="request-form-fullname" placeholder="<?php _e('[:en]Name[:sv]Kontaktperson');?>">
                     <input required type="text" id="request-form-phone" placeholder="<?php _e('[:en]Phone number[:sv]Telefon')?>">
-                    <input required type="email" id="request-form-email" placeholder="<?php _e('[:en]E-mail[:sv]E-mail')?>">
+                    <input required type="email" id="request-form-email" placeholder="<?php _e('[:en]E-mail[:sv]E-postadress')?>">
                     <input required type="text" id="request-form-company" placeholder="<?php _e('[:en]Organization name[:sv]Verksamhetens namn')?>">
                     <!-- 19 = föreläsningar, 190 = träningsprogram -->
                     <?php if(get_the_ID() == 19): ?><h1 class="center pad25"><?php _e('[:en]About the lecture[:sv]Om föreläsningen')?></h1><?php endif; ?>
@@ -95,9 +95,10 @@ endif;
                         <option value="ledningsgruppen"><?php _e('[:en]Board members[:sv]Ledningsgruppen')?></option>
                         <option value="endast chefer och ledare"><?php _e('[:en]Managers and Leaders[:sv]Chefer och Ledare')?></option>
                         <option value="medlemmar"><?php _e('[:en]Members[:sv]Medlemmar')?></option>
+                        <option value="annat"><?php _e('[:en]Other[:sv]Annat')?></option>
                     </select>
                     <input type="text" id="request-form-participants" placeholder="<?php _e('[:en]Number of participants[:sv]Antal deltagare')?>">
-                    <?php if(get_the_ID() == 190): ?>
+                    <?php if(get_the_ID() == 19): ?>
                     <select id="request-form-pass">
                         <option value="heldag"><?php _e('[:en]Whole day[:sv]Heldag')?></option>
                         <option value="förmiddag"><?php _e('[:en]Half a day[:sv]Halvdag')?></option>

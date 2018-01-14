@@ -20,7 +20,7 @@ function createVideoHeader($style){
         
         ?>
 
-        <div id="video-bg" class='video-header' data-url="https://www.youtube.com/watch?v=Zk9J5xnTVMA">
+        <div id="video-bg" class='video-header' data-url="https://www.youtube.com/watch?v=ZCk6Mpzjaxg">
         <div class="drop-shadow-bar"></div>
         <video class='video' src="/wp-content/themes/storefront/assets/videos/vardskapet_small_2.mp4?cache=1234" playsinline="" autoplay="" muted="" loop="" type="video/mp4"></video>
         <div class="hero">
@@ -35,7 +35,7 @@ function createVideoHeader($style){
     }
     else {
         ?>
-        <div id="video-bg" class='video-header' data-url="https://www.youtube.com/watch?v=Zk9J5xnTVMA">
+        <div id="video-bg" class='video-header' data-url="https://www.youtube.com/watch?v=ZCk6Mpzjaxg">
             <div class="drop-shadow-bar"></div>
             <video class='video' src="/wp-content/themes/storefront/assets/videos/vardskapet_small_2.mp4?cache=1234" playsinline="" autoplay="" muted="" loop="" type="video/mp4"></video>
             <div class="hero">

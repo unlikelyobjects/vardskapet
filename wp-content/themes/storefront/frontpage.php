@@ -118,7 +118,13 @@ $newsletter = get_field('newsletter');
 			<div class="thank-you">
 				<p class="regular center"><?php _e('[:en]Thanks![:sv]Tack!') ?></p>
 			</div>
-			<?php echo do_shortcode('[mc4wp_form id="258"]'); ?>
+			<form action="https://vardskapet.us15.list-manage.com/subscribe/post" method="POST">
+				<input type="hidden" name="u" value="8e89414b6065ae3f0464ac530">
+				<input type="hidden" name="id" value="442c278af2">
+				<input type="email" placeholder="<?php _e('[:en]E-mail address[:sv]E-postadress') ?>" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+				<input type="submit" class="button" value="<?php _e('[:en]Subscribe[:sv]Prenumerera')?>">
+			</form>
+			<?php //echo do_shortcode('[mc4wp_form id="258"]'); ?>
 		</div>
 	</div>
 </section>

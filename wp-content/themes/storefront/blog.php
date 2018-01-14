@@ -89,7 +89,6 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 		<div class="divider-black"></div>
 		<div class="blog-post-holder">
 			<?php
-			echo "<h1>Kategorier: " . $cats . "</h1>";
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 			$args = array(
 				'post_type' => 'post',
