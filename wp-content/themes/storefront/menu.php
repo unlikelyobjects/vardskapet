@@ -22,7 +22,6 @@ function createMenu($style){
                     <div class="menu-link-expanded">
                         <a class="menu-link" href="/blog"><?php _e("[:en]Blog[:sv]Blogg"); ?></a>
                         <a class="menu-link" href="/our-stories"><?php _e("[:en]Our stories[:sv]Våra berättelser"); ?></a>
-                        <a class="menu-link" href="/events"><?php _e("[:en]Events[:sv]Aktuellt"); ?></a>
                     </div>
                     
                 </div>
@@ -49,6 +48,9 @@ function createMenu($style){
                         <a class="menu-link" href="/our-stories"><?php _e("[:en]Our stories[:sv]Våra berättelser"); ?></a>
                         <!--<a class="menu-link" href="/online-courses"><?php _e("[:en]Online courses[:sv]Online kurser"); ?></a>-->
                     </div>
+                </div>
+                <div class="menu-link-holder">
+                    <a class="menu-link" href="/events"><?php _e("[:en]Events[:sv]Aktuellt"); ?></a>
                 </div>
                 <div class="menu-link-holder">
                     <a class="menu-link" href="/about-vardskapet"><?php _e("[:en]About us[:sv]Om oss"); ?></a>
