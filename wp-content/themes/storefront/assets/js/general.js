@@ -397,7 +397,54 @@ $(document).ready(function(){
     });
 
   });
+
+
+  var $form = $('#newsletter-form');
+  if ( $form.length > 0 ) {
+      $('#newsletter-form input[type="submit"]').bind('click', function ( event ) {
+          if ( event ) event.preventDefault();
+          // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+          register($form,function(){
+            $('.newsletter .thank-you').show();
+          });
+      });
+  }
+  var $videoform = $('#video-form');
+  if ( $videoform.length > 0 ) {
+    $('#video-form input[type="submit"]').bind('click', function ( event ) {
+        if ( event ) event.preventDefault();
+        // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+        register($videoform,function(){
+          $('.get-contacted-thanks').show();
+          $('.hide-sub').hide();
+        });
+    });
+}
 });
+
+function register($form,cb) {
+  $.ajax({
+      type: $form.attr('method'),
+      url: $form.attr('action'),
+      data: $form.serialize(),
+      cache       : false,
+      dataType    : 'json',
+      contentType: "application/json; charset=utf-8",
+      error       : function(err) { alert("Could not connect to the registration server. Please try again later."); },
+      success     : function(data) {
+          if (data.result != "success") {
+            alert(data.msg);
+              // Something went wrong, do something to notify the user. maybe alert(data.msg);
+          } else {
+            $form.hide();
+            cb();
+              // It worked, carry on...
+          }
+      }
+  });
+}
+
+
 
 function openContactForm(){
   console.log('click');

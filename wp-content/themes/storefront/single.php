@@ -11,10 +11,10 @@ $col = "blue";
 if ( $post ) {
     $categories = get_the_category( $post->ID );
 	foreach($categories as $cat){
-		if($cat->name == "Our stories" ){
+		if($cat->slug == "our-stories" ){
 			$col = 'teal';
 		}
-		elseif($cat->name == "Events"){
+		elseif($cat->slug == "events"){
 			$col = 'red';
 		}
 	}

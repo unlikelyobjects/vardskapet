@@ -115,10 +115,10 @@ $newsletter = get_field('newsletter');
 		<div class="newsletter">
 			<h1><?php echo $newsletter['title'] ?></h1>
 			<p><?php echo $newsletter['body'] ?></p>
-			<div class="thank-you">
-				<p class="regular center"><?php _e('[:en]Thanks![:sv]Tack!') ?></p>
+			<div class="thank-you form-thanks">
+				<h4 class="regular center"><?php _e('[:en]Thanks![:sv]Tack!') ?></h4>
 			</div>
-			<form action="https://vardskapet.us15.list-manage.com/subscribe/post" method="POST">
+			<form id="newsletter-form" action="https://vardskapet.us15.list-manage.com/subscribe/post-json?u=8e89414b6065ae3f0464ac530&id=442c278af2&c=?" method="get">
 				<input type="hidden" name="u" value="8e89414b6065ae3f0464ac530">
 				<input type="hidden" name="id" value="442c278af2">
 				<input type="email" placeholder="<?php _e('[:en]E-mail address[:sv]E-postadress') ?>" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
