@@ -8,9 +8,11 @@
 include 'head-block.php';
 $post = get_post();
 $col = "blue";
+$catname = "";
 if ( $post ) {
     $categories = get_the_category( $post->ID );
 	foreach($categories as $cat){
+		$catname = $cat->name;
 		if($cat->slug == "our-stories" ){
 			$col = 'teal';
 		}
@@ -40,6 +42,9 @@ createMenu($col);
 			<div class="center">
 				<div class="button colored blog-back">
 					<?php _e('[:en]Go back[:sv]Tillbaka') ?>
+				</div>
+				<div class="button colored">
+					<?php echo $catname . _e('[:en]page[:sv]sidan') ?>
 				</div>
 			</div>
 		</div>
