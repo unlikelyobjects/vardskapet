@@ -10,16 +10,19 @@ $post = get_post();
 $col = "blue";
 $catname = "";
 if ( $post ) {
-    $categories = get_the_category( $post->ID );
-	foreach($categories as $cat){
-		$catname = $cat->name;
-		$catslug = $cat->slug;
-		if($cat->slug == "our-stories" ){
-			$col = 'teal';
-		}
-		elseif($cat->slug == "events"){
-			$col = 'red';
-		}
+	$categories = get_the_category( $post->ID );
+	$category = $categories[0];
+	echo $category->parent;
+	if($category->parent != null){
+		$category = get_category($category->parent);
+	}
+	$catname = $category->name;
+	$catslug = $category->slug;
+	if($category->slug == "our-stories" ){
+		$col = 'teal';
+	}
+	elseif($category->slug == "events"){
+		$col = 'red';
 	}
 }
 ?>
@@ -46,11 +49,14 @@ createMenu($col);
 				</div>
 					<?php
 						$buttontext = __('[:en]Blog page[:sv]Bloggsidan');
+						$buttonlink = "/blog";
 						if($catslug == "events"){
 							$buttontext = __('[:en]Events page[:sv]Aktuellt sidan');
+							$buttonlink = "/events";
 						}
 						else if($catslug == "our-stories"){
 							$buttontext = __('[:en]More stories[:sv]Fler berättelser');
+							$buttonlink = "/our-stories";
 						}
 					?>
 
