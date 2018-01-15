@@ -11,13 +11,10 @@ $col = "blue";
 $catname = "";
 if ( $post ) {
 	$categories = get_the_category( $post->ID );
-	var_dump($categories);
 	$category = $categories[0];
-	echo $category->parent;
 	if($category->parent != null){
 		$category = get_category($category->parent);
 	}
-	var_dump($category);
 	$catname = $category->name;
 	$catslug = $category->slug;
 	if($category->slug == "our-stories" ){
