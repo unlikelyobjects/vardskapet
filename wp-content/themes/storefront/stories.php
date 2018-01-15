@@ -92,11 +92,7 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 				'post_type' => 'post',
 				'posts_per_page' => 6,
 				'category_name' => $cats,
-				'paged' => $paged ,
-				'date_query' => array(
-					'after' => $dateStart,
-					'before' => $dateEnd
-				)
+				'paged' => $paged
 			);
 			$wp_query = new WP_Query($args);
 			$postcount = $wp_query->found_posts;
