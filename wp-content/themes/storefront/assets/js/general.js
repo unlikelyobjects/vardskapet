@@ -187,9 +187,12 @@ $(document).ready(function(){
 
   var hash = window.location.hash;
   if(hash.length > 1){
+    if($(hash).hasClass('expandable')){
+      $(hash).find('.entry-title').trigger('click')
+    }
     setTimeout(function(){
       $('html, body').animate({
-          scrollTop: ($('.' + (hash.replace('#', ''))).offset().top) - 60
+          scrollTop: $(hash).offset().top - 60
       }, 500);
     },500);
   }
