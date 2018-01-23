@@ -33,5 +33,5 @@
 <meta property="og:url" content="http://www.vardskapet.se">
 <?php wp_head(); ?>
 <script src="//www.youtube.com/iframe_api"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
