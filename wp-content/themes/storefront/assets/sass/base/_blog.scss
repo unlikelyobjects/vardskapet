@@ -235,11 +235,15 @@ section.main-content {
     }
 }
 .fb_iframe_widget {
-    vertical-align: top;
+    vertical-align: bottom;
     display: inline-block !important;
 }
 .IN-widget {
-    vertical-align: super !important;
+    vertical-align: bottom !important;
+    margin-bottom: -3px;
+}
+.twitter-share-button {
+    vertical-align: bottom !important;
 }
 
 @media screen and (max-width:782px){

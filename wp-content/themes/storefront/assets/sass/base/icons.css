@@ -195,7 +195,8 @@
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  filter: none; }
+  -webkit-filter: none;
+          filter: none; }
 
 .fa-stack {
   position: relative;
@@ -2443,7 +2444,8 @@ input[type="submit"].loading,
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     content: "\f110";
-    animation: fa-spin .75s linear infinite;
+    -webkit-animation: fa-spin .75s linear infinite;
+            animation: fa-spin .75s linear infinite;
     height: 20px;
     width: 20px;
     line-height: 20px;
@@ -2710,7 +2712,8 @@ a.remove {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f110";
-  animation: fa-spin .75s linear infinite;
+  -webkit-animation: fa-spin .75s linear infinite;
+          animation: fa-spin .75s linear infinite;
   height: 30px;
   width: 30px;
   line-height: 30px;
@@ -2741,7 +2744,9 @@ a.remove {
     left: 50%;
     width: 1em;
     height: 1em;
-    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
     line-height: 1; }
 
 .woocommerce-pagination .next:after {
@@ -2768,7 +2773,9 @@ a.remove {
     left: 50%;
     width: 1em;
     height: 1em;
-    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
     text-align: center;
     opacity: .25; }
 
@@ -2781,6 +2788,7 @@ a.remove {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
   margin-right: 0.5407911001em;
+  -webkit-transition: color, ease, .2s;
   transition: color, ease, .2s; }
 
 #payment .payment_methods li.wc_payment_method > input[type=radio]:first-child {
@@ -2904,8 +2912,11 @@ p.order-again .button:after {
   position: absolute;
   top: 50%;
   right: -1em;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   opacity: 0;
+  -webkit-transition: all,ease,.3s;
   transition: all,ease,.3s; }
 
 .woocommerce-tabs ul.tabs li.active:after {

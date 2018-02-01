@@ -20,6 +20,10 @@
         padding: 0;
     }
     section.main-content .blog-post-single .blog-post-content img {
+        margin: auto;
+        display: block;
+        min-width: 40%;
+        max-width: 600px;
         width: 100%;
     }
     footer.site-footer {
@@ -45,6 +49,9 @@
             position: initial;
             margin-top: 30px;
         }
+    }
+    .social {
+        display: none;
     }
 }
 @page { size: auto;  margin: 5mm; }

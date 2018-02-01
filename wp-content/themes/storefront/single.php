@@ -76,8 +76,8 @@ createMenu($col);
 					<?php the_content(); ?>
 				</div>
 				<div class="social">
-					<div class="fb-share-button" data-href="<?php the_permalink() ?>" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.vardskapet.se%2F&amp;src=sdkpreparse">Dela</a></div>
-					<a class="twitter-share-button" data-size="large" href="https://twitter.com/intent/tweet?text=<?php the_title() ?>">
+					<div class="fb-share-button" data-href="<?php the_permalink() ?>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.vardskapet.se%2F&amp;src=sdkpreparse">Dela</a></div>
+					<a class="twitter-share-button" data-size="small" href="https://twitter.com/intent/tweet?text=<?php the_title() ?>">
 Tweet</a>
 					<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: <?php echo $lang ?></script>
 					<script type="IN/Share" data-url="<?php the_permalink() ?>"></script>
