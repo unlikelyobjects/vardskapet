@@ -245,6 +245,20 @@ section.main-content {
 .twitter-share-button {
     vertical-align: bottom !important;
 }
+a.mail-share {
+    height: 20px;
+    background: #656565;
+    margin: 0 3px;
+    border-radius: 3px;
+    padding: 1px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: bottom;
+    i {
+        margin-right: 3px;
+    }
+}
 
 @media screen and (max-width:782px){
     section.main-content .blog-post-single .blog-post-content {
