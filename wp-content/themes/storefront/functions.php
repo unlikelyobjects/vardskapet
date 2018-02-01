@@ -49,13 +49,14 @@ if ( is_admin() ) {
 	require 'inc/admin/class-storefront-plugin-install.php';
 }
 
-define ('VERSION', '4.9.27');
+define ('VERSION', '4.9.28');
 
 function version_id() {
   if ( WP_DEBUG )
     return time();
   return VERSION;
 }
+
 
 function add_theme_scripts(){
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/sass/vendors/slick.css', array(), '1.1', 'all');

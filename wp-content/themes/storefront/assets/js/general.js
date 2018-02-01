@@ -85,6 +85,7 @@ $(document).ready(function(){
       else {
         $el.addClass('mobile-expanded');
         $el.find('.menu-link-expanded').slideDown(300);
+        $('.mobile-expanded').not($el).removeClass('mobile-expanded').find('.menu-link-expanded').slideUp(300);
       }
     }
   });

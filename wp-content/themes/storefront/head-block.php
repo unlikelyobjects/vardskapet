@@ -25,12 +25,6 @@
 <link rel="shortcut icon" href="/wp-content/themes/storefront/assets/images/favicon.ico">
 <meta name="msapplication-config" content="/wp-content/themes/storefront/assets/images/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-<meta property="og:image" content="/wp-content/themes/storefront/assets/images/fb.png">
-<meta property="og:image:width" content="1080">
-<meta property="og:image:height" content="565">
-<meta property="og:description" content="Vi hj&auml;lper ledare och medarbetare att s&auml;kertst&auml;lla en v&auml;lkomnande kultur.">
-<meta property="og:title" content="V&auml;rdskapet">
-<meta property="og:url" content="http://www.vardskapet.se">
 <?php wp_head(); ?>
 <script src="//www.youtube.com/iframe_api"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

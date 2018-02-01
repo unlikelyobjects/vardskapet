@@ -26,9 +26,6 @@ if(empty($cats)){
 $catArray = explode(',',$cats);
 $dateStart = isset($_GET['datestart']) ? $_GET['datestart'] : '';
 $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
-
-
-
 ?>
 
 <section class="main-content">
