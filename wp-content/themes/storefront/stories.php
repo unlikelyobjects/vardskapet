@@ -108,10 +108,10 @@ $dateEnd = isset($_GET['dateend']) ? $_GET['dateend'] : '';
 								$imageurl = '/wp-content/themes/storefront/assets/images/default-img.png';
 							}
 						?>
-						<div class="blog-post-image" style='background-image: url("<?php echo $imageurl;?>");'></div>
+						<div class="blog-post-image"  data-href="<?php the_permalink(); ?>"  style='background-image: url("<?php echo $imageurl;?>");'></div>
 					</div>
 					<div class="grid-col-50 blog-post-small text">
-						<h3 class="colored"><?php the_title(); ?></h3>
+						<h3 class="colored"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<p class="blue date colored"><?php echo get_the_date('F j, Y'); ?></p>
 						<div class="blog-excerpt"><?php the_excerpt(); ?></div>
 						<p class="read-more colored"><a href="<?php the_permalink(); ?>"><?php _e('[:en]Read more[:sv]Läs mer') ?></a></p>

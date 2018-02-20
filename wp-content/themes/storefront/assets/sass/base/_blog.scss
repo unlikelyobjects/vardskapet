@@ -147,6 +147,9 @@
     h3 {
         font-size: 24px;
         margin-bottom: 5px;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     .date {
         font-family: 'Roboto-regular';
@@ -157,6 +160,7 @@
         background-position: center center;
         background-image: url('assets/images/default-img.png');
         padding-bottom: 100%;
+        cursor: pointer;
     }
 }
 

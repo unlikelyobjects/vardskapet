@@ -105,6 +105,7 @@ Tweet</a>
 					?>
 
 					<a class="button colored" href="/<?php echo $catslug;?>"> <?php echo $buttontext; ?></a>
+					<a class="button colored" href="#" onclick="window.print();"> <?php _e('[:en]Printable Version[:sv]Utskriftsvänlig version') ?></a>
 			</div>
 		</div>
 	</div>

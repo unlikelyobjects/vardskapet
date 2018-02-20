@@ -61,11 +61,13 @@ define('DB_COLLATE', '');
 
 
 $http = 'http';
+
 if ( $_SERVER["SERVER_ADDR"] != '127.0.0.1' ) {
     define('MYSQL_CLIENT_FLAGS', MYSQL_CLIENT_SSL);
     define( 'MYSQL_SSL_CA', getenv('MYSQL_SSL_CA'));
     $http = 'https';
 }
+
 
 /**#@+
  * Authentication Unique Keys and Salts.
