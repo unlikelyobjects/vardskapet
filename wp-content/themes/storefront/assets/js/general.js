@@ -3,7 +3,7 @@ var $ = jQuery;
 var console;
 console.log('waddup');
 $(document).ready(function(){
-  
+  ga('create', 'UA-110408257-1', 'auto');
   $('.slick-slider-text').on('afterChange init', function(event, slick, currentSlide){
     var theURL = $(slick.$slides.get(currentSlide)).attr('data-url');
     slideURL = theURL;
