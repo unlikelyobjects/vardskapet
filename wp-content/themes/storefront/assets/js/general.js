@@ -1,9 +1,17 @@
 
 var $ = jQuery;
 var console;
-console.log('waddup');
+function checkIfAnalyticsLoaded() {
+  if (window._gat && window._gat._getTracker) {
+    ga('create', 'UA-110408257-1', 'auto');
+  } else {
+    // Probably want to cap the total number of times you call this.
+    setTimeout(checkIfAnalyticsLoaded, 500);
+  }
+}
 $(document).ready(function(){
-  ga('create', 'UA-110408257-1', 'auto');
+  checkIfAnalyticsLoaded()
+
   $('.slick-slider-text').on('afterChange init', function(event, slick, currentSlide){
     var theURL = $(slick.$slides.get(currentSlide)).attr('data-url');
     slideURL = theURL;
