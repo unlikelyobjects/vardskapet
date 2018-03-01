@@ -56,7 +56,7 @@ endif;
         <?php get_template_part( 'content-block' ); ?>
         <div class="training-buttons center">
             <div class="button colored get-contacted"><?php _e('[:en]Get contacted[:sv]Bli kontaktad') ?></div>
-            <div class="button colored"><a class="show-contact-popup"><?php _e('[:en]Contact us[:sv]Kontakta oss') ?></a></div>
+            <a class="show-contact-popup"><div class="button colored"><?php _e('[:en]Contact us[:sv]Kontakta oss') ?></div></a>
             <?php
             //öppna träningsprogram
             if(get_the_ID() != 447): ?>
