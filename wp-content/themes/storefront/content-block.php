@@ -24,9 +24,11 @@ while ( have_rows('layout') ) : the_row();
                                             <?php if(have_rows('buttons')): ?>
                                                 <div class="button-row">
                                                 <?php while(have_rows('buttons')): the_row(); ?>
-                                                    <div class="button colored">
-                                                        <a href="<?php echo get_sub_field('button_link');?>"><?php echo get_sub_field('button_text');?></a>
-                                                    </div>
+                                                    <a href="<?php echo get_sub_field('button_link');?>">
+                                                        <div class="button colored">
+                                                            <?php echo get_sub_field('button_text');?>
+                                                        </div>
+                                                    </a>
                                                 <?php endwhile; ?>
                                                 </div>
                                             <?php endif; ?>
@@ -88,7 +90,7 @@ while ( have_rows('layout') ) : the_row();
                                         <div class="textblock"><?php echo get_sub_field('body');?></div>
                                     <?php endif; ?>
                                     <?php if(get_row_layout() == 'button'): ?>
-                                        <div class="button colored expandable-button"><a href="<?php echo get_sub_field('link')?>"><?php echo get_sub_field('text');?></a></div>
+                                        <a href="<?php echo get_sub_field('link')?>"><div class="button colored expandable-button"><?php echo get_sub_field('text');?></div></a>
                                     <?php endif; ?>
                                     <?php if(get_row_layout() == 'employee'): ?>
                                         <div class="employee">
