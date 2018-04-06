@@ -276,7 +276,7 @@ $(document).ready(function(){
       phone: $('#contact-form-phone').val()
     };
     console.log(data);
-    ga('send', 'event', "button", "Bli Kontaktad - Skicka");
+    ga('gtag_UA_110408257_1.send', 'event', "button", "Bli Kontaktad - Skicka");
     postContactForm(data,function(){
       $('.contact-form').hide(300);
       $('.contact-form-thanks').delay(300).show(300);
@@ -285,7 +285,7 @@ $(document).ready(function(){
   });
   $('.make-a-request').click(function(){
     console.log('click');
-    ga('send', 'event', "button", "Gör en förfrågan - Öppna formulär");
+    ga('gtag_UA_110408257_1.send', 'event', "button", "Gör en förfrågan - Öppna formulär");
     $('.request-popup').addClass('active');
     if($('body').hasClass('page-id-190')){
       if(window.location.href.indexOf('/en/') !== -1){
@@ -304,7 +304,7 @@ $(document).ready(function(){
     else {
       e.preventDefault();
     }
-    ga('send', 'event', "button", "Gör en förfrågan - Skicka");
+    ga('gtag_UA_110408257_1.send', 'event', "button", "Gör en förfrågan - Skicka");
     var data = {};
     $('.request-form input[type="text"],.request-form input[type="email"], .request-form select, .request-form textarea').each(function(){
       var idtag = String( $(this).attr('id').replace('request-form-',''));
@@ -459,7 +459,7 @@ function register($form,cb) {
 
 function openContactForm(){
   console.log('click');
-  ga('send', 'event', "button", "Bli kontaktad - Öppna formulär");
+  ga('gtag_UA_110408257_1.send', 'event', "button", "Bli kontaktad - Öppna formulär");
   $('.get-contacted-popup').addClass('active');
   $('body,html').addClass('popup-active');
 }
