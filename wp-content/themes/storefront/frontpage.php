@@ -61,8 +61,12 @@ $newsletter = get_field('newsletter');
 						$postcount = $wp_query->found_posts;
 						if ( have_posts() ) :
 							while ( have_posts() ) : the_post();
+							$link = get_the_permalink();
+							if($x == 2){
+								$link = "/events/";
+							}
 							?>
-							<div class="slidething <?php echo $catClass[$x]; ?>" data-url="<?php the_permalink(); ?>">
+							<div class="slidething <?php echo $catClass[$x]; ?>" data-url="<?php echo $link ?>">
 								<h2><?php _e($catTitle[$x]); ?></h2>
 								<div class="divider-short"></div>
 								<div class="date"><?php echo get_the_date('F j, Y'); ?></div>

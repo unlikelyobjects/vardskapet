@@ -39,7 +39,7 @@ function createVideoHeader($style){
             <div class="drop-shadow-bar"></div>
             <video class='video' src="/wp-content/themes/storefront/assets/videos/vardskapet_small_2.mp4?cache=1234" playsinline="" autoplay="" muted="" loop="" type="video/mp4"></video>
             <div class="hero">
-                <h1 class="video-title"><?php _e("[:en]Art of Welcoming[:sv]Art of Welcoming"); ?></h1>
+                <h1 class="video-title"><?php _e("[:en]Art of Welcoming[:sv]Konsten att få människor att känna sig inkluderade och välkomna"); ?></h1>
                 <p><?php _e("[:en]Click here to see the trailer[:sv]Tryck här för att se trailern till filmen om värdskap."); ?></p>
                 <div class="play-button"></div>
             </div>

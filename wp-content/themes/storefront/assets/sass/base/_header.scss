@@ -60,9 +60,14 @@
         background-position: center center;
     }
     .video-title {
-        font-size: 56px;
+        font-size: 46px;
         color: white;
         font-family: 'Playfair';
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1em;
+        padding-right: 1em;
     }
     p {
         color: white;

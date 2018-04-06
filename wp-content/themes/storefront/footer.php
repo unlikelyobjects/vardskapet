@@ -92,7 +92,7 @@
         <div class="client-modal-wrapper">
 			<div class="form">
 				<h1 class="center hide-sub"><?php _e('[:en]Watch the first five minutes of <br>Art of Welcoming![:sv]Se fem minuter av filmen Art of Welcoming!');?></h1>
-				<p class="center hide-sub"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Välkommen att fylla i din e-postadress så skickar vi fem minuter Art of Welcoming till dig.') ?></p>
+				<p class="center hide-sub"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Välkommen att fylla i din e-postadress så skickar vi fem minuter av Art of Welcoming och en prenumeration på Värdskapsbrevet - inspirerande berättelser om värdskap och senaste nytt om våra arrangemang.') ?></p>
 				<form id="video-form" action="https://vardskapet.us15.list-manage.com/subscribe/post-json?u=8e89414b6065ae3f0464ac530&id=6bd7ff0546&c=?" method="POST">
 					<input type="hidden" name="u" value="8e89414b6065ae3f0464ac530">
 					<input type="hidden" name="id" value="6bd7ff0546">	
