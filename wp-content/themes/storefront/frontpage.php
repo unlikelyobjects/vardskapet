@@ -122,7 +122,7 @@ $newsletter = get_field('newsletter');
 			
 		</div>
 		
-		<div class="newsletter">
+		<div class="newsletter" id="newsletter">
 			<h1><?php echo $newsletter['title'] ?></h1>
 			<p><?php echo $newsletter['body'] ?></p>
 			<div class="thank-you form-thanks">
