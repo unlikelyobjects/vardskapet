@@ -120,9 +120,11 @@ while ( have_rows('layout') ) : the_row();
                 <?php endif ?>
                 <?php if(get_row_layout() == 'button'): ?>
                     <div class="button-block">
-                        <div class="button colored">
-                            <a href="<?php echo get_sub_field('button_link');?>"><?php echo get_sub_field('button_text');?></a>
-                        </div>
+                        <a href="<?php echo get_sub_field('button_link');?>">
+                            <div class="button colored">
+                                <?php echo get_sub_field('button_text');?>
+                            </div>
+                        </a>
                     </div>
                 <?php endif ?>
                 <?php endwhile; ?>
