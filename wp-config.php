@@ -20,6 +20,7 @@
 
 //Using environment variables for DB connection information
 
+
 $connectstr_dbhost = 'localhost';
 $connectstr_dbname = 'vardskapet';
 $connectstr_dbusername = 'root';
@@ -62,7 +63,7 @@ define('DB_COLLATE', '');
 
 $http = 'http';
 
-if ( $_SERVER["SERVER_ADDR"] != '127.0.0.1' ) {
+if ( getenv('IS_LOCAL_PHP') != true ) {
     define('MYSQL_CLIENT_FLAGS', MYSQL_CLIENT_SSL);
     define( 'MYSQL_SSL_CA', getenv('MYSQL_SSL_CA'));
     $http = 'https';

@@ -133,6 +133,8 @@ $newsletter = get_field('newsletter');
 				<input type="hidden" name="id" value="442c278af2">
 				<input type="email" placeholder="<?php _e('[:en]E-mail address[:sv]E-postadress') ?>" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
 				<input type="submit" class="button" value="<?php _e('[:en]Subscribe[:sv]Prenumerera')?>">
+				<br>
+				<p>När du lämnar dina kontaktuppgifter samtycker du till att vi skickar information och erbjudanden till dig. <a href="/sekretess-och-anvandarvillkor">Läs mer här.</a></p>
 			</form>
 			<?php //echo do_shortcode('[mc4wp_form id="258"]'); ?>
 		</div>

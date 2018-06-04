@@ -126,6 +126,7 @@ endif;
                     ?>
                     <textarea id="request-form-purpose" rows="5" placeholder="<?php _e($purposeText) ?>"></textarea>
 
+                    <p>När du lämnar dina kontaktuppgifter samtycker du till att vi skickar information och erbjudanden till dig. <a href="/sekretess-och-anvandarvillkor">Läs mer här.</a></p>
                     <div class="center">
                         <input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
                     </div>

@@ -76,6 +76,7 @@
 					<div class="center">
 						<input type="submit" value="<?php _e('[:en]Send[:sv]Skicka')?>" class="button">
 					</div>
+					<p class="privacy-modal">När du lämnar dina kontaktuppgifter samtycker du till att vi skickar information och erbjudanden till dig. <a href="/sekretess-och-anvandarvillkor">Läs mer här.</a></p>
 				</form>
             </div>
             <div class="contact-form-thanks hidden">
@@ -102,6 +103,7 @@
 				<div class="get-contacted-thanks form-thanks">
 					<h1 class="center"><?php _e('[:en]Thanks![:sv]Tack!');?></h1>
 				</div>
+				<p>När du lämnar dina kontaktuppgifter samtycker du till att vi skickar information och erbjudanden till dig. <a href="/sekretess-och-anvandarvillkor">Läs mer här.</a></p>
 				<div class="center">		
 					<div class="button colored hide-sub read-more"><a href="/the-art-of-welcoming"><?php _e('[:en]Read more[:sv]Läs mer');?></a></div>
 				</div>
