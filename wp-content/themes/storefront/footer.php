@@ -94,6 +94,7 @@
 			<div class="form">
 				<h1 class="center hide-sub"><?php _e('[:en]Watch the first five minutes of <br>Art of Welcoming![:sv]Se fem minuter av filmen Art of Welcoming!');?></h1>
 				<p class="center hide-sub"><?php _e('[:en]Subscribe to our newsletter to follow the subject and to see the first five minutes of our documentary or read more on how you can experience our documentary.[:sv]Välkommen att fylla i din e-postadress så skickar vi fem minuter av Art of Welcoming och en prenumeration på Värdskapsbrevet - inspirerande berättelser om värdskap och senaste nytt om våra arrangemang.') ?></p>
+				<p class="movie-privacy">När du lämnar dina kontaktuppgifter samtycker du till att vi skickar information och erbjudanden till dig. <a href="/sekretess-och-anvandarvillkor">Läs mer här.</a></p>
 				<form id="video-form" action="https://vardskapet.us15.list-manage.com/subscribe/post-json?u=8e89414b6065ae3f0464ac530&id=6bd7ff0546&c=?" method="POST">
 					<input type="hidden" name="u" value="8e89414b6065ae3f0464ac530">
 					<input type="hidden" name="id" value="6bd7ff0546">	
@@ -103,7 +104,7 @@
 				<div class="get-contacted-thanks form-thanks">
 					<h1 class="center"><?php _e('[:en]Thanks![:sv]Tack!');?></h1>
 				</div>
-				<p>När du lämnar dina kontaktuppgifter samtycker du till att vi skickar information och erbjudanden till dig. <a href="/sekretess-och-anvandarvillkor">Läs mer här.</a></p>
+				
 				<div class="center">		
 					<div class="button colored hide-sub read-more"><a href="/the-art-of-welcoming"><?php _e('[:en]Read more[:sv]Läs mer');?></a></div>
 				</div>
