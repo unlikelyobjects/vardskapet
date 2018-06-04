@@ -416,7 +416,12 @@ $(document).ready(function(){
           if ( event ) event.preventDefault();
           // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
           register($form,function(){
+            $('#newsletter p').first().remove()
+            $('#newsletter h1').first().remove()
+            $('#newsletter h4').first().css({"color": "white","font-size": "38px",
+              "margin-bottom": "0"});
             $('.newsletter .thank-you').show();
+            console.log('does this even run?');
           });
       });
   }
