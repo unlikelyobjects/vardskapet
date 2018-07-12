@@ -1,12 +1,6 @@
 <?php
 function createMenu($style){
     $lang = 'en';
-    if(isset($_COOKIE["qtrans_front_language"])){
-        if($_COOKIE["qtrans_front_language"] == 'sv'){
-            $lang = 'sv';
-            setlocale(LC_ALL, "sv_SE");
-        }    
-    }
     ?>
     <div class="menu cf <?php echo $style; ?>">
         <div class="menu-wrapper">
@@ -59,8 +53,6 @@ function createMenu($style){
                 <div class="menu-link-holder">
                     <a class="menu-link" href="/contact"><?php _e("[:en]Contact[:sv]Kontakt"); ?></a>
                 </div>
-                <div class="flag" data-href="en" <?php if($lang == 'en'){echo 'data-active="active"';} ?>></div>
-                <div class="flag" data-href="sv" <?php if($lang == 'sv'){echo 'data-active="active"';} ?>></div>
             </div>
         </div>
     </div>

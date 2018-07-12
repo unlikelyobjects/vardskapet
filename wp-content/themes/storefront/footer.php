@@ -23,7 +23,7 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-logo.png">
 			</div>
 			<div class="footer-social">
-				<p class="medium">Våra sociala medier:</p>
+				<p class="medium">Our social media:</p>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-fb.png" class="share share-fb">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-yt.png" class="share share-yt">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-insta.png" class="share share-insta">
