@@ -22,7 +22,7 @@
 
 
 $connectstr_dbhost = 'localhost';
-$connectstr_dbname = 'vardskapet';
+$connectstr_dbname = 'vardskapetuganda';
 $connectstr_dbusername = 'root';
 $connectstr_dbpassword = 'root';
 $wp_debug = true;
