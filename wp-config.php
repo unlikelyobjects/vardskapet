@@ -64,9 +64,11 @@ define('DB_COLLATE', '');
 $http = 'http';
 
 if ( getenv('IS_LOCAL_PHP') != true ) {
+    /*
     define('MYSQL_CLIENT_FLAGS', MYSQL_CLIENT_SSL);
     define( 'MYSQL_SSL_CA', getenv('MYSQL_SSL_CA'));
     $http = 'https';
+    */
 }
 
 
