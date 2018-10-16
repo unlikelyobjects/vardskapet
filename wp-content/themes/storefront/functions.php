@@ -71,6 +71,11 @@ function add_theme_scripts(){
 }
 add_action('wp_enqueue_scripts','add_theme_scripts');
 
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
+
 /**
  * NUX
  * Only load if wp version is 4.7.3 or above because of this issue;
