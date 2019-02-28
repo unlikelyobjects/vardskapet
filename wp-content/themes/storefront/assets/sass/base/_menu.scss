@@ -1,317 +1,317 @@
-@mixin block(){
-    display: inline-block;
+@mixin block() {
+  display: inline-block;
 }
 
 .menu {
-    width: 100%;
-    margin: auto;
-    padding: 16px;
-    position: fixed;
-    touch-action: manipulation;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding-top:30px;
-    transition: all .3s ease-in-out;
-    z-index: 100;
+  width: 100%;
+  margin: auto;
+  padding: 16px;
+  position: fixed;
+  touch-action: manipulation;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 30px;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+  .menu-link-expanded {
+    padding: 0 15px;
+    margin-left: -15px;
+  }
+  &.fixed {
+    padding: 10px;
+    background: $blue;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.3);
+    .menu-links {
+      margin-top: 0;
+    }
+    .menu-logo {
+      background-size: 112px 28px;
+      width: 112px;
+      height: 28px;
+      margin-top: 2px;
+    }
+    .mobile-logo {
+      width: 110px;
+      margin-top: 4px;
+    }
+  }
+}
+
+@mixin colorMenu($cname, $color) {
+  .menu.#{$cname} {
+    background: $color;
     .menu-link-expanded {
-        padding: 0 15px;
-        margin-left: -15px;
+      background: $color;
     }
-    &.fixed {
-        padding: 10px;
-        background: $blue;
-        box-shadow: 2px 2px 30px rgba(0,0,0,0.3);
-        .menu-links {
-            margin-top: 0;
-        }
-        .menu-logo {
-            background-size: 112px 28px;
-            width: 112px;
-            height: 28px;
-            margin-top:2px;
-        }
-        .mobile-logo {
-            width: 110px;
-            margin-top: 4px;
-        }
-    }
-}
-
-@mixin colorMenu($cname,$color){
+  }
+  .show-video-header {
     .menu.#{$cname} {
+      background: none;
+      .menu-link-expanded {
+        background: none;
+      }
+    }
+    .menu.#{$cname}.fixed {
+      background: $color;
+      .menu-link-expanded {
         background: $color;
-        .menu-link-expanded {
-            background: $color;
-        }
+      }
     }
-    .show-video-header {
-        .menu.#{$cname}  {
-            background: none;
-            .menu-link-expanded {
-                background: none;
-            }
-        }
-        .menu.#{$cname}.fixed {
-            background: $color;
-            .menu-link-expanded {
-                background: $color;
-            }  
-        }
-    }
+  }
 }
 
-@include colorMenu('blue',$blue);
-@include colorMenu('green',$green);
-@include colorMenu('red',$red);
-@include colorMenu('purple',$purple);
-@include colorMenu('pink',$pink);
-@include colorMenu('teal',$teal);
-
-
-
+@include colorMenu("blue", $blue);
+@include colorMenu("green", $green);
+@include colorMenu("red", $red);
+@include colorMenu("purple", $purple);
+@include colorMenu("pink", $pink);
+@include colorMenu("teal", $teal);
 
 .menu-wrapper {
-    width: 100%;
-    max-width: $grid-large;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    &:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
+  width: 100%;
+  max-width: $grid-large;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 
 .logged-in .menu {
-    top: 32px;
-    @media screen and (max-width:782px){
-        top: 46px;
-    }
+  top: 32px;
+  @media screen and (max-width: 782px) {
+    top: 46px;
+  }
 }
 .menu ul li {
-    padding: 0;
-    margin: 0;
-    font-size: 12px;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
 }
 .menu-logo {
-    background-image: url($imgpath + 'logo-old.png');
-    background-size: 182px 47px;
-    width: 182px;
-    height: 47px;
-    float: left;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-    @media (max-width:815px){
-        width: 142px;
-        height: 36px;
-        background-size: 142px 36px;
-    }
+  background-image: url($imgpath+"logo-old.png");
+  background-size: 182px 47px;
+  width: 182px;
+  height: 47px;
+  float: left;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  @media (max-width: 815px) {
+    width: 142px;
+    height: 36px;
+    background-size: 142px 36px;
+  }
 }
 
 .show-contact-popup {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
 .menu-link-expanded {
-    display: block;
-    position: absolute;
-    transition: all .1s ease-in-out;
-    height: 0;
-    overflow: hidden;
+  display: block;
+  position: absolute;
+  transition: all 0.1s ease-in-out;
+  height: 0;
+  overflow: hidden;
 }
 
 .menu-link-holder {
-    display: block;
-    margin-right: 16px;
-    float: left;
-    i {
-        color: white;
-        margin-left: 0;
+  display: block;
+  margin-right: 16px;
+  float: left;
+  i {
+    color: white;
+    margin-left: 0;
+  }
+  .menu-link-expanded {
+    .menu-link {
+      display: block;
     }
-    .menu-link-expanded {
-        .menu-link {
-            display: block;
-        }
-    }
+  }
 }
-@media (min-width:782px){
-    .menu-link-holder.link-expandable:hover {
-        .menu-link-expanded {
-            display: block;
-            height: 80px;
-        }
-        .menu-link-expanded.menu-services {
-            height: 158px;
-        }
-        .menu-link-expanded.menu-vardskap {
-            height: 134px;
-        }
+@media (min-width: 782px) {
+  .menu-link-holder.link-expandable:hover {
+    .menu-link-expanded {
+      display: block;
+      height: 80px;
     }
+    .menu-link-expanded.menu-services {
+      height: 158px;
+    }
+    .menu-link-expanded.menu-vardskap {
+      height: 134px;
+    }
+  }
 }
 
 .menu-links {
-    float: right;
-    margin-top: 3px;
-    font-size:20px;
-    transition: all .3s ease-in-out;
-    .flag {
-        @include block();
-        background-image: url($imgpath + 'english.png');
-        background-size: 31px 18px;
-        opacity: 0.5;
-        width: 31px;
-        height: 18px;
-        cursor: pointer;
-        margin-right: 5px;
+  float: right;
+  margin-top: 3px;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  .flag {
+    @include block();
+    background-image: url($imgpath+"english.png");
+    background-size: 31px 18px;
+    opacity: 0.5;
+    width: 31px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  .flag[data-href="sv"] {
+    background-image: url($imgpath+"sweden.png");
+  }
+  .flag[data-href="en"] {
+    display: none;
+  }
+  .flag[data-active="active"] {
+    opacity: 1;
+  }
+  a {
+    color: white;
+    margin-right: 5px;
+    font-size: 16px;
+    outline: none;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
     }
-    .flag[data-href="sv"]{
-        background-image: url($imgpath + 'sweden.png');
-    }
-    .flag[data-href="en"]{
-        display:none;
-    }
-    .flag[data-active="active"] {
-        opacity: 1;
-    }
-    a {
-        color: white;
-        margin-right: 5px;
-        font-size:16px;
-        outline: none;
-        &:hover {
-            text-decoration: none;
-            opacity: .8;
-        }
-    }
+  }
 }
 .show-mobile {
-    display: none;
+  display: none;
 }
 .mobile-logo {
-    float: left;
-    width: 140px;
-    margin-top: 0;
-    cursor: pointer;
-    transition: all .3s ease-in-out
+  float: left;
+  width: 140px;
+  margin-top: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 782px){
-    :not(.show-video-header){
-        .menu {
-            padding: 10px;
-        }
+@media screen and (max-width: 782px) {
+  :not(.show-video-header) {
+    .menu {
+      padding: 10px;
     }
-    .mobile-logo {
-        margin-left: 8px;
-        width:110px;
-        margin-top:0;
-        padding-top: 4px;
+  }
+  .mobile-logo {
+    margin-left: 8px;
+    width: 110px;
+    margin-top: 0;
+    padding-top: 4px;
+  }
+  .menu.fixed .mobile-logo {
+    margin-top: 0;
+  }
+  .logged-in .menu.fixed {
+    top: 0;
+  }
+  .show-mobile {
+    display: block;
+  }
+  .menu-logo {
+    display: none;
+  }
+  .hamburger {
+    float: right;
+    line-height: 0;
+    &:after {
+      content: "\f394";
+      font-family: "ion";
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      line-height: 0.8;
+      padding: 0 10px;
     }
-    .menu.fixed .mobile-logo {
-        margin-top:0;
+    &:hover {
+      opacity: 0.7;
     }
-    .logged-in .menu.fixed {
-        top: 0;
+  }
+  .menu-links {
+    display: none;
+  }
+  .menu.expanded {
+    height: 100vh;
+    min-height: 100vh;
+    .menu-links {
+      clear: both;
+      display: block;
+      float: none;
+      padding: 20px;
+      a {
+        font-size: 20px;
+        padding: 4px 0;
+      }
     }
-    .show-mobile {
-        display: block;
+    .menu-link-holder {
+      float: none;
+      margin: 10px 0;
     }
-    .menu-logo {
-        display: none;
+    .menu-link-holder i {
+      display: none;
+    }
+    .menu-link-expanded {
+      height: auto;
+      position: initial;
+      margin-left: 20px;
+      display: none;
+      transition: none;
+    }
+    .menu-link[href="#"] {
+      &:after {
+        font-family: "ion";
+        content: "\f123";
+        display: inline;
+        color: white;
+        margin-left: 6px;
+        display: inline-block;
+        transition: 0.3s all ease-in-out;
+      }
+    }
+    .mobile-expanded .menu-link[href="#"] {
+      &:after {
+        transform: scaleY(-1);
+      }
     }
     .hamburger {
-        float: right;
-        line-height: 0;
-        &:after {
-            content: '\f394';
-            font-family: 'ion';
-            font-size: 40px;
-            color: white;
-            cursor: pointer;
-            line-height: .8;
-            padding: 0 10px;
-        }
-        &:hover {
-            opacity: .7;
-        }
+      &:after {
+        content: "\f405";
+      }
     }
-    .menu-links {
-        display: none;
-    }
-    .menu.expanded {
-        height: 100vh;
-        min-height: 100vh;
-        .menu-links {
-            clear: both;
-            display: block;
-            float: none;
-            padding: 20px;
-            a {
-                font-size: 20px;
-                padding: 4px 0;
-            }
-        }
-        .menu-link-holder {
-            float: none;
-            margin: 10px 0;
-        }
-        .menu-link-holder i {
-            display: none;
-        }
-        .menu-link-expanded {
-            height: auto;
-            position: initial;
-            margin-left: 20px;
-            display: none;
-            transition: none;
-        }
-        .menu-link[href="#"]{
-            &:after {
-                font-family: 'ion';
-                content: '\f123';
-                display: inline;
-                color: white;
-                margin-left: 6px;
-                display: inline-block;
-                transition: .3s all ease-in-out;
+  }
 
-            }
-        }
-        .mobile-expanded .menu-link[href="#"] {
-            &:after {
-                transform: scaleY(-1);
-            }
-        }
-        .hamburger {
-            &:after {
-                content: '\f405';
-            }
-        }
+  .menu-links .flag {
+    position: absolute;
+    bottom: 30px;
+    background-size: 62px 36px;
+    width: 62px;
+    height: 36px;
+    &[data-href="en"] {
+      left: calc(50% - 32px - 40px);
     }
-
-    .menu-links .flag {
-        position: absolute;
-        bottom: 30px;
-        background-size: 62px 36px;
-        width: 62px;
-        height: 36px;
-        &[data-href="en"]{
-            left: calc(50% - 32px - 40px);
-        }
-        &[data-href="sv"]{
-            left: calc(50% - 32px + 40px);
-            left: calc(50% - 32px);
-        }
+    &[data-href="sv"] {
+      left: calc(50% - 32px + 40px);
+      left: calc(50% - 32px);
     }
+  }
 }
 
-@media screen and (max-width: 374px){
-    .menu.expanded .menu-links a {
-        font-size: 16px;
-        padding: 2px 0;
-    }
+@media screen and (max-width: 374px) {
+  .menu.expanded .menu-links a {
+    font-size: 16px;
+    padding: 2px 0;
+  }
+}
+
+/* Text shadow on secondary links */
+body.home div.menu-link-expanded a.menu-link {
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.65);
 }
