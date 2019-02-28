@@ -5,7 +5,7 @@ function createMenu($style){
         if($_COOKIE["qtrans_front_language"] == 'sv'){
             $lang = 'sv';
             setlocale(LC_ALL, "sv_SE");
-        }    
+        }
     }
     ?>
     <div class="menu cf <?php echo $style; ?>">
@@ -24,7 +24,7 @@ function createMenu($style){
                         <a class="menu-link" href="/our-stories"><?php _e("[:en]Our stories[:sv]Våra berättelser"); ?></a>
                         <a class="menu-link" href="/movies"><?php _e("[:en]Movies[:sv]Film"); ?></a>
                     </div>
-                    
+
                 </div>
                 <div class="menu-link-holder link-expandable">
                     <a class="menu-link" href="#"><?php _e("[:en]Värdskap[:sv]Värdskap"); ?></a><i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -50,12 +50,25 @@ function createMenu($style){
                         <!--<a class="menu-link" href="/online-courses"><?php _e("[:en]Online courses[:sv]Online kurser"); ?></a>-->
                     </div>
                 </div>
-                <div class="menu-link-holder">
-                    <a class="menu-link" href="/events"><?php _e("[:en]Events[:sv]Aktuellt"); ?></a>
+
+				<!-- Aktuellt -->
+                <div class="menu-link-holder link-expandable">
+                    <a class="menu-link" href="#"><?php _e("[:en]Events[:sv]Aktuellt"); ?></a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="menu-link-expanded menu-events">
+	                    <a class="menu-link" href="/events"><?php _e("[:en]Events[:sv]Aktuellt"); ?></a>
+	                    <a class="menu-link" href="/our-events"><?php _e("[:en]Events NY[:sv]Events"); ?></a>
+                    </div>
                 </div>
-                <div class="menu-link-holder">
-                    <a class="menu-link" href="/about-vardskapet"><?php _e("[:en]About us[:sv]Om oss"); ?></a>
+
+				<!-- About -->
+                <div class="menu-link-holder link-expandable">
+                    <a class="menu-link" href="#"><?php _e("[:en]About us[:sv]Om oss"); ?></a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="menu-link-expanded menu-about">
+	                    <a class="menu-link" href="/about-vardskapet"><?php _e("[:en]About us[:sv]Om oss"); ?></a>
+	                    <a class="menu-link" href="/case-studies"><?php _e("[:en]Case studies[:sv]Kundcase"); ?></a>
+                    </div>
                 </div>
+
                 <div class="menu-link-holder">
                     <a class="menu-link" href="/contact"><?php _e("[:en]Contact[:sv]Kontakt"); ?></a>
                 </div>
