@@ -99,9 +99,9 @@ while ( have_rows('layout') ) : the_row();
                                             </div>
                                             <div class="employee-info employee-col">
                                                 <div class="name colored"><?php echo get_sub_field('name'); ?></div>
-                                                <div class="description"><?php echo get_sub_field('description'); ?></div>
                                                 <div class="email"><span class="strong colored"><?php _e('[:en]Email:[:sv]E-post:')?></span> <a class="mail-link" href="mailto:<?php echo get_sub_field('email'); ?>"><?php echo get_sub_field('email'); ?></a></div>
                                                 <div class="phone"><span class="strong colored"><?php _e('[:en]Phone:[:sv]Telefon:')?></span> <?php echo get_sub_field('phone'); ?></div>
+                                                <div class="description"><?php echo get_sub_field('description'); ?></div>
                                                 <!--<div class="movie colored" data-url="<?php echo get_sub_field('youtube_url'); ?>"><span class="ion">&#xf488;</span> <?php _e('[:en]Watch video presentation[:sv]See videopresentation') ?></div>-->
                                             </div>
                                         </div>
@@ -131,7 +131,7 @@ while ( have_rows('layout') ) : the_row();
                 <?php endif; ?>
             </div>
         </div>
-    <?php    
+    <?php
     elseif( get_row_layout() == 'slider' ):
     endif;
 endwhile;
