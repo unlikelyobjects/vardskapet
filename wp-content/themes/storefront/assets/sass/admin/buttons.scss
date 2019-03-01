@@ -57,17 +57,18 @@ a.sf-nux-button {
 // Custom buttons in blog posts via customized version of Forget About Short Codes plugin
 a.fasc-button {
   font-size: 120%;
-  font-family: "Roboto-regular";
+  font-family: "Roboto-Regular";
   padding: 15px 40px !important;
 }
 
 // Second custom button solution via TinyMCE Format menu
 a.mce-button {
   font-size: 120%;
-  font-family: "Roboto-regular";
+  font-family: "Roboto-Regular";
   padding: 15px 40px;
-  display: block;
+  display: inline-block;
   color: #fff;
+  border-radius: 10px;
 
   // these colors should be variables but the file isn't compiling properly.
   // quick and dirty fix:
