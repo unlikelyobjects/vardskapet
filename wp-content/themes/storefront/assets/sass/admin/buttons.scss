@@ -60,3 +60,63 @@ a.fasc-button {
   font-family: "Roboto-regular";
   padding: 15px 40px !important;
 }
+
+// Second custom button solution via TinyMCE Format menu
+a.mce-button {
+  font-size: 120%;
+  font-family: "Roboto-regular";
+  padding: 15px 40px;
+  display: block;
+  color: #fff;
+
+  // these colors should be variables but the file isn't compiling properly.
+  // quick and dirty fix:
+  &-blue {
+    background-color: #362ffe;
+    &:hover,
+    :active,
+    :focus {
+      background-color: #7670ff;
+    }
+  }
+  &-green {
+    background-color: #29b15b;
+    &:hover,
+    :active,
+    :focus {
+      background-color: #43cc75;
+    }
+  }
+  &-purple {
+    background-color: #7551e5;
+    &:hover,
+    :active,
+    :focus {
+      background-color: #a98ffb;
+    }
+  }
+  &-pink {
+    background-color: #e91589;
+    &:hover,
+    :active,
+    :focus {
+      background-color: #f57cbe;
+    }
+  }
+  &-red {
+    background-color: #ef224e;
+    &:hover,
+    :active,
+    :focus {
+      background-color: #f85c7e;
+    }
+  }
+  &-teal {
+    background-color: #329daf;
+    &:hover,
+    :active,
+    :focus {
+      background-color: #64b7c5;
+    }
+  }
+}
