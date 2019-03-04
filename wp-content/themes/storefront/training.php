@@ -10,7 +10,7 @@
  * @package storefront
  */
 
-/* Template Name: Training */ 
+/* Template Name: Training */
 
 include 'head-block.php';
 $pagecolor = get_field('page_color');
@@ -59,10 +59,11 @@ endif;
             <a class="show-contact-popup"><div class="button colored"><?php _e('[:en]Contact us[:sv]Kontakta oss') ?></div></a>
             <?php
             //öppna träningsprogram
-            if(get_the_ID() != 447): ?>
+            //visa inte knappen på alla sidor:
+            if ((get_the_ID() != 447) && (get_the_ID() != 1532) && (get_the_ID() != 1536)): ?>
                 <div class="button colored make-a-request"><?php _e('[:en]Make a request[:sv]Gör en förfrågan')?></div>
             <?php endif; ?>
-            
+
         </div>
 	</div>
 </section>
