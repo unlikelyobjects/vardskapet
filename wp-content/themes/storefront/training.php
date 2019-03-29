@@ -60,7 +60,8 @@ endif;
             <?php
             //öppna träningsprogram
             //visa inte knappen på alla sidor:
-            if ((get_the_ID() != 447) && (get_the_ID() != 1473) && (get_the_ID() != 1476)): ?>
+            if ((get_the_ID() != 447) && (get_the_ID() != 1321) && (get_the_ID() != 1324) && (get_the_ID() != 1326) && (get_the_ID() != 1328) && (get_the_ID() != 1329) && (get_the_ID() != 1330) && (get_the_ID() != 1473) && (get_the_ID() != 1476)): ?>
+
                 <div class="button colored make-a-request"><?php _e('[:en]Make a request[:sv]Gör en förfrågan')?></div>
             <?php endif; ?>
 
