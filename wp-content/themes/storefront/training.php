@@ -57,8 +57,8 @@ endif;
 
         <?php
         //Visa inte .training-buttons på alla sidor:
-        if ((get_the_ID() != 1321) && (get_the_ID() != 1324) && (get_the_ID() != 1326) && (get_the_ID() != 1328) && (get_the_ID() != 1329) && (get_the_ID() != 1330) && (get_the_ID() != 1565)): ?>
-        
+        if ((get_the_ID() != 1321) && (get_the_ID() != 1324) && (get_the_ID() != 1326) && (get_the_ID() != 1328) && (get_the_ID() != 1329) && (get_the_ID() != 1330) && (get_the_ID() != 1565) && (get_the_ID() != 1604) && (get_the_ID() != 1606) && (get_the_ID() != 1607) && (get_the_ID() != 1608) && (get_the_ID() != 1612) ): ?>
+
         <div class="training-buttons center">
             <div class="button colored get-contacted"><?php _e('[:en]Get contacted[:sv]Bli kontaktad') ?></div>
             <a class="show-contact-popup"><div class="button colored"><?php _e('[:en]Contact us[:sv]Kontakta oss') ?></div></a>
